@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 3 in progress. Layout shell complete: sticky Header with desktop nav + mobile Sheet drawer, 4-column async Footer, locale layout updated to wrap all pages in Header + main + Footer. Ready for Hero section (03-03).
+**Current Focus:** Phase 3 in progress. Hero section complete: full-viewport Hero with AI headline, CTA buttons, and static SVG Gantt mockup using brand colors. Ready for remaining landing page sections (03-04).
 
 ---
 
@@ -12,15 +12,15 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 3 -- Layout Shell & Landing Page
-**Current Plan:** 03-02 complete (2 of 4 in phase)
+**Current Plan:** 03-03 complete (3 of 4 in phase)
 **Status:** In progress
-**Last activity:** 2026-02-09 -- Completed 03-02-PLAN.md
+**Last activity:** 2026-02-09 -- Completed 03-03-PLAN.md
 
 **Progress:**
 ```
 Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
-Phase 3: Layout Shell & Landing     [=====.    ] Plan 02 of 04 complete
+Phase 3: Layout Shell & Landing     [=======.  ] Plan 03 of 04 complete
 Phase 4: Animated Gantt & Visuals   [          ] Not Started
 Phase 5: Content Pages              [          ] Not Started
 Phase 6: Blog Infrastructure        [          ] Not Started
@@ -29,7 +29,7 @@ Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 2/9 phases complete | 5/25 requirements done | 8/~25 plans complete
+**Overall:** 2/9 phases complete | 5/25 requirements done | 9/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 8 |
+| Plans completed | 9 |
 | Plans failed | 0 |
 | Requirements completed | 5/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06) |
 | Phases completed | 2/9 |
@@ -75,6 +75,8 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | Gantt bars icon (4 staggered rects) | Geometric, recognizable at 16px, communicates scheduling at a glance | 2 |
 | HomePage namespace replaced by Hero | Section-specific namespaces (Hero, Features, etc.) instead of monolithic HomePage | 3 |
 | Privacy/Terms use Footer namespace | Page titles come from Footer namespace since they appear in footer nav, not main nav | 3 |
+| SVG Gantt uses computed layout from constants | Makes bar positions maintainable vs magic numbers; easy to adjust | 3 |
+| Home page delegates to Hero component | Page.tsx is composition root; Hero is self-contained async server component | 3 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- needs research
@@ -98,11 +100,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 3 Plan 02 execution
-**What happened:** Executed 03-02-PLAN.md (Layout Shell: Header, Footer & Locale Layout). Task 1: Created Header client component with sticky positioning, backdrop blur, desktop nav (6 links), language switcher, "Request Demo" CTA, and mobile Sheet drawer with hamburger trigger. Task 2: Created async Footer server component with 4-column grid (brand+tagline, product links, company links, contact info), bottom bar with copyright and secondary language switcher; updated locale layout to render Header + main + Footer (removed temporary inline header). Build produces 21 static pages, all wrapped in layout shell.
-**Stopped at:** Completed 03-02-PLAN.md
+**Last session:** 2026-02-09 -- Phase 3 Plan 03 execution
+**What happened:** Executed 03-03-PLAN.md (Hero Section & Static Gantt Mockup). Task 1: Created GanttMockup SVG component with 800x400 viewBox, 6 resource rows, 11 task bars, day headers, grid lines, and "now" indicator -- all colors via CSS variables. Task 2: Created async Hero server component with full-viewport layout (min-h-dvh), two-column grid on desktop, stacked on mobile, AI headline, subtext, two CTA buttons (demo + features), and GanttMockup in elevated card wrapper. Updated home page to render Hero component.
+**Stopped at:** Completed 03-03-PLAN.md
 **Resume file:** None
-**Next action:** Execute 03-03-PLAN.md (Hero section)
+**Next action:** Execute 03-04-PLAN.md (Features, SocialProof, CTABanner sections)
 
 ---
-*Last updated: 2026-02-09 after 03-02 execution*
+*Last updated: 2026-02-09 after 03-03 execution*
