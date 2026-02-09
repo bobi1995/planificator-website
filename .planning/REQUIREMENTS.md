@@ -6,9 +6,9 @@
 
 - [x] **FOUND-01**: Next.js App Router project initialized with Tailwind CSS and shadcn/ui component library
 - [x] **FOUND-02**: Full i18n setup with next-intl -- English and Bulgarian with URL-based switching (/en, /bg) and language switcher component
-- [ ] **FOUND-03**: Brand identity created from scratch -- logo, color palette, typography (Latin + Cyrillic), design tokens integrated into Tailwind config
+- [x] **FOUND-03**: Brand identity created from scratch -- logo, color palette, typography (Latin + Cyrillic), design tokens integrated into Tailwind config
 - [ ] **FOUND-04**: SEO infrastructure -- dynamic sitemap generation, metadata cascading from layout to page, structured data (Organization, Product schemas), robots.txt
-- [ ] **FOUND-05**: Responsive design system -- mobile-first approach, all components work on mobile (375px), tablet, and desktop
+- [x] **FOUND-05**: Responsive design system -- mobile-first approach, all components work on mobile (375px), tablet, and desktop
 - [x] **FOUND-06**: Cyrillic font support -- preloaded Latin + Cyrillic subsets for Bulgarian content, no flash of unstyled text
 
 ### Landing Page (LAND)
@@ -79,9 +79,9 @@
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
-| FOUND-03 | Phase 2 | Pending |
+| FOUND-03 | Phase 2 | Complete |
 | FOUND-04 | Phase 8 | Pending |
-| FOUND-05 | Phase 2 | Pending |
+| FOUND-05 | Phase 2 | Complete |
 | FOUND-06 | Phase 1 | Complete |
 | LAND-01 | Phase 3 | Pending |
 | LAND-02 | Phase 4 | Pending |
@@ -104,4 +104,4 @@
 | OPS-03 | Phase 8 | Pending |
 
 ---
-*Last updated: 2026-02-09 after phase 1 completion*
+*Last updated: 2026-02-09 after phase 2 completion*

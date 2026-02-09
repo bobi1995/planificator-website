@@ -36,16 +36,22 @@ Plans:
 
 ## Phase 2: Brand Identity & Design System
 
-**Goal:** Prefactor has a complete visual identity -- logo, colors, typography, and responsive design tokens -- that every page and component can use consistently.
+**Goal:** Planifactor has a complete visual identity -- logo, colors, typography, and responsive design tokens -- that every page and component can use consistently.
 
 **Dependencies:** Phase 1
 
 **Requirements:** FOUND-03, FOUND-05
 
+**Plans:** 2 plans
+
+Plans:
+- [x] 02-01-PLAN.md -- Rename Prefactor to Planifactor, replace default shadcn theme with blue brand design tokens
+- [x] 02-02-PLAN.md -- Create Logo SVG component, favicon, update home page with brand typography
+
 **Success Criteria:**
-1. A Prefactor logo exists in SVG format and renders correctly at all viewport sizes (mobile 375px through desktop 1440px+)
+1. A Planifactor logo exists in SVG format and renders correctly at all viewport sizes (mobile 375px through desktop 1440px+)
 2. Tailwind config contains custom color palette, typography scale, and spacing tokens that produce a cohesive "modern + approachable" aesthetic
-3. shadcn/ui components render with Prefactor brand colors (not default shadcn theme)
+3. shadcn/ui components render with Planifactor brand colors (not default shadcn theme)
 4. All design system components are responsive -- visually verified at 375px, 768px, and 1440px breakpoints
 
 ---
@@ -171,7 +177,7 @@ Plans:
 | Phase | Name | Requirements | Status |
 |-------|------|--------------|--------|
 | 1 | Foundation & i18n | FOUND-01, FOUND-02, FOUND-06 | Complete (3/3 plans) |
-| 2 | Brand Identity & Design System | FOUND-03, FOUND-05 | Not Started |
+| 2 | Brand Identity & Design System | FOUND-03, FOUND-05 | Complete (2/2 plans) |
 | 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Not Started |
 | 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Not Started |
 | 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Not Started |
@@ -245,4 +251,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-09 after phase 1 execution*
+*Last updated: 2026-02-09 after phase 2 completion*
