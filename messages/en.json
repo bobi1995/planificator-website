@@ -1,0 +1,29 @@
+{
+  "Metadata": {
+    "title": "Prefactor - Production Scheduling Software",
+    "description": "Visual production scheduling with Gantt charts, resource optimization, and real-time planning for manufacturers."
+  },
+  "Navigation": {
+    "features": "Features",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "requestDemo": "Request Demo"
+  },
+  "LanguageSwitcher": {
+    "en": "English",
+    "bg": "Bulgarian"
+  },
+  "HomePage": {
+    "title": "Production Scheduling, Simplified",
+    "description": "Visual Gantt charts, resource optimization, and real-time planning for manufacturers.",
+    "cta": "Request a Demo",
+    "ctaSecondary": "See Features"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist."
+  }
+}
