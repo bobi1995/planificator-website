@@ -4,6 +4,7 @@
     "description": "AI-powered production scheduling with Gantt charts, resource optimization, and real-time planning for manufacturers."
   },
   "Navigation": {
+    "home": "Home",
     "features": "Features",
     "useCases": "Use Cases",
     "pricing": "Pricing",
@@ -16,11 +17,94 @@
     "en": "English",
     "bg": "Bulgarian"
   },
-  "HomePage": {
-    "title": "Production Scheduling, Simplified",
-    "description": "Visual Gantt charts, resource optimization, and real-time planning for manufacturers.",
+  "Hero": {
+    "headline": "AI Finds Your Optimal Production Schedule",
+    "subtext": "For manufacturers who need to ship on time, every time. Planifactor uses artificial intelligence to automatically optimize your production planning.",
     "cta": "Request a Demo",
-    "ctaSecondary": "See Features"
+    "ctaSecondary": "See Features",
+    "ganttAlt": "Gantt chart showing optimized production schedule"
+  },
+  "Features": {
+    "title": "Everything You Need to Optimize Production",
+    "subtitle": "Powerful tools designed for manufacturing teams",
+    "aiScheduling": {
+      "title": "AI-Powered Scheduling",
+      "description": "Let artificial intelligence find the optimal production sequence. Reduce setup times, eliminate bottlenecks, and maximize throughput automatically."
+    },
+    "ganttVisualization": {
+      "title": "Gantt Chart Visualization",
+      "description": "See your entire production timeline at a glance. Drag-and-drop scheduling with real-time conflict detection and resource allocation."
+    },
+    "resourceManagement": {
+      "title": "Resource Management",
+      "description": "Track machines, workers, and workstations in one place. Manage shifts, breaks, and changeovers with full visibility."
+    },
+    "optimization": {
+      "title": "Smart Optimization",
+      "description": "Configure optimization goals — minimize late orders, reduce changeover time, or balance workload across resources."
+    },
+    "realTimePlanning": {
+      "title": "Real-Time Planning",
+      "description": "Respond to disruptions instantly. Reschedule orders, adjust priorities, and see the impact of changes before committing."
+    }
+  },
+  "SocialProof": {
+    "trustedBy": "Trusted by Leading Manufacturers",
+    "companies": {
+      "0": "TechMetal Industries",
+      "1": "Balkan Precision",
+      "2": "EuroMach Components",
+      "3": "NovaSteel Fabrication",
+      "4": "Alpine Manufacturing",
+      "5": "Meridian Toolworks"
+    },
+    "testimonials": {
+      "0": {
+        "quote": "Planifactor reduced our scheduling time from 4 hours to 30 minutes. The AI optimizer finds solutions our planners never considered.",
+        "name": "Stefan Petrov",
+        "title": "Production Manager",
+        "company": "TechMetal Industries"
+      },
+      "1": {
+        "quote": "We finally have full visibility into our production timeline. Late deliveries dropped by 40% in the first quarter.",
+        "name": "Maria Georgieva",
+        "title": "Operations Director",
+        "company": "Balkan Precision"
+      },
+      "2": {
+        "quote": "The Gantt chart alone was worth it — but the AI scheduling is what truly transformed how we plan production.",
+        "name": "Andreas Muller",
+        "title": "Plant Manager",
+        "company": "EuroMach Components"
+      }
+    }
+  },
+  "CTABanner": {
+    "heading": "Ready to Optimize Your Production?",
+    "description": "See how Planifactor can reduce scheduling time, eliminate bottlenecks, and help you deliver on time — every time.",
+    "cta": "Request a Demo"
+  },
+  "Footer": {
+    "tagline": "AI-powered production scheduling for manufacturers.",
+    "product": "Product",
+    "company": "Company",
+    "contactTitle": "Contact",
+    "features": "Features",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "email": "hello@planifactor.com",
+    "phone": "+359 2 123 4567",
+    "linkedin": "LinkedIn",
+    "copyright": "© 2026 Planifactor. All rights reserved."
+  },
+  "StubPage": {
+    "comingSoon": "Coming Soon",
+    "description": "This page is under construction. Check back soon."
   },
   "NotFound": {
     "title": "Page Not Found",
