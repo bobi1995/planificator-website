@@ -1,5 +1,6 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {Hero} from '@/components/sections/Hero';
+import {ComparisonSection} from '@/components/sections/ComparisonSection';
 import {FeatureHighlights} from '@/components/sections/FeatureHighlights';
 import {SocialProof} from '@/components/sections/SocialProof';
 import {CTABanner} from '@/components/sections/CTABanner';
@@ -25,6 +26,7 @@ export default async function HomePage({params}: Props) {
   return (
     <>
       <Hero />
+      <ComparisonSection />
       <FeatureHighlights />
       <SocialProof />
       <CTABanner />
