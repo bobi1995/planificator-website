@@ -1,34 +1,35 @@
-# STATE.md -- Prefactor Marketing Site
+# STATE.md -- Planifactor Marketing Site
 
 ## Project Reference
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 1 COMPLETE & VERIFIED. All i18n foundation, routing, font, and language switching operational. Ready for Phase 2 (Brand Identity & Design System).
+**Current Focus:** Phase 2 in progress. Plan 02-01 (Brand Rename & Design Tokens) complete. Brand name is now Planifactor, primary color is blue-600, typography scale and brand palette defined.
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 1 -- Foundation & i18n (VERIFIED COMPLETE)
-**Current Plan:** All plans complete, verification passed (17/17 must-haves)
-**Status:** PHASE 1 VERIFIED -- Ready for Phase 2
+**Current Phase:** Phase 2 -- Brand Identity & Design System (In Progress)
+**Current Plan:** 02-01 complete, 02-02 pending
+**Status:** In progress
+**Last activity:** 2026-02-09 -- Completed 02-01-PLAN.md
 
 **Progress:**
 ```
-Phase 1: Foundation & i18n          [==========] VERIFIED ✓
-Phase 2: Brand Identity & Design    [ ] Not Started
-Phase 3: Layout Shell & Landing     [ ] Not Started
-Phase 4: Animated Gantt & Visuals   [ ] Not Started
-Phase 5: Content Pages              [ ] Not Started
-Phase 6: Blog Infrastructure        [ ] Not Started
-Phase 7: Interactive Features       [ ] Not Started
-Phase 8: SEO & Performance          [ ] Not Started
-Phase 9: Blog Content & Launch      [ ] Not Started
+Phase 1: Foundation & i18n          [==========] VERIFIED
+Phase 2: Brand Identity & Design    [=====     ] Plan 1/2 complete
+Phase 3: Layout Shell & Landing     [          ] Not Started
+Phase 4: Animated Gantt & Visuals   [          ] Not Started
+Phase 5: Content Pages              [          ] Not Started
+Phase 6: Blog Infrastructure        [          ] Not Started
+Phase 7: Interactive Features       [          ] Not Started
+Phase 8: SEO & Performance          [          ] Not Started
+Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 1/9 phases complete | 3/25 requirements done | 3/~25 plans complete
+**Overall:** 1/9 phases complete | 3/25 requirements done | 4/~25 plans complete
 
 ---
 
@@ -36,7 +37,7 @@ Phase 9: Blog Content & Launch      [ ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 3 |
+| Plans completed | 4 |
 | Plans failed | 0 |
 | Requirements completed | 3/25 (FOUND-01, FOUND-02, FOUND-06) |
 | Phases completed | 1/9 |
@@ -62,6 +63,11 @@ Phase 9: Blog Content & Launch      [ ] Not Started
 | proxy.ts in src/ not root | Next.js 16 --src-dir watches src/ for convention files | 1 |
 | getTranslations in async components | useTranslations not callable in async server components | 1 |
 | LanguageSwitcher in minimal header | Temporary placement; Phase 3 will integrate into navigation | 1 |
+| Brand rename: Planifactor | "Plan + Factory" -- captures AI scheduling for factories | 2 |
+| Blue-600 as primary color | oklch(0.546 0.245 262.881) -- vivid, trustworthy B2B blue | 2 |
+| Light-mode only (no dark) | Marketing site complexity reduction; no B2B benefit from dark mode | 2 |
+| 12px border radius | Rounded, approachable feel for marketing site | 2 |
+| Monochrome blue design system | Primary, secondary, accent, charts all blue-family for brand consistency | 2 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- needs research
@@ -85,11 +91,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 1 execution & verification
-**What happened:** Executed all 3 Phase 1 plans sequentially (Waves 1-3). Plan 01-01: Next.js 16 project init with Tailwind v4, shadcn/ui, next-intl. Plan 01-02: i18n routing, proxy, navigation, message files, locale layout (2 deviations auto-fixed: proxy.ts in src/, getTranslations for async). Plan 01-03: LanguageSwitcher component, build verification. Verifier confirmed 17/17 must-haves, zero gaps. Phase 1 complete and verified.
-**Stopped at:** Phase 1 fully verified
+**Last session:** 2026-02-09 -- Phase 2 Plan 01 execution
+**What happened:** Executed 02-01-PLAN.md (Brand Rename & Design Tokens). Task 1: Renamed all "Prefactor" to "Planifactor" in messages/en.json, messages/bg.json, CLAUDE.md. Task 2: Replaced default shadcn near-black theme with blue-600 primary, brand-50 through brand-950 color scale, typography scale (hero through label), removed dark mode and sidebar vars. Both tasks committed, build passes.
+**Stopped at:** Completed 02-01-PLAN.md
 **Resume file:** None
-**Next action:** Run `/gsd:discuss-phase 2` or `/gsd:plan-phase 2` for Brand Identity & Design System
+**Next action:** Execute 02-02-PLAN.md (Font System & Visual Polish)
 
 ---
-*Last updated: 2026-02-09 after phase 1 verification*
+*Last updated: 2026-02-09 after 02-01 plan execution*
