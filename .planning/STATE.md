@@ -4,24 +4,24 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 4 in progress. Animated Gantt chaos-to-order animation live on landing page Hero. Next: before/after comparison slider (04-02).
+**Current Focus:** Phase 4 complete. Landing page now has animated Gantt hero + before/after comparison slider with KPI metrics. Next: Phase 5 (Content Pages).
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 4 -- Animated Gantt & Visuals (In Progress)
-**Current Plan:** 04-01 complete (1 of 2 in phase)
-**Status:** In progress
-**Last activity:** 2026-02-09 -- Completed 04-01-PLAN.md
+**Current Phase:** Phase 4 -- Animated Gantt & Visuals (COMPLETE)
+**Current Plan:** 04-02 complete (2 of 2 in phase)
+**Status:** Phase complete
+**Last activity:** 2026-02-09 -- Completed 04-02-PLAN.md
 
 **Progress:**
 ```
 Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
-Phase 4: Animated Gantt & Visuals   [=====     ] 1/2 plans complete
+Phase 4: Animated Gantt & Visuals   [==========] COMPLETE
 Phase 5: Content Pages              [          ] Not Started
 Phase 6: Blog Infrastructure        [          ] Not Started
 Phase 7: Interactive Features       [          ] Not Started
@@ -29,7 +29,7 @@ Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 3/9 phases complete | 9/25 requirements done | 11/~25 plans complete
+**Overall:** 4/9 phases complete | 9/25 requirements done | 12/~25 plans complete
 
 ---
 
@@ -37,10 +37,10 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 11 |
+| Plans completed | 12 |
 | Plans failed | 0 |
 | Requirements completed | 9/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-03, LAND-04, LAND-05) |
-| Phases completed | 3/9 |
+| Phases completed | 4/9 |
 
 ---
 
@@ -84,6 +84,9 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | Hex colors for animated bars | Motion cannot interpolate oklch; hex enables smooth color transitions | 4 |
 | attrX/attrY for SVG animation | Motion interprets x/y as CSS transforms; attrX/attrY force SVG attribute mode | 4 |
 | State-driven animation (useState) | More reliable than useAnimate for SVG attribute animation with motion.rect | 4 |
+| defaultPosition for react-compare-slider v4 | v4 API uses defaultPosition (not position); Handle no longer accepts portrait prop | 4 |
+| Dual slider instances for responsive | Landscape/portrait can't toggle dynamically; hidden/shown via Tailwind responsive classes | 4 |
+| LazyMotion for comparison entrance | Only entrance animation needed; LazyMotion + domAnimation smaller than full motion bundle | 4 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -107,11 +110,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 4 Plan 01 execution
-**What happened:** Executed 04-01-PLAN.md (Animated Gantt Chart chaos-to-order). Task 1: Installed motion v12.34.0 and react-compare-slider v4.0.0-1 beta. Task 2: Created AnimatedGantt client component with motion.rect bars using attrX/attrY for SVG attribute animation, hex colors for smooth interpolation, 1s chaos hold + staggered 80ms transitions to optimized state. Updated Hero.tsx to render AnimatedGantt instead of GanttMockup. Build verified, SSG output confirmed.
-**Stopped at:** Completed 04-01-PLAN.md
+**Last session:** 2026-02-09 -- Phase 4 Plan 02 execution
+**What happened:** Executed 04-02-PLAN.md (Before/After Comparison Section). Task 1: Added 16-key Comparison namespace to both EN and BG locale files. Task 2: Created MetricCard (presentational), ComparisonSlider (client, react-compare-slider v4 + LazyMotion entrance), and ComparisonSection (async server component). Fixed v4 API deviation: defaultPosition instead of position, no portrait on Handle. Task 3: Inserted ComparisonSection between Hero and FeatureHighlights on home page. Build and lint verified.
+**Stopped at:** Completed 04-02-PLAN.md -- Phase 4 complete
 **Resume file:** None
-**Next action:** Phase 4 Plan 02 (before/after comparison slider)
+**Next action:** Phase 5 (Content Pages)
 
 ---
-*Last updated: 2026-02-09 after 04-01 execution*
+*Last updated: 2026-02-09 after 04-02 execution*
