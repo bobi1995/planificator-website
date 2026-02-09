@@ -4,23 +4,23 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 3 in progress. Hero section complete: full-viewport Hero with AI headline, CTA buttons, and static SVG Gantt mockup using brand colors. Ready for remaining landing page sections (03-04).
+**Current Focus:** Phase 3 complete. Full landing page assembled: Hero, FeatureHighlights (5 icon cards), SocialProof (logos + testimonials), CTABanner (brand-blue CTA). All sections render in EN and BG. Ready for Phase 4 (Animated Gantt & Visuals).
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 3 -- Layout Shell & Landing Page
-**Current Plan:** 03-03 complete (3 of 4 in phase)
-**Status:** In progress
-**Last activity:** 2026-02-09 -- Completed 03-03-PLAN.md
+**Current Phase:** Phase 3 -- Layout Shell & Landing Page (COMPLETE)
+**Current Plan:** 03-04 complete (4 of 4 in phase)
+**Status:** Phase complete
+**Last activity:** 2026-02-09 -- Completed 03-04-PLAN.md
 
 **Progress:**
 ```
 Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
-Phase 3: Layout Shell & Landing     [=======.  ] Plan 03 of 04 complete
+Phase 3: Layout Shell & Landing     [==========] COMPLETE
 Phase 4: Animated Gantt & Visuals   [          ] Not Started
 Phase 5: Content Pages              [          ] Not Started
 Phase 6: Blog Infrastructure        [          ] Not Started
@@ -29,7 +29,7 @@ Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 2/9 phases complete | 5/25 requirements done | 9/~25 plans complete
+**Overall:** 3/9 phases complete | 5/25 requirements done | 10/~25 plans complete
 
 ---
 
@@ -37,10 +37,10 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 9 |
+| Plans completed | 10 |
 | Plans failed | 0 |
 | Requirements completed | 5/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06) |
-| Phases completed | 2/9 |
+| Phases completed | 3/9 |
 
 ---
 
@@ -77,6 +77,10 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | Privacy/Terms use Footer namespace | Page titles come from Footer namespace since they appear in footer nav, not main nav | 3 |
 | SVG Gantt uses computed layout from constants | Makes bar positions maintainable vs magic numbers; easy to adjust | 3 |
 | Home page delegates to Hero component | Page.tsx is composition root; Hero is self-contained async server component | 3 |
+| Section composition via fragment | Layout wraps in `<main>`, page uses `<>...</>` to avoid double-wrapping | 3 |
+| Company logos as styled text placeholders | Real partner logos will replace these when available | 3 |
+| Avatar initials from name.split(' ') | Works for both Latin (EN) and Cyrillic (BG) characters | 3 |
+| Secondary button on CTA banner | Creates visual contrast against brand-600 dark blue background | 3 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- needs research
@@ -100,11 +104,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 3 Plan 03 execution
-**What happened:** Executed 03-03-PLAN.md (Hero Section & Static Gantt Mockup). Task 1: Created GanttMockup SVG component with 800x400 viewBox, 6 resource rows, 11 task bars, day headers, grid lines, and "now" indicator -- all colors via CSS variables. Task 2: Created async Hero server component with full-viewport layout (min-h-dvh), two-column grid on desktop, stacked on mobile, AI headline, subtext, two CTA buttons (demo + features), and GanttMockup in elevated card wrapper. Updated home page to render Hero component.
-**Stopped at:** Completed 03-03-PLAN.md
+**Last session:** 2026-02-09 -- Phase 3 Plan 04 execution (phase finale)
+**What happened:** Executed 03-04-PLAN.md (Feature Highlights, Social Proof, CTA Banner & Home Page Assembly). Task 1: Created FeatureHighlights (5 Lucide icon cards in 3-col grid) and CTABanner (brand-600 blue background with demo CTA). Task 2: Created SocialProof (6 company name placeholders + 3 testimonial cards with Avatar initials). Task 3: Rewrote page.tsx to compose all 4 sections (Hero, FeatureHighlights, SocialProof, CTABanner) in fragment. Task 4: Human visual verification approved -- full landing page renders correctly in both EN and BG.
+**Stopped at:** Completed 03-04-PLAN.md -- Phase 3 complete
 **Resume file:** None
-**Next action:** Execute 03-04-PLAN.md (Features, SocialProof, CTABanner sections)
+**Next action:** Phase 4 (Animated Gantt & Visuals) -- requires research phase first
 
 ---
-*Last updated: 2026-02-09 after 03-03 execution*
+*Last updated: 2026-02-09 after 03-04 execution*
