@@ -18,6 +18,13 @@ Nine phases delivering a complete B2B marketing site for Prefactor's AI-powered 
 
 **Requirements:** FOUND-01, FOUND-02, FOUND-06
 
+**Plans:** 3 plans
+
+Plans:
+- [x] 01-01-PLAN.md -- Project initialization with Next.js 16, Tailwind v4, shadcn/ui, next-intl
+- [x] 01-02-PLAN.md -- i18n infrastructure: routing, proxy, navigation, message files, locale layout
+- [x] 01-03-PLAN.md -- LanguageSwitcher component and end-to-end build verification
+
 **Success Criteria:**
 1. Navigating to `/en` and `/bg` renders locale-specific content with correct HTML `lang` attribute
 2. Language switcher component toggles between English and Bulgarian while preserving the current page path
@@ -163,7 +170,7 @@ Nine phases delivering a complete B2B marketing site for Prefactor's AI-powered 
 
 | Phase | Name | Requirements | Status |
 |-------|------|--------------|--------|
-| 1 | Foundation & i18n | FOUND-01, FOUND-02, FOUND-06 | Not Started |
+| 1 | Foundation & i18n | FOUND-01, FOUND-02, FOUND-06 | Complete (3/3 plans) |
 | 2 | Brand Identity & Design System | FOUND-03, FOUND-05 | Not Started |
 | 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Not Started |
 | 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Not Started |
@@ -238,4 +245,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-06 during roadmap creation*
+*Last updated: 2026-02-09 after phase 1 execution*
