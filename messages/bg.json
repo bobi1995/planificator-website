@@ -5,13 +5,13 @@
   },
   "Navigation": {
     "home": "Начало",
-    "features": "Features",
-    "useCases": "Use Cases",
-    "pricing": "Pricing",
-    "about": "About",
-    "blog": "Blog",
-    "contact": "Contact",
-    "requestDemo": "Request Demo"
+    "features": "Функции",
+    "useCases": "Приложения",
+    "pricing": "Цени",
+    "about": "За Нас",
+    "blog": "Блог",
+    "contact": "Контакт",
+    "requestDemo": "Заявете Демо"
   },
   "LanguageSwitcher": {
     "en": "English",
