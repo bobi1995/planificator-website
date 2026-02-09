@@ -3,6 +3,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {setRequestLocale} from 'next-intl/server';
 import {Inter} from 'next/font/google';
+import {LanguageSwitcher} from '@/components/layout/LanguageSwitcher';
 import '../globals.css';
 
 const inter = Inter({
@@ -32,7 +33,12 @@ export default async function LocaleLayout({children, params}: Props) {
     <html lang={locale} className={inter.variable}>
       <body className="font-sans antialiased">
         <NextIntlClientProvider>
-          {children}
+          <header className="flex justify-end p-4 border-b">
+            <LanguageSwitcher />
+          </header>
+          <div className="flex-1">
+            {children}
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
