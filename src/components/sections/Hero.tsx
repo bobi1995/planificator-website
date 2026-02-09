@@ -1,7 +1,7 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {Button} from '@/components/ui/button';
-import {GanttMockup} from '@/components/sections/GanttMockup';
+import {AnimatedGantt} from '@/components/sections/AnimatedGantt';
 
 /**
  * Hero section — the first thing visitors see on the landing page.
@@ -39,7 +39,7 @@ export async function Hero() {
           {/* Visual column — Gantt mockup */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-lg lg:max-w-none rounded-xl border bg-card shadow-lg overflow-hidden">
-              <GanttMockup />
+              <AnimatedGantt />
             </div>
           </div>
         </div>
