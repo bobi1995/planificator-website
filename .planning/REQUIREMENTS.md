@@ -14,7 +14,7 @@
 ### Landing Page (LAND)
 
 - [x] **LAND-01**: Hero section with clear value proposition headline, subtext, and primary CTA ("Request a Demo") in both EN and BG
-- [ ] **LAND-02**: Animated Gantt chart mockup -- Framer Motion animation showing AI scheduling in action (scope-limited, choreographed animation, not interactive product)
+- [x] **LAND-02**: Animated Gantt chart mockup -- Framer Motion animation showing AI scheduling in action (scope-limited, choreographed animation, not interactive product)
 - [x] **LAND-03**: Feature highlights section -- 3-5 key capabilities with icons and brief descriptions linking to features page
 - [x] **LAND-04**: Social proof section -- placeholder grid for customer logos and 3-4 testimonial quotes (can use placeholder content initially)
 - [x] **LAND-05**: CTA banner section -- secondary conversion point at page bottom with demo booking link
@@ -31,7 +31,7 @@
 - [ ] **INTER-01**: ROI Calculator -- interactive tool with 3-5 inputs (e.g., orders/week, current scheduling time), shows estimated time/cost savings with conservative methodology visible
 - [ ] **INTER-02**: Instant demo booking -- Calendly or Cal.com embed on contact page and as modal from CTA buttons
 - [ ] **INTER-03**: Cookie consent banner -- GDPR-compliant consent management, lightweight, non-intrusive for EU visitors
-- [ ] **INTER-04**: Before/After comparison -- drag slider or side-by-side animation showing manual scheduling (spreadsheet chaos) vs Prefactor (clean Gantt)
+- [x] **INTER-04**: Before/After comparison -- drag slider or side-by-side animation showing manual scheduling (spreadsheet chaos) vs Prefactor (clean Gantt)
 
 ### Blog & Content (BLOG)
 
@@ -84,7 +84,7 @@
 | FOUND-05 | Phase 2 | Complete |
 | FOUND-06 | Phase 1 | Complete |
 | LAND-01 | Phase 3 | Complete |
-| LAND-02 | Phase 4 | Pending |
+| LAND-02 | Phase 4 | Complete |
 | LAND-03 | Phase 3 | Complete |
 | LAND-04 | Phase 3 | Complete |
 | LAND-05 | Phase 3 | Complete |
@@ -95,7 +95,7 @@
 | INTER-01 | Phase 7 | Pending |
 | INTER-02 | Phase 7 | Pending |
 | INTER-03 | Phase 7 | Pending |
-| INTER-04 | Phase 4 | Pending |
+| INTER-04 | Phase 4 | Complete |
 | BLOG-01 | Phase 6 | Pending |
 | BLOG-02 | Phase 9 | Pending |
 | BLOG-03 | Phase 9 | Pending |
@@ -104,4 +104,4 @@
 | OPS-03 | Phase 8 | Pending |
 
 ---
-*Last updated: 2026-02-09 after phase 3 completion*
+*Last updated: 2026-02-09 after phase 4 completion*

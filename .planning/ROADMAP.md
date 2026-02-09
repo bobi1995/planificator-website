@@ -83,15 +83,21 @@ Plans:
 
 ## Phase 4: Animated Gantt & Visual Differentiators
 
-**Goal:** The landing page showcases Prefactor's core differentiator through an animated Gantt chart mockup and a before/after comparison -- the two visuals no competitor has.
+**Goal:** The landing page showcases Planifactor's core differentiator through an animated Gantt chart mockup and a before/after comparison -- the two visuals no competitor has.
 
 **Dependencies:** Phase 3
 
 **Requirements:** LAND-02, INTER-04
 
+**Plans:** 2 plans
+
+Plans:
+- [x] 04-01-PLAN.md -- Animated Gantt chart (chaos-to-order choreographed SVG animation replacing static mockup)
+- [x] 04-02-PLAN.md -- Before/after comparison section with draggable slider and KPI metrics dashboard
+
 **Success Criteria:**
-1. An animated Gantt chart mockup plays on the landing page showing AI scheduling operations filling in over time (choreographed Framer Motion animation, not interactive)
-2. A before/after comparison (drag slider or side-by-side) contrasts manual scheduling chaos with Prefactor's clean Gantt output
+1. An animated Gantt chart mockup plays on the landing page showing AI scheduling operations filling in over time (choreographed Motion animation, not interactive)
+2. A before/after comparison (drag slider or side-by-side) contrasts manual scheduling chaos with Planifactor's clean Gantt output
 3. Both animations lazy-load and do not degrade Core Web Vitals (LCP remains under 2.5s, CLS under 0.1)
 4. Both visuals render correctly and are viewable on mobile (375px) -- simplified if necessary but still communicative
 
@@ -187,7 +193,7 @@ Plans:
 | 1 | Foundation & i18n | FOUND-01, FOUND-02, FOUND-06 | Complete (3/3 plans) |
 | 2 | Brand Identity & Design System | FOUND-03, FOUND-05 | Complete (2/2 plans) |
 | 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Complete (4/4 plans) |
-| 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Not Started |
+| 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Complete (2/2 plans) |
 | 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Not Started |
 | 6 | Blog Infrastructure | BLOG-01 | Not Started |
 | 7 | Interactive Features & Forms | INTER-01, INTER-02, INTER-03 | Not Started |
@@ -259,4 +265,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-09 after phase 3 completion*
+*Last updated: 2026-02-09 after phase 4 execution*
