@@ -106,6 +106,24 @@
     "comingSoon": "Очаквайте Скоро",
     "description": "Тази страница е в процес на изграждане. Проверете отново скоро."
   },
+  "Comparison": {
+    "sectionHeading": "Вижте Разликата",
+    "sectionSubtext": "Реални резултати от AI задвижвано производствено планиране",
+    "beforeLabel": "Ръчно Планиране",
+    "afterLabel": "С Planifactor",
+    "resourceUtilization": "Използване на Ресурсите",
+    "onTimeDelivery": "Навременна Доставка",
+    "schedulingTime": "Време за Планиране",
+    "idleTime": "Престой",
+    "resourceUtilizationBefore": "62%",
+    "resourceUtilizationAfter": "90%",
+    "onTimeDeliveryBefore": "74%",
+    "onTimeDeliveryAfter": "96%",
+    "schedulingTimeBefore": "4 часа",
+    "schedulingTimeAfter": "15 мин",
+    "idleTimeBefore": "28%",
+    "idleTimeAfter": "8%"
+  },
   "NotFound": {
     "title": "Page Not Found",
     "description": "The page you are looking for does not exist."

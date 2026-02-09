@@ -106,6 +106,24 @@
     "comingSoon": "Coming Soon",
     "description": "This page is under construction. Check back soon."
   },
+  "Comparison": {
+    "sectionHeading": "See the Difference",
+    "sectionSubtext": "Real results from AI-powered production scheduling",
+    "beforeLabel": "Manual Scheduling",
+    "afterLabel": "With Planifactor",
+    "resourceUtilization": "Resource Utilization",
+    "onTimeDelivery": "On-Time Delivery",
+    "schedulingTime": "Scheduling Time",
+    "idleTime": "Idle Time",
+    "resourceUtilizationBefore": "62%",
+    "resourceUtilizationAfter": "90%",
+    "onTimeDeliveryBefore": "74%",
+    "onTimeDeliveryAfter": "96%",
+    "schedulingTimeBefore": "4 hours",
+    "schedulingTimeAfter": "15 min",
+    "idleTimeBefore": "28%",
+    "idleTimeAfter": "8%"
+  },
   "NotFound": {
     "title": "Page Not Found",
     "description": "The page you are looking for does not exist."
