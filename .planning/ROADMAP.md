@@ -105,11 +105,19 @@ Plans:
 
 ## Phase 5: Content Pages
 
-**Goal:** Visitors can explore Prefactor's full capabilities, use cases, team story, and pricing -- building enough trust and understanding to request a demo.
+**Goal:** Visitors can explore Planifactor's full capabilities, use cases, team story, and pricing -- building enough trust and understanding to request a demo.
 
 **Dependencies:** Phase 3 (layout shell must exist)
 
 **Requirements:** CONT-01, CONT-02, CONT-03, CONT-04
+
+**Plans:** 4 plans
+
+Plans:
+- [ ] 05-01-PLAN.md -- Features page: install shadcn components, 6 feature domains with cards, full EN/BG translations
+- [ ] 05-02-PLAN.md -- Use Cases pages: index + 3 sub-routed detail pages (discrete manufacturing, job shops, production planning)
+- [ ] 05-03-PLAN.md -- Pricing page: 3 tier cards, feature comparison table, FAQ accordion
+- [ ] 05-04-PLAN.md -- About page: company story, mission/values, team section
 
 **Success Criteria:**
 1. Features page organizes capabilities by domain (scheduling, resource management, optimization, BOM, inventory, shop floor) with clear descriptions in both EN and BG
@@ -194,7 +202,7 @@ Plans:
 | 2 | Brand Identity & Design System | FOUND-03, FOUND-05 | Complete (2/2 plans) |
 | 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Complete (4/4 plans) |
 | 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Complete (2/2 plans) |
-| 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Not Started |
+| 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Planned (0/4 plans) |
 | 6 | Blog Infrastructure | BLOG-01 | Not Started |
 | 7 | Interactive Features & Forms | INTER-01, INTER-02, INTER-03 | Not Started |
 | 8 | SEO & Performance | FOUND-04, OPS-01, OPS-02, OPS-03 | Not Started |
@@ -265,4 +273,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-09 after phase 4 execution*
+*Last updated: 2026-02-09 after phase 5 planning*
