@@ -20,7 +20,7 @@
 ```
 Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
-Phase 3: Layout Shell & Landing     [==========] COMPLETE
+Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [          ] Not Started
 Phase 5: Content Pages              [          ] Not Started
 Phase 6: Blog Infrastructure        [          ] Not Started
@@ -29,7 +29,7 @@ Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 3/9 phases complete | 5/25 requirements done | 10/~25 plans complete
+**Overall:** 3/9 phases complete | 9/25 requirements done | 10/~25 plans complete
 
 ---
 
@@ -39,7 +39,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 |--------|-------|
 | Plans completed | 10 |
 | Plans failed | 0 |
-| Requirements completed | 5/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06) |
+| Requirements completed | 9/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-03, LAND-04, LAND-05) |
 | Phases completed | 3/9 |
 
 ---

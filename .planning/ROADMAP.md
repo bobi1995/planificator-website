@@ -67,10 +67,10 @@ Plans:
 **Plans:** 4 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Foundation: shadcn components (Sheet, Avatar), all translations, stub pages
-- [ ] 03-02-PLAN.md -- Layout shell: Header with mobile drawer, Footer, locale layout update
-- [ ] 03-03-PLAN.md -- Hero section with static SVG Gantt mockup
-- [ ] 03-04-PLAN.md -- Feature Highlights, Social Proof, CTA Banner, home page assembly
+- [x] 03-01-PLAN.md -- Foundation: shadcn components (Sheet, Avatar), all translations, stub pages
+- [x] 03-02-PLAN.md -- Layout shell: Header with mobile drawer, Footer, locale layout update
+- [x] 03-03-PLAN.md -- Hero section with static SVG Gantt mockup
+- [x] 03-04-PLAN.md -- Feature Highlights, Social Proof, CTA Banner, home page assembly
 
 **Success Criteria:**
 1. Header with site navigation and language switcher appears on every page, with mobile hamburger menu working at 375px
@@ -186,7 +186,7 @@ Plans:
 |-------|------|--------------|--------|
 | 1 | Foundation & i18n | FOUND-01, FOUND-02, FOUND-06 | Complete (3/3 plans) |
 | 2 | Brand Identity & Design System | FOUND-03, FOUND-05 | Complete (2/2 plans) |
-| 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Planned (0/4 plans) |
+| 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Complete (4/4 plans) |
 | 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Not Started |
 | 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Not Started |
 | 6 | Blog Infrastructure | BLOG-01 | Not Started |
@@ -259,4 +259,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-09 after phase 3 planning*
+*Last updated: 2026-02-09 after phase 3 completion*

@@ -13,11 +13,11 @@
 
 ### Landing Page (LAND)
 
-- [ ] **LAND-01**: Hero section with clear value proposition headline, subtext, and primary CTA ("Request a Demo") in both EN and BG
+- [x] **LAND-01**: Hero section with clear value proposition headline, subtext, and primary CTA ("Request a Demo") in both EN and BG
 - [ ] **LAND-02**: Animated Gantt chart mockup -- Framer Motion animation showing AI scheduling in action (scope-limited, choreographed animation, not interactive product)
-- [ ] **LAND-03**: Feature highlights section -- 3-5 key capabilities with icons and brief descriptions linking to features page
-- [ ] **LAND-04**: Social proof section -- placeholder grid for customer logos and 3-4 testimonial quotes (can use placeholder content initially)
-- [ ] **LAND-05**: CTA banner section -- secondary conversion point at page bottom with demo booking link
+- [x] **LAND-03**: Feature highlights section -- 3-5 key capabilities with icons and brief descriptions linking to features page
+- [x] **LAND-04**: Social proof section -- placeholder grid for customer logos and 3-4 testimonial quotes (can use placeholder content initially)
+- [x] **LAND-05**: CTA banner section -- secondary conversion point at page bottom with demo booking link
 
 ### Content Pages (CONT)
 
@@ -83,11 +83,11 @@
 | FOUND-04 | Phase 8 | Pending |
 | FOUND-05 | Phase 2 | Complete |
 | FOUND-06 | Phase 1 | Complete |
-| LAND-01 | Phase 3 | Pending |
+| LAND-01 | Phase 3 | Complete |
 | LAND-02 | Phase 4 | Pending |
-| LAND-03 | Phase 3 | Pending |
-| LAND-04 | Phase 3 | Pending |
-| LAND-05 | Phase 3 | Pending |
+| LAND-03 | Phase 3 | Complete |
+| LAND-04 | Phase 3 | Complete |
+| LAND-05 | Phase 3 | Complete |
 | CONT-01 | Phase 5 | Pending |
 | CONT-02 | Phase 5 | Pending |
 | CONT-03 | Phase 5 | Pending |
@@ -104,4 +104,4 @@
 | OPS-03 | Phase 8 | Pending |
 
 ---
-*Last updated: 2026-02-09 after phase 2 completion*
+*Last updated: 2026-02-09 after phase 3 completion*
