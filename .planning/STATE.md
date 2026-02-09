@@ -4,24 +4,24 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 3 complete. Full landing page assembled: Hero, FeatureHighlights (5 icon cards), SocialProof (logos + testimonials), CTABanner (brand-blue CTA). All sections render in EN and BG. Ready for Phase 4 (Animated Gantt & Visuals).
+**Current Focus:** Phase 4 in progress. Animated Gantt chaos-to-order animation live on landing page Hero. Next: before/after comparison slider (04-02).
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 3 -- Layout Shell & Landing Page (COMPLETE)
-**Current Plan:** 03-04 complete (4 of 4 in phase)
-**Status:** Phase complete
-**Last activity:** 2026-02-09 -- Completed 03-04-PLAN.md
+**Current Phase:** Phase 4 -- Animated Gantt & Visuals (In Progress)
+**Current Plan:** 04-01 complete (1 of 2 in phase)
+**Status:** In progress
+**Last activity:** 2026-02-09 -- Completed 04-01-PLAN.md
 
 **Progress:**
 ```
 Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
-Phase 4: Animated Gantt & Visuals   [          ] Not Started
+Phase 4: Animated Gantt & Visuals   [=====     ] 1/2 plans complete
 Phase 5: Content Pages              [          ] Not Started
 Phase 6: Blog Infrastructure        [          ] Not Started
 Phase 7: Interactive Features       [          ] Not Started
@@ -29,7 +29,7 @@ Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 3/9 phases complete | 9/25 requirements done | 10/~25 plans complete
+**Overall:** 3/9 phases complete | 9/25 requirements done | 11/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 10 |
+| Plans completed | 11 |
 | Plans failed | 0 |
 | Requirements completed | 9/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-03, LAND-04, LAND-05) |
 | Phases completed | 3/9 |
@@ -81,9 +81,12 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | Company logos as styled text placeholders | Real partner logos will replace these when available | 3 |
 | Avatar initials from name.split(' ') | Works for both Latin (EN) and Cyrillic (BG) characters | 3 |
 | Secondary button on CTA banner | Creates visual contrast against brand-600 dark blue background | 3 |
+| Hex colors for animated bars | Motion cannot interpolate oklch; hex enables smooth color transitions | 4 |
+| attrX/attrY for SVG animation | Motion interprets x/y as CSS transforms; attrX/attrY force SVG attribute mode | 4 |
+| State-driven animation (useState) | More reliable than useAnimate for SVG attribute animation with motion.rect | 4 |
 
 ### Research Flags
-- Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- needs research
+- Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
 - Phase 7 (ROI Calculator): B2B calculator best practices, conservative estimation models -- needs research
 - Phases 5, 6 (Content, Blog): Well-documented patterns -- skip research
 
@@ -93,8 +96,8 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 - [x] Configure Inter font with Cyrillic subsets (done in Plan 02)
 - [x] Create LanguageSwitcher component (done in Plan 03)
 - [x] Verify Phase 1 build end-to-end (done in Plan 03)
+- [x] Define Gantt animation design spec before Phase 4 implementation
 - [ ] Validate Bulgarian localization approach with native speaker
-- [ ] Define Gantt animation design spec before Phase 4 implementation
 - [ ] Define ROI calculator formula with customer data before Phase 7
 
 ### Blockers
@@ -104,11 +107,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 3 Plan 04 execution (phase finale)
-**What happened:** Executed 03-04-PLAN.md (Feature Highlights, Social Proof, CTA Banner & Home Page Assembly). Task 1: Created FeatureHighlights (5 Lucide icon cards in 3-col grid) and CTABanner (brand-600 blue background with demo CTA). Task 2: Created SocialProof (6 company name placeholders + 3 testimonial cards with Avatar initials). Task 3: Rewrote page.tsx to compose all 4 sections (Hero, FeatureHighlights, SocialProof, CTABanner) in fragment. Task 4: Human visual verification approved -- full landing page renders correctly in both EN and BG.
-**Stopped at:** Completed 03-04-PLAN.md -- Phase 3 complete
+**Last session:** 2026-02-09 -- Phase 4 Plan 01 execution
+**What happened:** Executed 04-01-PLAN.md (Animated Gantt Chart chaos-to-order). Task 1: Installed motion v12.34.0 and react-compare-slider v4.0.0-1 beta. Task 2: Created AnimatedGantt client component with motion.rect bars using attrX/attrY for SVG attribute animation, hex colors for smooth interpolation, 1s chaos hold + staggered 80ms transitions to optimized state. Updated Hero.tsx to render AnimatedGantt instead of GanttMockup. Build verified, SSG output confirmed.
+**Stopped at:** Completed 04-01-PLAN.md
 **Resume file:** None
-**Next action:** Phase 4 (Animated Gantt & Visuals) -- requires research phase first
+**Next action:** Phase 4 Plan 02 (before/after comparison slider)
 
 ---
-*Last updated: 2026-02-09 after 03-04 execution*
+*Last updated: 2026-02-09 after 04-01 execution*
