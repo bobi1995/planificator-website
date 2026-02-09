@@ -4,23 +4,23 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 2 complete. Brand identity system fully established: Planifactor name, blue-600 primary, typography scale, Logo component, SVG favicon, and branded home page. Ready for Phase 3 (Layout Shell & Landing Page).
+**Current Focus:** Phase 3 in progress. Foundation plan complete: shadcn Sheet/Avatar components installed, all Phase 3 translations added (Hero, Features, SocialProof, CTABanner, Footer, StubPage), 8 stub route pages created. Ready for Header/Footer layout (03-02).
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 2 -- Brand Identity & Design System (COMPLETE)
-**Current Plan:** 02-02 complete (phase done)
-**Status:** Phase complete
-**Last activity:** 2026-02-09 -- Completed 02-02-PLAN.md
+**Current Phase:** Phase 3 -- Layout Shell & Landing Page
+**Current Plan:** 03-01 complete (1 of 4 in phase)
+**Status:** In progress
+**Last activity:** 2026-02-09 -- Completed 03-01-PLAN.md
 
 **Progress:**
 ```
 Phase 1: Foundation & i18n          [==========] VERIFIED
-Phase 2: Brand Identity & Design    [==========] VERIFIED ✓
-Phase 3: Layout Shell & Landing     [          ] Not Started
+Phase 2: Brand Identity & Design    [==========] VERIFIED
+Phase 3: Layout Shell & Landing     [==.       ] Plan 01 of 04 complete
 Phase 4: Animated Gantt & Visuals   [          ] Not Started
 Phase 5: Content Pages              [          ] Not Started
 Phase 6: Blog Infrastructure        [          ] Not Started
@@ -29,7 +29,7 @@ Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 2/9 phases complete | 5/25 requirements done | 6/~25 plans complete
+**Overall:** 2/9 phases complete | 5/25 requirements done | 7/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 6 |
+| Plans completed | 7 |
 | Plans failed | 0 |
 | Requirements completed | 5/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06) |
 | Phases completed | 2/9 |
@@ -71,6 +71,8 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | Logo as inline SVG component | Supports currentColor, white variant, icon-only -- all from one component | 2 |
 | SVG favicon via file convention | Scales perfectly, smaller file, brand blue baked in; deleted old favicon.ico | 2 |
 | Gantt bars icon (4 staggered rects) | Geometric, recognizable at 16px, communicates scheduling at a glance | 2 |
+| HomePage namespace replaced by Hero | Section-specific namespaces (Hero, Features, etc.) instead of monolithic HomePage | 3 |
+| Privacy/Terms use Footer namespace | Page titles come from Footer namespace since they appear in footer nav, not main nav | 3 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- needs research
@@ -94,11 +96,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 2 Plan 02 execution
-**What happened:** Executed 02-02-PLAN.md (Logo, Favicon & Home Page). Task 1: Created Logo SVG component with 3 variants (default/white/icon) and 4 sizes, plus icon.svg favicon with blue Gantt bars. Task 2: Updated home page with Logo component, responsive typography scale, and shadcn Button components. Task 3: Human verified visual result at 375px, 768px, 1440px -- approved. Phase 2 complete.
-**Stopped at:** Completed 02-02-PLAN.md (Phase 2 complete)
+**Last session:** 2026-02-09 -- Phase 3 Plan 01 execution
+**What happened:** Executed 03-01-PLAN.md (Foundation: shadcn Components, Translations & Stub Pages). Task 1: Installed Sheet and Avatar shadcn components (both using unified radix-ui import). Task 2: Added all Phase 3 translations to en.json and bg.json (Hero, Features, SocialProof, CTABanner, Footer, StubPage namespaces), removed HomePage namespace, updated home page to use Hero namespace. Task 3: Created 8 stub pages (features, use-cases, pricing, about, blog, contact, privacy, terms) for both locales. Build produces 21 static pages.
+**Stopped at:** Completed 03-01-PLAN.md
 **Resume file:** None
-**Next action:** Begin Phase 3 (Layout Shell & Landing Page)
+**Next action:** Execute 03-02-PLAN.md (Header & Footer layout components)
 
 ---
-*Last updated: 2026-02-09 after phase 2 verification*
+*Last updated: 2026-02-09 after 03-01 execution*
