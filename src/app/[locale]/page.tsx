@@ -1,5 +1,8 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {Hero} from '@/components/sections/Hero';
+import {FeatureHighlights} from '@/components/sections/FeatureHighlights';
+import {SocialProof} from '@/components/sections/SocialProof';
+import {CTABanner} from '@/components/sections/CTABanner';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -20,8 +23,11 @@ export default async function HomePage({params}: Props) {
   setRequestLocale(locale);
 
   return (
-    <main>
+    <>
       <Hero />
-    </main>
+      <FeatureHighlights />
+      <SocialProof />
+      <CTABanner />
+    </>
   );
 }
