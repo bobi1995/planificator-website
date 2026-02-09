@@ -1,4 +1,6 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
+import {Logo} from '@/components/brand/Logo';
+import {Button} from '@/components/ui/button';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -21,20 +23,21 @@ export default async function HomePage({params}: Props) {
   const t = await getTranslations({locale, namespace: 'HomePage'});
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold tracking-tight">
+    <main className="flex min-h-screen flex-col items-center justify-center px-6 py-16 md:px-12 md:py-24">
+      <Logo size="lg" className="mb-8" />
+      <h1 className="text-heading md:text-display lg:text-hero text-center">
         {t('title')}
       </h1>
-      <p className="mt-4 text-lg text-muted-foreground max-w-2xl text-center">
+      <p className="mt-6 text-base md:text-body-lg text-muted-foreground max-w-2xl text-center">
         {t('description')}
       </p>
       <div className="mt-8 flex gap-4">
-        <button className="rounded-md bg-primary px-6 py-3 text-primary-foreground font-medium hover:bg-primary/90">
+        <Button size="lg">
           {t('cta')}
-        </button>
-        <button className="rounded-md border border-input px-6 py-3 font-medium hover:bg-accent hover:text-accent-foreground">
+        </Button>
+        <Button variant="outline" size="lg">
           {t('ctaSecondary')}
-        </button>
+        </Button>
       </div>
     </main>
   );
