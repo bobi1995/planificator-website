@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 5 in progress. Features page complete (05-01). Next: Use Cases page (05-02).
+**Current Focus:** Phase 5 in progress. Features page (05-01) and Pricing page (05-03) complete. Use Cases (05-02) and About/Contact (05-04) in parallel.
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 5 -- Content Pages (IN PROGRESS)
-**Current Plan:** 05-01 complete (1 of 4 in phase)
+**Current Plan:** 05-03 complete (2 of 4 in phase)
 **Status:** In progress
-**Last activity:** 2026-02-10 -- Completed 05-01-PLAN.md
+**Last activity:** 2026-02-10 -- Completed 05-03-PLAN.md
 
 **Progress:**
 ```
@@ -22,14 +22,14 @@ Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
-Phase 5: Content Pages              [==        ] 05-01 done (1/4)
+Phase 5: Content Pages              [=====     ] 05-01, 05-03 done (2/4)
 Phase 6: Blog Infrastructure        [          ] Not Started
 Phase 7: Interactive Features       [          ] Not Started
 Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 4/9 phases complete | 11/25 requirements done | 13/~25 plans complete
+**Overall:** 4/9 phases complete | 11/25 requirements done | 14/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 13 |
+| Plans completed | 14 |
 | Plans failed | 0 |
 | Requirements completed | 11/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-04) |
 | Phases completed | 4/9 |
@@ -89,6 +89,9 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | LazyMotion for comparison entrance | Only entrance animation needed; LazyMotion + domAnimation smaller than full motion bundle | 4 |
 | Static icon maps for domain sections | Server component -- no serialization boundary; static maps are type-safe and tree-shakeable | 5 |
 | Domain section composition pattern | Page maps over domain keys; each section calls getTranslations independently | 5 |
+| t.raw() for comparison table booleans | next-intl 4.8.2 t.raw() retrieves raw JSON values (true/false/string) without coercion | 5 |
+| PricingFAQ as client, rest as server | Only FAQ needs client state (Accordion); tier cards and comparison table are server components | 5 |
+| Badge absolute positioning for tier cards | "Most Popular" badge floats above card border with -top-3 + -translate-x-1/2 | 5 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -112,11 +115,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 5 Plan 01 execution
-**What happened:** Executed 05-01-PLAN.md (Features Page). Task 1: Installed 6 shadcn/ui components (card, badge, separator, tabs, accordion, table) and added FeaturesPage namespace (~66 string keys) to both EN and BG locale files. Task 2: Created FeatureHero and FeatureDomainSection async server components, replaced Features page stub with full content page showing 6 domains (22 feature cards total) with Lucide icons and alternating backgrounds. Build verified with zero errors.
-**Stopped at:** Completed 05-01-PLAN.md
+**Last session:** 2026-02-10 -- Phase 5 Plan 03 execution (parallel with 05-02, 05-04)
+**What happened:** Executed 05-03-PLAN.md (Pricing Page). Task 1: Added PricingPage namespace (~110 keys) to both EN and BG locale files with tier data, comparison table, and FAQ content. Task 2: Created 4 pricing section components (PricingHero, PricingTierCard, PricingComparisonTable, PricingFAQ) and replaced pricing stub with full page. Professional tier highlighted with badge. Comparison table uses t.raw() for boolean values. Build verified with zero errors.
+**Stopped at:** Completed 05-03-PLAN.md
 **Resume file:** None
-**Next action:** 05-02-PLAN.md (Use Cases page)
+**Next action:** Complete 05-02 and 05-04 (running in parallel)
 
 ---
-*Last updated: 2026-02-10 after 05-01 completion*
+*Last updated: 2026-02-10 after 05-03 completion*
