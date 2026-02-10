@@ -615,5 +615,69 @@
         "company": "Alpine Manufacturing"
       }
     }
+  },
+  "AboutPage": {
+    "metaTitle": "About Us",
+    "metaDescription": "Learn about Planifactor -- the team, mission, and story behind AI-powered production scheduling for manufacturers.",
+    "hero": {
+      "title": "Building the Future of Production Scheduling",
+      "subtitle": "We started Planifactor because we saw manufacturers struggling with the same problem: too much time spent on manual scheduling, not enough time for actual production."
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraphs": {
+        "0": "Planifactor was born from a simple observation: manufacturing scheduling is still done with spreadsheets and whiteboards. While every other business function has been transformed by software, production planners are stuck with tools from the 1990s.",
+        "1": "We saw production managers spending days building weekly schedules. We watched as a single machine breakdown cascaded into chaos because nobody could quickly replan. We realized that AI could do in minutes what takes humans hours -- and do it better.",
+        "2": "Today, Planifactor helps manufacturers replace reactive firefighting with proactive planning. Our AI optimization engine considers thousands of variables simultaneously, finding schedules that no human planner could discover on their own."
+      }
+    },
+    "mission": {
+      "title": "Our Mission & Values",
+      "statement": "To give every manufacturer the planning intelligence that was once reserved for the largest enterprises.",
+      "values": {
+        "0": {
+          "title": "Built for Practitioners",
+          "description": "We design for production managers and planners -- not IT departments. If it does not make the shop floor easier, we do not build it."
+        },
+        "1": {
+          "title": "Honest Technology",
+          "description": "AI is not magic. We are transparent about what our optimizer can and cannot do. No black boxes, no overpromises."
+        },
+        "2": {
+          "title": "Ship and Improve",
+          "description": "We release early, listen to users, and iterate fast. Perfect is the enemy of useful."
+        },
+        "3": {
+          "title": "Manufacturing First",
+          "description": "We are not a generic scheduling tool. Every feature is designed specifically for production environments."
+        }
+      }
+    },
+    "team": {
+      "title": "The Team",
+      "subtitle": "A small team with deep expertise in manufacturing, AI, and enterprise software.",
+      "members": {
+        "0": {
+          "name": "Alex Nikolov",
+          "role": "Co-Founder & CEO",
+          "bio": "15 years in manufacturing IT. Previously led digital transformation at two Bulgarian factories."
+        },
+        "1": {
+          "name": "Viktor Stoyanov",
+          "role": "Co-Founder & CTO",
+          "bio": "AI/ML engineer with a background in operations research and combinatorial optimization."
+        },
+        "2": {
+          "name": "Iva Petrova",
+          "role": "Head of Product",
+          "bio": "Former production planner turned product manager. Knows the pain of manual scheduling firsthand."
+        },
+        "3": {
+          "name": "Martin Dimitrov",
+          "role": "Lead Engineer",
+          "bio": "Full-stack developer specialized in real-time systems and data visualization."
+        }
+      }
+    }
   }
 }
