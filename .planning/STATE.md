@@ -4,17 +4,17 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 4 complete. Landing page now has animated Gantt hero + before/after comparison slider with KPI metrics. Next: Phase 5 (Content Pages).
+**Current Focus:** Phase 5 in progress. Features page complete (05-01). Next: Use Cases page (05-02).
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 4 -- Animated Gantt & Visuals (COMPLETE)
-**Current Plan:** 04-02 complete (2 of 2 in phase)
-**Status:** Phase complete
-**Last activity:** 2026-02-09 -- Completed 04-02-PLAN.md
+**Current Phase:** Phase 5 -- Content Pages (IN PROGRESS)
+**Current Plan:** 05-01 complete (1 of 4 in phase)
+**Status:** In progress
+**Last activity:** 2026-02-10 -- Completed 05-01-PLAN.md
 
 **Progress:**
 ```
@@ -22,14 +22,14 @@ Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
-Phase 5: Content Pages              [          ] Not Started
+Phase 5: Content Pages              [==        ] 05-01 done (1/4)
 Phase 6: Blog Infrastructure        [          ] Not Started
 Phase 7: Interactive Features       [          ] Not Started
 Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 4/9 phases complete | 11/25 requirements done | 12/~25 plans complete
+**Overall:** 4/9 phases complete | 11/25 requirements done | 13/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 12 |
+| Plans completed | 13 |
 | Plans failed | 0 |
 | Requirements completed | 11/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-04) |
 | Phases completed | 4/9 |
@@ -87,6 +87,8 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | defaultPosition for react-compare-slider v4 | v4 API uses defaultPosition (not position); Handle no longer accepts portrait prop | 4 |
 | Dual slider instances for responsive | Landscape/portrait can't toggle dynamically; hidden/shown via Tailwind responsive classes | 4 |
 | LazyMotion for comparison entrance | Only entrance animation needed; LazyMotion + domAnimation smaller than full motion bundle | 4 |
+| Static icon maps for domain sections | Server component -- no serialization boundary; static maps are type-safe and tree-shakeable | 5 |
+| Domain section composition pattern | Page maps over domain keys; each section calls getTranslations independently | 5 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -110,11 +112,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-09 -- Phase 4 Plan 02 execution
-**What happened:** Executed 04-02-PLAN.md (Before/After Comparison Section). Task 1: Added 16-key Comparison namespace to both EN and BG locale files. Task 2: Created MetricCard (presentational), ComparisonSlider (client, react-compare-slider v4 + LazyMotion entrance), and ComparisonSection (async server component). Fixed v4 API deviation: defaultPosition instead of position, no portrait on Handle. Task 3: Inserted ComparisonSection between Hero and FeatureHighlights on home page. Build and lint verified.
-**Stopped at:** Completed 04-02-PLAN.md -- Phase 4 complete
+**Last session:** 2026-02-10 -- Phase 5 Plan 01 execution
+**What happened:** Executed 05-01-PLAN.md (Features Page). Task 1: Installed 6 shadcn/ui components (card, badge, separator, tabs, accordion, table) and added FeaturesPage namespace (~66 string keys) to both EN and BG locale files. Task 2: Created FeatureHero and FeatureDomainSection async server components, replaced Features page stub with full content page showing 6 domains (22 feature cards total) with Lucide icons and alternating backgrounds. Build verified with zero errors.
+**Stopped at:** Completed 05-01-PLAN.md
 **Resume file:** None
-**Next action:** Phase 5 (Content Pages)
+**Next action:** 05-02-PLAN.md (Use Cases page)
 
 ---
-*Last updated: 2026-02-09 after phase 4 verification*
+*Last updated: 2026-02-10 after 05-01 completion*
