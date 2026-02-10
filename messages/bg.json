@@ -1,7 +1,8 @@
 {
   "Metadata": {
-    "title": "Planifactor - AI production scheduling",
-    "description": "AI-powered production scheduling with Gantt charts, resource optimization, and real-time planning for manufacturers."
+    "title": "Planifactor - AI производствено планиране",
+    "description": "AI задвижвано производствено планиране с Гант диаграми, оптимизация на ресурси и планиране в реално време за производители.",
+    "ogDescription": "AI намира оптималния ви производствен график. Гант диаграми, оптимизация на ресурси и планиране в реално време."
   },
   "Navigation": {
     "home": "Начало",
