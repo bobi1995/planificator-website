@@ -127,5 +127,145 @@
   "NotFound": {
     "title": "Page Not Found",
     "description": "The page you are looking for does not exist."
+  },
+  "FeaturesPage": {
+    "metaTitle": "Features",
+    "metaDescription": "Explore Planifactor's production scheduling features: AI optimization, Gantt visualization, resource management, shift planning, BOM, and shop floor tracking.",
+    "hero": {
+      "title": "Powerful Tools for Modern Manufacturing",
+      "subtitle": "From AI-powered scheduling to real-time shop floor tracking, Planifactor gives your team complete control over production planning."
+    },
+    "domains": {
+      "scheduling": {
+        "title": "Production Scheduling",
+        "description": "Visualize, plan, and optimize your entire production timeline with an intelligent Gantt chart interface.",
+        "icon": "GanttChart",
+        "features": {
+          "0": {
+            "title": "Interactive Gantt Chart",
+            "description": "See every order, resource, and operation on a dynamic timeline. Drag and drop to reschedule, zoom in on bottlenecks, and get the big picture at a glance."
+          },
+          "1": {
+            "title": "Drag-and-Drop Scheduling",
+            "description": "Move operations between resources and time slots with intuitive drag-and-drop. Conflicts are detected automatically before you commit changes."
+          },
+          "2": {
+            "title": "Real-Time Conflict Detection",
+            "description": "Instantly see scheduling conflicts, resource overloads, and constraint violations. Planifactor highlights problems before they reach the shop floor."
+          },
+          "3": {
+            "title": "Multi-Resource View",
+            "description": "View all machines, workers, and workstations on a single timeline. Filter by resource group, shift, or department to focus on what matters."
+          }
+        }
+      },
+      "resources": {
+        "title": "Resource Management",
+        "description": "Track every machine, worker, and station. Know what is available, what is running, and what needs attention.",
+        "icon": "Users",
+        "features": {
+          "0": {
+            "title": "Machine & Equipment Tracking",
+            "description": "Register all production resources with detailed specifications -- capacity, capabilities, setup requirements, and maintenance windows."
+          },
+          "1": {
+            "title": "Worker & Skill Management",
+            "description": "Assign workers based on skills, certifications, and availability. Ensure the right person is at the right machine at the right time."
+          },
+          "2": {
+            "title": "Capacity Planning",
+            "description": "See available capacity across all resources at a glance. Identify bottlenecks before they cause delays and plan for peak demand."
+          },
+          "3": {
+            "title": "Resource Groups",
+            "description": "Organize resources into logical groups -- production lines, departments, or skill pools. Schedule at the group level or drill down to individual resources."
+          }
+        }
+      },
+      "optimization": {
+        "title": "AI Optimization",
+        "description": "Let artificial intelligence find the best production schedule. Configure your goals and let the optimizer do the heavy lifting.",
+        "icon": "Brain",
+        "features": {
+          "0": {
+            "title": "AI Scheduling Engine",
+            "description": "Our optimization engine evaluates thousands of possible schedules to find the one that best meets your objectives -- automatically."
+          },
+          "1": {
+            "title": "Configurable Objectives",
+            "description": "Minimize late orders, reduce changeover time, balance workload, or optimize for throughput. Set priorities and let the AI decide the best trade-offs."
+          },
+          "2": {
+            "title": "Constraint Handling",
+            "description": "Define hard constraints (resource availability, order deadlines) and soft constraints (preferred sequences, load balancing). The optimizer respects them all."
+          },
+          "3": {
+            "title": "What-If Scenarios",
+            "description": "Run multiple optimization scenarios to compare outcomes. See how adding a shift, changing priorities, or accepting a rush order affects your entire schedule."
+          }
+        }
+      },
+      "shifts": {
+        "title": "Shifts & Calendar",
+        "description": "Define work patterns, manage breaks, and handle changeovers. Your schedule reflects how your factory actually operates.",
+        "icon": "Calendar",
+        "features": {
+          "0": {
+            "title": "Shift Templates",
+            "description": "Create reusable shift patterns -- day shift, night shift, rotating schedules. Apply them to resources or entire departments with one click."
+          },
+          "1": {
+            "title": "Break & Downtime Management",
+            "description": "Schedule breaks, planned maintenance, and cleaning periods. The optimizer works around downtime automatically."
+          },
+          "2": {
+            "title": "Changeover Time Matrices",
+            "description": "Define setup times between product types or configurations. The optimizer sequences jobs to minimize total changeover time."
+          },
+          "3": {
+            "title": "Holiday & Exception Calendars",
+            "description": "Mark public holidays, factory shutdowns, and special events. The schedule adjusts automatically -- no manual corrections needed."
+          }
+        }
+      },
+      "bom": {
+        "title": "BOM & Inventory",
+        "description": "Manage bills of materials, track stock levels, and ensure materials are available when production needs them.",
+        "icon": "Layers",
+        "features": {
+          "0": {
+            "title": "Bill of Materials",
+            "description": "Define multi-level BOMs with components, sub-assemblies, and raw materials. Link BOMs directly to production orders for full traceability."
+          },
+          "1": {
+            "title": "Inventory Tracking",
+            "description": "Monitor stock levels in real time. Get alerts when inventory drops below safety stock and see which orders are at risk of material shortages."
+          },
+          "2": {
+            "title": "Material Availability Check",
+            "description": "Before scheduling an order, verify that all required materials are in stock or on order. Prevent scheduling orders that cannot be produced."
+          }
+        }
+      },
+      "shopFloor": {
+        "title": "Shop Floor Tracking",
+        "description": "See what is happening on the production floor right now. Track progress, collect feedback, and close the loop between planning and execution.",
+        "icon": "Activity",
+        "features": {
+          "0": {
+            "title": "Real-Time Production Status",
+            "description": "See which operations are in progress, completed, or delayed. Live updates from the shop floor feed directly into your scheduling view."
+          },
+          "1": {
+            "title": "Order Progress Tracking",
+            "description": "Track each order from release to completion. Know exactly where every job stands and when it will be finished."
+          },
+          "2": {
+            "title": "Operator Feedback",
+            "description": "Let operators report progress, flag issues, and log actual times from the production floor. Close the gap between the plan and reality."
+          }
+        }
+      }
+    }
   }
 }
