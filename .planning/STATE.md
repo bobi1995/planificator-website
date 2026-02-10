@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 6 in progress. Plan 06-01 (MDX Infrastructure Foundation) complete. Blog content registry, prose styling, and seed posts ready.
+**Current Focus:** Phase 6 in progress. Plans 06-01 and 06-02 complete. Blog is fully operational with index page, post pages, and RSS feed. Plan 06-03 remaining.
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 6 -- Blog Infrastructure (IN PROGRESS)
-**Current Plan:** 06-01 complete, 06-02 and 06-03 remaining
+**Current Plan:** 06-02 complete, 06-03 remaining
 **Status:** In progress
-**Last activity:** 2026-02-10 -- Completed 06-01-PLAN.md
+**Last activity:** 2026-02-10 -- Completed 06-02-PLAN.md
 
 **Progress:**
 ```
@@ -23,13 +23,13 @@ Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
 Phase 5: Content Pages              [==========] VERIFIED
-Phase 6: Blog Infrastructure        [===       ] In Progress (1/3 plans)
+Phase 6: Blog Infrastructure        [======    ] In Progress (2/3 plans)
 Phase 7: Interactive Features       [          ] Not Started
 Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 5/9 phases complete | 15/25 requirements done | 17/~25 plans complete
+**Overall:** 5/9 phases complete | 15/25 requirements done | 18/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 17 |
+| Plans completed | 18 |
 | Plans failed | 0 |
 | Requirements completed | 15/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-04, CONT-01, CONT-02, CONT-03, CONT-04) |
 | Phases completed | 5/9 |
@@ -102,6 +102,9 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | React cache() on blog query functions | Request-level deduplication -- generateMetadata and page component share single disk read | 6 |
 | Prose customizations as plain CSS | @plugin provides prose classes; brand colors via CSS custom properties matching design tokens | 6 |
 | not-prose on Callout component | Callout has its own styling that would conflict with prose typography defaults | 6 |
+| Blog index dynamic due to searchParams | Tag filtering and pagination use URL searchParams which forces dynamic rendering | 6 |
+| RSS feed English-only (MVP) | Bulgarian RSS can be added later; EN is the primary content language | 6 |
+| TagFilter and BlogPagination as client components | Only components needing browser interactivity (useRouter, useSearchParams) are client | 6 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -125,11 +128,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 6 Plan 06-01 execution
-**What happened:** Executed Plan 06-01 (MDX Infrastructure Foundation). Installed 8 npm packages (next-mdx-remote-client, gray-matter, @tailwindcss/typography, feed, remark-gfm, rehype-slug, rehype-pretty-code, shiki). Created content registry (src/lib/blog.ts) with 6 cached query functions. Added Tailwind typography plugin with brand prose customizations. Created MDX component map with heading overrides and Callout component. Seeded 4 blog posts (2 EN, 2 BG). All 9 verification checks passed including full build (27 static pages, 0 errors).
-**Stopped at:** Plan 06-01 complete
+**Last session:** 2026-02-10 -- Phase 6 Plan 06-02 execution
+**What happened:** Executed Plan 06-02 (Blog Pages, UI Components, Translations & RSS). Added BlogPage namespace (17 keys) to both locale files. Created 5 blog UI components (BlogHero, PostCard, PostHeader, TagFilter, BlogPagination). Replaced blog stub with full index page featuring tag filtering and pagination. Created blog post page with MDXRemote RSC rendering and prose typography. Created RSS feed route handler at /feed.xml. All 14 verification checks passed including full build (32 pages, 0 errors).
+**Stopped at:** Plan 06-02 complete
 **Resume file:** None
-**Next action:** Plans 06-02 (Blog Routes & Listing Page) and 06-03 (RSS Feed & SEO) remaining in Phase 6
+**Next action:** Plan 06-03 remaining in Phase 6
 
 ---
-*Last updated: 2026-02-10 after 06-01 plan execution*
+*Last updated: 2026-02-10 after 06-02 plan execution*
