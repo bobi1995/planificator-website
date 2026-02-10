@@ -4,17 +4,17 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 5 complete. All 4 content pages done (Features, Use Cases, Pricing, About). Ready for Phase 6.
+**Current Focus:** Phase 6 in progress. Plan 06-01 (MDX Infrastructure Foundation) complete. Blog content registry, prose styling, and seed posts ready.
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 5 -- Content Pages (COMPLETE)
-**Current Plan:** All 4 plans complete
-**Status:** Phase verified
-**Last activity:** 2026-02-10 -- Phase 5 verified
+**Current Phase:** Phase 6 -- Blog Infrastructure (IN PROGRESS)
+**Current Plan:** 06-01 complete, 06-02 and 06-03 remaining
+**Status:** In progress
+**Last activity:** 2026-02-10 -- Completed 06-01-PLAN.md
 
 **Progress:**
 ```
@@ -23,13 +23,13 @@ Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
 Phase 5: Content Pages              [==========] VERIFIED
-Phase 6: Blog Infrastructure        [          ] Not Started
+Phase 6: Blog Infrastructure        [===       ] In Progress (1/3 plans)
 Phase 7: Interactive Features       [          ] Not Started
 Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 5/9 phases complete | 15/25 requirements done | 16/~25 plans complete
+**Overall:** 5/9 phases complete | 15/25 requirements done | 17/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 16 |
+| Plans completed | 17 |
 | Plans failed | 0 |
 | Requirements completed | 15/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-04, CONT-01, CONT-02, CONT-03, CONT-04) |
 | Phases completed | 5/9 |
@@ -98,6 +98,10 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | generateStaticParams for [slug] sub-routing | Parent [locale] handles locale; child [slug] only returns slug values | 5 |
 | Slug-based icon maps (Factory, Scissors, CalendarRange) | Server components can't use dynamic icon imports; module-level maps are type-safe | 5 |
 | AlertTriangle (red) vs CheckCircle (brand-blue) | Visual contrast between pain points and solutions sections aids comprehension | 5 |
+| next-mdx-remote-client over @next/mdx | Avoids bundler pipeline -- no next.config.ts changes, RSC-compatible via /rsc import | 6 |
+| React cache() on blog query functions | Request-level deduplication -- generateMetadata and page component share single disk read | 6 |
+| Prose customizations as plain CSS | @plugin provides prose classes; brand colors via CSS custom properties matching design tokens | 6 |
+| not-prose on Callout component | Callout has its own styling that would conflict with prose typography defaults | 6 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -121,11 +125,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 5 execution and verification
-**What happened:** Executed all 4 plans in Phase 5. Wave 1: 05-01 (Features page with 6 domains, 22 feature cards, 6 shadcn components). Wave 2 (parallel): 05-02 (Use Cases index + 3 detail pages with sub-routing), 05-03 (Pricing with tier cards, comparison table, FAQ accordion), 05-04 (About with company story, mission/values, team grid). Verifier confirmed 6/6 must-haves passed. All locale files contain full EN+BG translations.
-**Stopped at:** Phase 5 complete and verified
+**Last session:** 2026-02-10 -- Phase 6 Plan 06-01 execution
+**What happened:** Executed Plan 06-01 (MDX Infrastructure Foundation). Installed 8 npm packages (next-mdx-remote-client, gray-matter, @tailwindcss/typography, feed, remark-gfm, rehype-slug, rehype-pretty-code, shiki). Created content registry (src/lib/blog.ts) with 6 cached query functions. Added Tailwind typography plugin with brand prose customizations. Created MDX component map with heading overrides and Callout component. Seeded 4 blog posts (2 EN, 2 BG). All 9 verification checks passed including full build (27 static pages, 0 errors).
+**Stopped at:** Plan 06-01 complete
 **Resume file:** None
-**Next action:** Phase 6 (Blog Infrastructure)
+**Next action:** Plans 06-02 (Blog Routes & Listing Page) and 06-03 (RSS Feed & SEO) remaining in Phase 6
 
 ---
-*Last updated: 2026-02-10 after phase 5 verification*
+*Last updated: 2026-02-10 after 06-01 plan execution*
