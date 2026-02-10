@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 5 in progress. Features page (05-01) and Pricing page (05-03) complete. Use Cases (05-02) and About/Contact (05-04) in parallel.
+**Current Focus:** Phase 5 in progress. Features (05-01), Pricing (05-03), and About (05-04) complete. Use Cases (05-02) in progress.
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 5 -- Content Pages (IN PROGRESS)
-**Current Plan:** 05-03 complete (2 of 4 in phase)
+**Current Plan:** 05-04 complete (3 of 4 in phase)
 **Status:** In progress
-**Last activity:** 2026-02-10 -- Completed 05-03-PLAN.md
+**Last activity:** 2026-02-10 -- Completed 05-04-PLAN.md
 
 **Progress:**
 ```
@@ -22,14 +22,14 @@ Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
-Phase 5: Content Pages              [=====     ] 05-01, 05-03 done (2/4)
+Phase 5: Content Pages              [=======   ] 05-01, 05-03, 05-04 done (3/4)
 Phase 6: Blog Infrastructure        [          ] Not Started
 Phase 7: Interactive Features       [          ] Not Started
 Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 4/9 phases complete | 11/25 requirements done | 14/~25 plans complete
+**Overall:** 4/9 phases complete | 11/25 requirements done | 15/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 14 |
+| Plans completed | 15 |
 | Plans failed | 0 |
 | Requirements completed | 11/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-04) |
 | Phases completed | 4/9 |
@@ -92,6 +92,9 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | t.raw() for comparison table booleans | next-intl 4.8.2 t.raw() retrieves raw JSON values (true/false/string) without coercion | 5 |
 | PricingFAQ as client, rest as server | Only FAQ needs client state (Accordion); tier cards and comparison table are server components | 5 |
 | Badge absolute positioning for tier cards | "Most Popular" badge floats above card border with -top-3 + -translate-x-1/2 | 5 |
+| About page values as 2-col grid | 4 values with longer descriptions need more horizontal space; 2-col balances readability | 5 |
+| Mission statement as italic quote | Visually distinguished from body text; quotes convey aspiration and purpose | 5 |
+| Lucide icons for values (Wrench, Shield, Rocket, Factory) | Semantic mapping: practitioners=Wrench, honest=Shield, ship=Rocket, manufacturing=Factory | 5 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -115,11 +118,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 5 Plan 03 execution (parallel with 05-02, 05-04)
-**What happened:** Executed 05-03-PLAN.md (Pricing Page). Task 1: Added PricingPage namespace (~110 keys) to both EN and BG locale files with tier data, comparison table, and FAQ content. Task 2: Created 4 pricing section components (PricingHero, PricingTierCard, PricingComparisonTable, PricingFAQ) and replaced pricing stub with full page. Professional tier highlighted with badge. Comparison table uses t.raw() for boolean values. Build verified with zero errors.
-**Stopped at:** Completed 05-03-PLAN.md
+**Last session:** 2026-02-10 -- Phase 5 Plan 04 execution (parallel with 05-02)
+**What happened:** Executed 05-04-PLAN.md (About Page). Task 1: Added AboutPage namespace (~55 keys) to both EN and BG locale files with hero, story, mission/values, and team sections. Task 2: Created 4 about section components (AboutHero, CompanyStory, MissionValues, TeamSection) and replaced About page stub with full content. Mission statement as italic quote, 4 values with Lucide icons, team grid with Avatar initials for both Latin and Cyrillic. Build verified with zero errors.
+**Stopped at:** Completed 05-04-PLAN.md
 **Resume file:** None
-**Next action:** Complete 05-02 and 05-04 (running in parallel)
+**Next action:** Complete 05-02 (Use Cases, running in parallel)
 
 ---
-*Last updated: 2026-02-10 after 05-03 completion*
+*Last updated: 2026-02-10 after 05-04 completion*
