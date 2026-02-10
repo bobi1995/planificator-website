@@ -698,5 +698,85 @@
     "previousPage": "Previous",
     "nextPage": "Next",
     "pageOf": "Page {current} of {total}"
+  },
+  "ContactPage": {
+    "metaTitle": "Contact Us",
+    "metaDescription": "Book a free demo of Planifactor's AI-powered production scheduling platform, or get in touch with our team.",
+    "hero": {
+      "title": "Let's Talk Production Scheduling",
+      "subtitle": "Book a free demo to see how Planifactor can optimize your production planning -- or reach out to discuss your specific needs."
+    },
+    "booking": {
+      "title": "Book a Demo",
+      "description": "Choose a time that works for you. Our team will walk you through the platform with your specific use case in mind.",
+      "consentRequired": "Please accept cookies to use the booking widget.",
+      "alternativeContact": "You can also reach us directly at"
+    },
+    "info": {
+      "title": "Other Ways to Reach Us",
+      "emailLabel": "Email",
+      "emailValue": "hello@planifactor.com",
+      "phoneLabel": "Phone",
+      "phoneValue": "+359 2 XXX XXXX",
+      "linkedinLabel": "LinkedIn",
+      "linkedinValue": "Planifactor",
+      "officeHours": "Office Hours",
+      "officeHoursValue": "Mon-Fri, 9:00-18:00 EET",
+      "responseTime": "We typically respond within 24 hours."
+    },
+    "expect": {
+      "title": "What to Expect",
+      "step1": "30-minute personalized demo with your production data",
+      "step2": "See AI optimization in action on a real scheduling scenario",
+      "step3": "Get answers to your specific questions -- no sales pressure"
+    }
+  },
+  "ROICalculator": {
+    "metaTitle": "ROI Calculator",
+    "metaDescription": "Calculate how much time and money Planifactor could save your production planning team. Enter your details and see estimated savings.",
+    "hero": {
+      "title": "How Much Time Could You Save?",
+      "subtitle": "Enter your production details below and see how AI-powered scheduling could transform your planning process."
+    },
+    "inputs": {
+      "ordersPerWeek": "Orders per Week",
+      "ordersPerWeekHelp": "Average number of production orders you schedule each week",
+      "schedulingHours": "Scheduling Time (hours/week)",
+      "schedulingHoursHelp": "Hours your team currently spends on production scheduling per week",
+      "resources": "Number of Resources",
+      "resourcesHelp": "Total machines, workers, or workstations you schedule across",
+      "currentMethod": "Current Scheduling Method",
+      "currentMethodHelp": "How do you currently create your production schedule?",
+      "methods": {
+        "excel": "Excel / Spreadsheet",
+        "whiteboard": "Whiteboard / Paper",
+        "software": "Other Software",
+        "none": "No Formal Method"
+      }
+    },
+    "calculate": "Calculate Savings",
+    "reset": "Reset",
+    "results": {
+      "title": "Your Estimated Savings",
+      "hoursSavedWeek": "Hours Saved Per Week",
+      "hoursSavedYear": "Hours Saved Per Year",
+      "costSavingsYear": "Estimated Annual Cost Savings",
+      "speedImprovement": "Scheduling Speed Improvement",
+      "fasterSuffix": "faster",
+      "perWeek": "per week",
+      "perYear": "per year",
+      "disclaimer": "Estimates based on industry benchmarks. Actual results vary based on your specific environment."
+    },
+    "methodology": {
+      "title": "How We Calculated This",
+      "description": "Our estimates are based on observed efficiency gains across manufacturing environments of similar size and complexity.",
+      "conservative": "We use conservative estimates and show ranges rather than exact numbers. The lower bound represents a cautious projection; the upper bound represents typical best-case outcomes.",
+      "factors": "Factors considered: your current scheduling method, number of production resources, and weekly order volume. Cost savings assume an average production planner rate of EUR 35/hour."
+    },
+    "cta": {
+      "title": "Want to Validate These Numbers?",
+      "description": "Book a free demo and we'll run the analysis with your real production data -- no commitment required.",
+      "button": "Book a Demo"
+    }
   }
 }
