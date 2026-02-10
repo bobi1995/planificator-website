@@ -679,5 +679,24 @@
         }
       }
     }
+  },
+  "BlogPage": {
+    "metaTitle": "Blog",
+    "metaDescription": "Insights and guides on production scheduling, AI in manufacturing, and production optimization.",
+    "heroTitle": "Blog & Resources",
+    "heroSubtitle": "Insights on production scheduling, AI optimization, and smart manufacturing from the Planifactor team.",
+    "allPosts": "All Posts",
+    "filterByTag": "Filter by tag",
+    "readMore": "Read more",
+    "minRead": "min read",
+    "noPosts": "No posts found",
+    "noPostsForTag": "No posts found for this tag.",
+    "backToBlog": "Back to Blog",
+    "publishedOn": "Published on",
+    "taggedWith": "Tagged with",
+    "writtenBy": "By",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "pageOf": "Page {current} of {total}"
   }
 }
