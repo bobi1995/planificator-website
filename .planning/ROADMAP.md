@@ -139,8 +139,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md -- MDX infrastructure: packages, typography plugin, content registry, MDX components, seed posts
-- [ ] 06-02-PLAN.md -- Blog pages (index + post), UI components, translations, tag filtering, RSS feed
+- [x] 06-01-PLAN.md -- MDX infrastructure: packages, typography plugin, content registry, MDX components, seed posts
+- [x] 06-02-PLAN.md -- Blog pages (index + post), UI components, translations, tag filtering, RSS feed
 
 **Success Criteria:**
 1. Blog index page at `/[locale]/blog` lists posts with pagination, sorted by date
@@ -209,7 +209,7 @@ Plans:
 | 3 | Layout Shell & Landing Page | LAND-01, LAND-03, LAND-04, LAND-05 | Complete (4/4 plans) |
 | 4 | Animated Gantt & Visual Differentiators | LAND-02, INTER-04 | Complete (2/2 plans) |
 | 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Complete (4/4 plans) |
-| 6 | Blog Infrastructure | BLOG-01 | Planned (2 plans) |
+| 6 | Blog Infrastructure | BLOG-01 | Complete (2/2 plans) |
 | 7 | Interactive Features & Forms | INTER-01, INTER-02, INTER-03 | Not Started |
 | 8 | SEO & Performance | FOUND-04, OPS-01, OPS-02, OPS-03 | Not Started |
 | 9 | Blog Content & Launch Polish | BLOG-02, BLOG-03 | Not Started |
@@ -279,4 +279,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-10 after phase 6 planning*
+*Last updated: 2026-02-10 after phase 6 completion*
