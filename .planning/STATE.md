@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 8 in progress. Plans 08-01 (SEO foundation) and 08-03 (OG images) complete. Plans 08-02 and 08-04 remaining.
+**Current Focus:** Phase 8 in progress. Plans 08-01 (SEO foundation), 08-02 (page metadata + Plausible), and 08-03 (OG images) complete. Plan 08-04 (analytics events) remaining.
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 8 -- SEO & Performance (In Progress)
-**Current Plan:** 2 of 4 complete
+**Current Plan:** 3 of 4 complete
 **Status:** In progress
-**Last activity:** 2026-02-10 -- Completed 08-03-PLAN.md
+**Last activity:** 2026-02-10 -- Completed 08-02-PLAN.md
 
 **Progress:**
 ```
@@ -25,11 +25,11 @@ Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
 Phase 5: Content Pages              [==========] VERIFIED
 Phase 6: Blog Infrastructure        [==========] VERIFIED
 Phase 7: Interactive Features       [==========] VERIFIED
-Phase 8: SEO & Performance          [=====     ] 2/4 Plans
+Phase 8: SEO & Performance          [=======   ] 3/4 Plans
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 7/9 phases complete | 19/25 requirements done | 23/~25 plans complete
+**Overall:** 7/9 phases complete | 19/25 requirements done | 24/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 23 |
+| Plans completed | 24 |
 | Plans failed | 0 |
 | Requirements completed | 19/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-01, INTER-02, INTER-03, INTER-04, CONT-01, CONT-02, CONT-03, CONT-04, BLOG-01) |
 | Phases completed | 7/9 |
@@ -123,6 +123,10 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | Privacy/Terms excluded from OG images | Low-value stub pages inherit locale root default; no custom branding needed | 8 |
 | Blog post OG uses getPostBySlug | Blog titles come from MDX frontmatter, not translation files | 8 |
 | VALID_SLUGS guard for use case OG | Prevents getTranslations from throwing on invalid slugs; falls back to generic branding | 8 |
+| PlausibleProvider outside NextIntlClientProvider | Must be higher in tree to inject script tag properly; no intl dependency | 8 |
+| OrganizationJsonLd outside PlausibleProvider | Server-rendered script tag, not visual content; doesn't need provider context | 8 |
+| Home page absolute title bypasses template | Shows full brand title "Planifactor - AI Production Scheduling" instead of "Home \| Planifactor" | 8 |
+| title.template cascading for DRY page titles | Layout sets template '%s \| Planifactor'; child pages provide title string only | 8 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -146,11 +150,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 8 Plan 03 execution
-**What happened:** Executed Plan 08-03 (OG Images). Created 10 opengraph-image.tsx files across all route segments. 8 static pages use getTranslations with page-specific namespaces. 2 dynamic routes (blog [slug] via getPostBySlug, use-cases [slug] via UseCases.{slug} namespace). All produce 1200x630 branded PNG with blue gradient. Build passes cleanly.
-**Stopped at:** Completed 08-03-PLAN.md
+**Last session:** 2026-02-10 -- Phase 8 Plan 02 execution
+**What happened:** Executed Plan 08-02 (Page-Level Metadata + Plausible). Wired withPlausibleProxy in next.config.ts, added PlausibleProvider + generateMetadata + OrganizationJsonLd to locale layout. Updated all 12 page files with alternates, openGraph, and removed manual "| Planifactor" suffixes. Home page gets SoftwareApplicationJsonLd, blog posts get ArticleJsonLd. Build passes cleanly.
+**Stopped at:** Completed 08-02-PLAN.md
 **Resume file:** None
-**Next action:** Plans 08-02 (page-level metadata) and 08-04 (analytics) remaining
+**Next action:** Plan 08-04 (analytics events) remaining in Phase 8
 
 ---
-*Last updated: 2026-02-10 after 08-03 execution*
+*Last updated: 2026-02-10 after 08-02 execution*
