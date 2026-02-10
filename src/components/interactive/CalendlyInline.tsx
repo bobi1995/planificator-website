@@ -38,7 +38,7 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
 
   if (consent !== 'accepted') {
     return (
-      <div className="rounded-lg border border-dashed p-8 text-center bg-muted/30 min-h-[300px] flex flex-col items-center justify-center">
+      <div className="rounded-lg border border-dashed p-8 text-center bg-muted/30 min-h-[700px] flex flex-col items-center justify-center">
         <Mail className="h-10 w-10 text-muted-foreground mx-auto mb-4" />
         <p className="text-muted-foreground mb-2">{t('booking.consentRequired')}</p>
         <p className="text-sm text-muted-foreground">
