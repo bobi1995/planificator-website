@@ -162,9 +162,9 @@ Plans:
 **Plans:** 3 plans
 
 Plans:
-- [ ] 07-01-PLAN.md -- ROI Calculator: shadcn inputs, pure calculation logic, client component, standalone page with conservative methodology
-- [ ] 07-02-PLAN.md -- Contact page replacement with Calendly inline embed, contact info sidebar, server section components
-- [ ] 07-03-PLAN.md -- Cookie consent banner: GDPR-compliant localStorage consent, Calendly conditional loading, layout integration
+- [x] 07-01-PLAN.md -- ROI Calculator: shadcn inputs, pure calculation logic, client component, standalone page with conservative methodology
+- [x] 07-02-PLAN.md -- Contact page replacement with Calendly inline embed, contact info sidebar, server section components
+- [x] 07-03-PLAN.md -- Cookie consent banner: GDPR-compliant localStorage consent, Calendly conditional loading, layout integration
 
 **Success Criteria:**
 1. ROI calculator accepts 3-5 inputs (e.g., orders/week, current scheduling time), computes estimated savings, and displays results with visible methodology (conservative estimates, not inflated)
@@ -181,6 +181,14 @@ Plans:
 **Dependencies:** Phases 5, 6 (all pages and blog must exist for complete sitemap and metadata)
 
 **Requirements:** FOUND-04, OPS-01, OPS-02, OPS-03
+
+**Plans:** 4 plans
+
+Plans:
+- [ ] 08-01-PLAN.md -- SEO foundation: install packages, shared utilities (constants, metadata, structured-data, og-image, analytics), sitemap.ts, robots.ts
+- [ ] 08-02-PLAN.md -- Plausible Analytics, metadata cascading (metadataBase + title.template), enhanced generateMetadata on all 12 pages, structured data
+- [ ] 08-03-PLAN.md -- Open Graph images: 10 opengraph-image.tsx files for all route segments using shared brand template
+- [ ] 08-04-PLAN.md -- Performance audit, CLS prevention, Lighthouse verification checkpoint
 
 **Success Criteria:**
 1. Dynamic sitemap at `/sitemap.xml` includes all pages across both locales with correct hreflang annotations
@@ -218,7 +226,7 @@ Plans:
 | 5 | Content Pages | CONT-01, CONT-02, CONT-03, CONT-04 | Complete (4/4 plans) |
 | 6 | Blog Infrastructure | BLOG-01 | Complete (2/2 plans) |
 | 7 | Interactive Features & Forms | INTER-01, INTER-02, INTER-03 | Complete (3/3 plans) |
-| 8 | SEO & Performance | FOUND-04, OPS-01, OPS-02, OPS-03 | Not Started |
+| 8 | SEO & Performance | FOUND-04, OPS-01, OPS-02, OPS-03 | Planned (0/4 plans) |
 | 9 | Blog Content & Launch Polish | BLOG-02, BLOG-03 | Not Started |
 
 ---
@@ -286,4 +294,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-10 after phase 7 execution and verification*
+*Last updated: 2026-02-10 after phase 8 planning*
