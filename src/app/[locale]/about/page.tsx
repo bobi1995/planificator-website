@@ -1,4 +1,9 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
+import {AboutHero} from '@/components/sections/about/AboutHero';
+import {CompanyStory} from '@/components/sections/about/CompanyStory';
+import {MissionValues} from '@/components/sections/about/MissionValues';
+import {TeamSection} from '@/components/sections/about/TeamSection';
+import {CTABanner} from '@/components/sections/CTABanner';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -6,23 +11,24 @@ type Props = {
 
 export async function generateMetadata({params}: Props) {
   const {locale} = await params;
-  const t = await getTranslations({locale, namespace: 'Navigation'});
+  const t = await getTranslations({locale, namespace: 'AboutPage'});
   return {
-    title: `${t('about')} | Planifactor`,
+    title: `${t('metaTitle')} | Planifactor`,
+    description: t('metaDescription'),
   };
 }
 
 export default async function AboutPage({params}: Props) {
   const {locale} = await params;
   setRequestLocale(locale);
-  const nav = await getTranslations({locale, namespace: 'Navigation'});
-  const t = await getTranslations({locale, namespace: 'StubPage'});
 
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-16">
-      <h1 className="text-heading md:text-display mb-4">{nav('about')}</h1>
-      <p className="text-muted-foreground text-body-lg">{t('comingSoon')}</p>
-      <p className="text-muted-foreground mt-2">{t('description')}</p>
-    </div>
+    <>
+      <AboutHero />
+      <CompanyStory />
+      <MissionValues />
+      <TeamSection />
+      <CTABanner />
+    </>
   );
 }
