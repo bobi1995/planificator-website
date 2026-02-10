@@ -1,6 +1,9 @@
+import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {UseCaseCard} from '@/components/sections/use-cases/UseCaseCard';
 import {CTABanner} from '@/components/sections/CTABanner';
+import {buildAlternates} from '@/lib/metadata';
+import {SITE_URL} from '@/lib/constants';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -8,12 +11,19 @@ type Props = {
 
 const USE_CASE_SLUGS = ['discrete-manufacturing', 'job-shops', 'production-planning'] as const;
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'UseCasesIndex'});
   return {
-    title: `${t('metaTitle')} | Planifactor`,
+    title: t('metaTitle'),
     description: t('metaDescription'),
+    alternates: buildAlternates(locale, '/use-cases'),
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: `${SITE_URL}/${locale}/use-cases`,
+      type: 'website',
+    },
   };
 }
 

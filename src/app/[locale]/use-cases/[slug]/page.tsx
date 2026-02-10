@@ -1,3 +1,4 @@
+import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {Avatar, AvatarFallback} from '@/components/ui/avatar';
@@ -5,6 +6,8 @@ import {UseCaseHero} from '@/components/sections/use-cases/UseCaseHero';
 import {UseCaseBenefits} from '@/components/sections/use-cases/UseCaseBenefits';
 import {CTABanner} from '@/components/sections/CTABanner';
 import {AlertTriangle, CheckCircle} from 'lucide-react';
+import {buildAlternates} from '@/lib/metadata';
+import {SITE_URL} from '@/lib/constants';
 
 const VALID_SLUGS = ['discrete-manufacturing', 'job-shops', 'production-planning'] as const;
 type UseCaseSlug = typeof VALID_SLUGS[number];
@@ -17,13 +20,20 @@ export function generateStaticParams() {
   return VALID_SLUGS.map((slug) => ({slug}));
 }
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale, slug} = await params;
   if (!VALID_SLUGS.includes(slug as UseCaseSlug)) return {};
   const t = await getTranslations({locale, namespace: `UseCases.${slug}`});
   return {
-    title: `${t('metaTitle')} | Planifactor`,
+    title: t('metaTitle'),
     description: t('metaDescription'),
+    alternates: buildAlternates(locale, `/use-cases/${slug}`),
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: `${SITE_URL}/${locale}/use-cases/${slug}`,
+      type: 'website',
+    },
   };
 }
 

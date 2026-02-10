@@ -1,18 +1,28 @@
+import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {ContactHero} from '@/components/sections/contact/ContactHero';
 import {ContactInfo} from '@/components/sections/contact/ContactInfo';
 import {CalendlyInline} from '@/components/interactive/CalendlyInline';
+import {buildAlternates} from '@/lib/metadata';
+import {SITE_URL} from '@/lib/constants';
 
 type Props = {
   params: Promise<{locale: string}>;
 };
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'ContactPage'});
   return {
-    title: `${t('metaTitle')} | Planifactor`,
+    title: t('metaTitle'),
     description: t('metaDescription'),
+    alternates: buildAlternates(locale, '/contact'),
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: `${SITE_URL}/${locale}/contact`,
+      type: 'website',
+    },
   };
 }
 

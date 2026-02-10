@@ -1,3 +1,4 @@
+import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {MDXRemote} from 'next-mdx-remote-client/rsc';
@@ -8,6 +9,9 @@ import {getPostBySlug, getPostSlugs} from '@/lib/blog';
 import {PostHeader} from '@/components/sections/blog/PostHeader';
 import {CTABanner} from '@/components/sections/CTABanner';
 import {mdxComponents} from '@/components/mdx/mdx-components';
+import {buildAlternates} from '@/lib/metadata';
+import {SITE_URL} from '@/lib/constants';
+import {ArticleJsonLd} from '@/lib/structured-data';
 
 type Props = {
   params: Promise<{locale: string; slug: string}>;
@@ -27,18 +31,22 @@ export async function generateStaticParams() {
   return Array.from(slugSet).map((slug) => ({slug}));
 }
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale, slug} = await params;
   const post = await getPostBySlug(locale, slug);
   if (!post) return {};
   return {
-    title: `${post.meta.title} | Planifactor`,
+    title: post.meta.title,
     description: post.meta.description,
+    alternates: buildAlternates(locale, `/blog/${slug}`),
     openGraph: {
       title: post.meta.title,
       description: post.meta.description,
+      url: `${SITE_URL}/${locale}/blog/${slug}`,
       type: 'article',
       publishedTime: post.meta.date,
+      authors: [post.meta.author],
+      tags: post.meta.tags,
     },
   };
 }
@@ -54,6 +62,13 @@ export default async function BlogPostPage({params}: Props) {
 
   return (
     <>
+      <ArticleJsonLd
+        title={post.meta.title}
+        description={post.meta.description}
+        datePublished={post.meta.date}
+        author={post.meta.author}
+        url={`${SITE_URL}/${locale}/blog/${slug}`}
+      />
       <article className="max-w-3xl mx-auto py-16 px-4">
         <PostHeader
           meta={post.meta}

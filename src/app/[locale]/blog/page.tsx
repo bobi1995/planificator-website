@@ -1,3 +1,4 @@
+import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {getAllPosts, getAllTags, getPostsByTag} from '@/lib/blog';
 import {BlogHero} from '@/components/sections/blog/BlogHero';
@@ -5,6 +6,8 @@ import {PostCard} from '@/components/sections/blog/PostCard';
 import {TagFilter} from '@/components/sections/blog/TagFilter';
 import {BlogPagination} from '@/components/sections/blog/BlogPagination';
 import {CTABanner} from '@/components/sections/CTABanner';
+import {buildAlternates} from '@/lib/metadata';
+import {SITE_URL} from '@/lib/constants';
 
 const POSTS_PER_PAGE = 9;
 
@@ -13,12 +16,19 @@ type Props = {
   searchParams: Promise<{tag?: string; page?: string}>;
 };
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'BlogPage'});
   return {
-    title: `${t('metaTitle')} | Planifactor`,
+    title: t('metaTitle'),
     description: t('metaDescription'),
+    alternates: buildAlternates(locale, '/blog'),
+    openGraph: {
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: `${SITE_URL}/${locale}/blog`,
+      type: 'website',
+    },
   };
 }
 
