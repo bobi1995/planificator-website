@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 5 in progress. Features (05-01), Pricing (05-03), and About (05-04) complete. Use Cases (05-02) in progress.
+**Current Focus:** Phase 5 complete. All 4 content pages done (Features, Use Cases, Pricing, About). Ready for Phase 6.
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 5 -- Content Pages (IN PROGRESS)
-**Current Plan:** 05-04 complete (3 of 4 in phase)
-**Status:** In progress
-**Last activity:** 2026-02-10 -- Completed 05-04-PLAN.md
+**Current Plan:** 05-02 complete (4 of 4 in phase)
+**Status:** Phase complete
+**Last activity:** 2026-02-10 -- Completed 05-02-PLAN.md (Phase 5 complete)
 
 **Progress:**
 ```
@@ -22,14 +22,14 @@ Phase 1: Foundation & i18n          [==========] VERIFIED
 Phase 2: Brand Identity & Design    [==========] VERIFIED
 Phase 3: Layout Shell & Landing     [==========] VERIFIED
 Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
-Phase 5: Content Pages              [=======   ] 05-01, 05-03, 05-04 done (3/4)
+Phase 5: Content Pages              [==========] COMPLETE (4/4)
 Phase 6: Blog Infrastructure        [          ] Not Started
 Phase 7: Interactive Features       [          ] Not Started
 Phase 8: SEO & Performance          [          ] Not Started
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 4/9 phases complete | 11/25 requirements done | 15/~25 plans complete
+**Overall:** 5/9 phases complete | 11/25 requirements done | 16/~25 plans complete
 
 ---
 
@@ -37,10 +37,10 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 15 |
+| Plans completed | 16 |
 | Plans failed | 0 |
 | Requirements completed | 11/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-04) |
-| Phases completed | 4/9 |
+| Phases completed | 5/9 |
 
 ---
 
@@ -95,6 +95,9 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | About page values as 2-col grid | 4 values with longer descriptions need more horizontal space; 2-col balances readability | 5 |
 | Mission statement as italic quote | Visually distinguished from body text; quotes convey aspiration and purpose | 5 |
 | Lucide icons for values (Wrench, Shield, Rocket, Factory) | Semantic mapping: practitioners=Wrench, honest=Shield, ship=Rocket, manufacturing=Factory | 5 |
+| generateStaticParams for [slug] sub-routing | Parent [locale] handles locale; child [slug] only returns slug values | 5 |
+| Slug-based icon maps (Factory, Scissors, CalendarRange) | Server components can't use dynamic icon imports; module-level maps are type-safe | 5 |
+| AlertTriangle (red) vs CheckCircle (brand-blue) | Visual contrast between pain points and solutions sections aids comprehension | 5 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -118,11 +121,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 5 Plan 04 execution (parallel with 05-02)
-**What happened:** Executed 05-04-PLAN.md (About Page). Task 1: Added AboutPage namespace (~55 keys) to both EN and BG locale files with hero, story, mission/values, and team sections. Task 2: Created 4 about section components (AboutHero, CompanyStory, MissionValues, TeamSection) and replaced About page stub with full content. Mission statement as italic quote, 4 values with Lucide icons, team grid with Avatar initials for both Latin and Cyrillic. Build verified with zero errors.
-**Stopped at:** Completed 05-04-PLAN.md
+**Last session:** 2026-02-10 -- Phase 5 Plan 02 execution (final plan in phase)
+**What happened:** Executed 05-02-PLAN.md (Use Cases Pages). Task 1: Added UseCasesIndex and UseCases namespaces to both locale files (handled parallel plan conflicts with en.json/bg.json gracefully). Task 2: Created 3 section components (UseCaseCard, UseCaseHero, UseCaseBenefits), replaced use-cases stub with full index page, created [slug] detail page with generateStaticParams for 3 industry use cases. Build verified with zero errors. Phase 5 now fully complete (4/4 plans).
+**Stopped at:** Completed 05-02-PLAN.md (Phase 5 complete)
 **Resume file:** None
-**Next action:** Complete 05-02 (Use Cases, running in parallel)
+**Next action:** Phase 6 (Blog Infrastructure)
 
 ---
-*Last updated: 2026-02-10 after 05-04 completion*
+*Last updated: 2026-02-10 after 05-02 completion (Phase 5 complete)*
