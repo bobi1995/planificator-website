@@ -778,5 +778,11 @@
       "description": "Book a free demo and we'll run the analysis with your real production data -- no commitment required.",
       "button": "Book a Demo"
     }
+  },
+  "CookieConsent": {
+    "message": "We use cookies for the demo booking widget on our contact page. Our analytics (Plausible) are completely cookieless.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
