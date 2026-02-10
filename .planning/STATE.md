@@ -4,17 +4,17 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 7 complete and verified. All interactive features delivered: ROI calculator, Calendly booking, cookie consent. Ready for Phase 8.
+**Current Focus:** Phase 8 in progress. Plan 08-01 (SEO foundation utilities, sitemap, robots.txt) complete. Plans 08-02 through 08-04 remaining.
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 7 -- Interactive Features & Forms (COMPLETE)
-**Current Plan:** All 3 plans complete
-**Status:** Phase verified
-**Last activity:** 2026-02-10 -- Phase 7 verified (31/31 must-haves passed)
+**Current Phase:** Phase 8 -- SEO & Performance (In Progress)
+**Current Plan:** 1 of 4 complete
+**Status:** In progress
+**Last activity:** 2026-02-10 -- Completed 08-01-PLAN.md
 
 **Progress:**
 ```
@@ -25,11 +25,11 @@ Phase 4: Animated Gantt & Visuals   [==========] VERIFIED
 Phase 5: Content Pages              [==========] VERIFIED
 Phase 6: Blog Infrastructure        [==========] VERIFIED
 Phase 7: Interactive Features       [==========] VERIFIED
-Phase 8: SEO & Performance          [          ] Not Started
+Phase 8: SEO & Performance          [==        ] 1/4 Plans
 Phase 9: Blog Content & Launch      [          ] Not Started
 ```
 
-**Overall:** 7/9 phases complete | 19/25 requirements done | 21/~25 plans complete
+**Overall:** 7/9 phases complete | 19/25 requirements done | 22/~25 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 21 |
+| Plans completed | 22 |
 | Plans failed | 0 |
 | Requirements completed | 19/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-01, INTER-02, INTER-03, INTER-04, CONT-01, CONT-02, CONT-03, CONT-04, BLOG-01) |
 | Phases completed | 7/9 |
@@ -115,6 +115,11 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | CustomEvent for cross-component consent | Avoids prop drilling or context; CalendlyInline reacts in real-time without page reload | 7 |
 | localStorage over cookies for consent state | Consent status itself does not need to be sent to server; localStorage is simpler | 7 |
 | Consent defaults to 'unknown' (widget hidden) | GDPR requires explicit opt-in; safe default shows email fallback | 7 |
+| structured-data.tsx not .ts | JSX in structured data components requires .tsx extension | 8 |
+| XSS-safe JSON-LD via \\u003c escaping | dangerouslySetInnerHTML in script tags must escape < to prevent injection | 8 |
+| EN canonical URLs in sitemap | English is default locale; alternates provide bg URLs for hreflang | 8 |
+| createOgImageElement returns JSX not component | Matches satori/ImageResponse API which expects JSX elements | 8 |
+| Types-only analytics file | Runtime Plausible integration deferred to Plan 08-04; type definitions ready now | 8 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -138,11 +143,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 7 execution and verification
-**What happened:** Executed all 3 plans in Phase 7. Wave 1: 07-01 (ROI Calculator -- 3 shadcn components, pure calculation utility, client component, standalone page) + 07-02 (Contact Page -- react-calendly v4.4.0, CalendlyInline, ContactHero, ContactInfo, replaced stub) in parallel. Wave 2: 07-03 (Cookie Consent -- localStorage utility, CookieConsent banner, CalendlyInline consent wiring, layout integration). Verifier confirmed 31/31 must-haves passed. Build produces 34 static pages with 0 errors.
-**Stopped at:** Phase 7 complete and verified
+**Last session:** 2026-02-10 -- Phase 8 Plan 01 execution
+**What happened:** Executed Plan 08-01 (SEO Foundation). Installed next-plausible + schema-dts. Created 5 shared utility modules (constants, metadata, structured-data, og-image, analytics) and 2 route files (sitemap.ts, robots.ts). All 7 files compile cleanly. Sitemap serves 15 entries with en/bg hreflang alternates. Robots.txt allows all crawlers.
+**Stopped at:** Completed 08-01-PLAN.md
 **Resume file:** None
-**Next action:** Phase 8 (SEO & Performance)
+**Next action:** Plan 08-02 (page-level metadata)
 
 ---
-*Last updated: 2026-02-10 after phase 7 verification*
+*Last updated: 2026-02-10 after 08-01 execution*
