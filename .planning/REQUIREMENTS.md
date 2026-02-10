@@ -28,9 +28,9 @@
 
 ### Interactive Features (INTER)
 
-- [ ] **INTER-01**: ROI Calculator -- interactive tool with 3-5 inputs (e.g., orders/week, current scheduling time), shows estimated time/cost savings with conservative methodology visible
-- [ ] **INTER-02**: Instant demo booking -- Calendly or Cal.com embed on contact page and as modal from CTA buttons
-- [ ] **INTER-03**: Cookie consent banner -- GDPR-compliant consent management, lightweight, non-intrusive for EU visitors
+- [x] **INTER-01**: ROI Calculator -- interactive tool with 3-5 inputs (e.g., orders/week, current scheduling time), shows estimated time/cost savings with conservative methodology visible
+- [x] **INTER-02**: Instant demo booking -- Calendly or Cal.com embed on contact page and as modal from CTA buttons
+- [x] **INTER-03**: Cookie consent banner -- GDPR-compliant consent management, lightweight, non-intrusive for EU visitors
 - [x] **INTER-04**: Before/After comparison -- drag slider or side-by-side animation showing manual scheduling (spreadsheet chaos) vs Prefactor (clean Gantt)
 
 ### Blog & Content (BLOG)
@@ -92,9 +92,9 @@
 | CONT-02 | Phase 5 | Complete |
 | CONT-03 | Phase 5 | Complete |
 | CONT-04 | Phase 5 | Complete |
-| INTER-01 | Phase 7 | Pending |
-| INTER-02 | Phase 7 | Pending |
-| INTER-03 | Phase 7 | Pending |
+| INTER-01 | Phase 7 | Complete |
+| INTER-02 | Phase 7 | Complete |
+| INTER-03 | Phase 7 | Complete |
 | INTER-04 | Phase 4 | Complete |
 | BLOG-01 | Phase 6 | Complete |
 | BLOG-02 | Phase 9 | Pending |
@@ -104,4 +104,4 @@
 | OPS-03 | Phase 8 | Pending |
 
 ---
-*Last updated: 2026-02-10 after phase 6 completion*
+*Last updated: 2026-02-10 after phase 7 completion*
