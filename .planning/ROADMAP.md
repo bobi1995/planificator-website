@@ -159,6 +159,13 @@ Plans:
 
 **Requirements:** INTER-01, INTER-02, INTER-03
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 07-01-PLAN.md -- ROI Calculator: shadcn inputs, pure calculation logic, client component, standalone page with conservative methodology
+- [ ] 07-02-PLAN.md -- Contact page replacement with Calendly inline embed, contact info sidebar, server section components
+- [ ] 07-03-PLAN.md -- Cookie consent banner: GDPR-compliant localStorage consent, Calendly conditional loading, layout integration
+
 **Success Criteria:**
 1. ROI calculator accepts 3-5 inputs (e.g., orders/week, current scheduling time), computes estimated savings, and displays results with visible methodology (conservative estimates, not inflated)
 2. Calendly or Cal.com embed loads on the contact page and as a modal triggered from CTA buttons across the site
@@ -279,4 +286,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-10 after phase 6 completion*
+*Last updated: 2026-02-10 after phase 7 planning*
