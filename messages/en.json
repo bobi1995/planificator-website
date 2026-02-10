@@ -267,5 +267,353 @@
         }
       }
     }
+  },
+  "UseCasesIndex": {
+    "metaTitle": "Use Cases",
+    "metaDescription": "See how manufacturers use Planifactor for discrete manufacturing, job shop scheduling, and production planning optimization.",
+    "title": "Built for How You Work",
+    "subtitle": "Whether you run a high-volume production line or a custom job shop, Planifactor adapts to your workflow.",
+    "cards": {
+      "discrete-manufacturing": {
+        "title": "Discrete Manufacturing",
+        "description": "High-volume production lines with complex sequencing, multi-resource coordination, and tight delivery windows.",
+        "cta": "Learn More"
+      },
+      "job-shops": {
+        "title": "Job Shops",
+        "description": "High-mix, low-volume environments where every order is different and priorities shift constantly.",
+        "cta": "Learn More"
+      },
+      "production-planning": {
+        "title": "Production Planning",
+        "description": "Strategic scheduling across resources, shifts, and order priorities -- replacing spreadsheets with AI.",
+        "cta": "Learn More"
+      }
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Pricing",
+    "metaDescription": "Explore Planifactor pricing tiers for production scheduling. From small manufacturers to enterprise operations -- find the right plan for your factory.",
+    "hero": {
+      "title": "Simple Plans for Every Factory",
+      "subtitle": "From small workshops to large-scale operations. Choose the plan that matches your production needs."
+    },
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "For small manufacturers getting started with intelligent scheduling.",
+        "cta": "Contact for Pricing",
+        "features": {
+          "0": "Up to 5 resources",
+          "1": "Interactive Gantt chart",
+          "2": "Basic order management",
+          "3": "Single shift support",
+          "4": "Email support"
+        }
+      },
+      "professional": {
+        "name": "Professional",
+        "badge": "Most Popular",
+        "description": "For growing manufacturers who need full optimization and multi-resource planning.",
+        "cta": "Contact for Pricing",
+        "features": {
+          "0": "Up to 50 resources",
+          "1": "AI optimization engine",
+          "2": "Multi-shift scheduling",
+          "3": "Changeover optimization",
+          "4": "Resource groups & skill matching",
+          "5": "BOM & inventory tracking",
+          "6": "Priority support"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large operations with complex requirements and custom integration needs.",
+        "cta": "Contact Sales",
+        "features": {
+          "0": "Unlimited resources",
+          "1": "Everything in Professional",
+          "2": "Custom API integrations",
+          "3": "Shop floor tracking",
+          "4": "Multi-site support",
+          "5": "Dedicated account manager",
+          "6": "Custom onboarding & training"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Feature Comparison",
+      "starter": "Starter",
+      "professional": "Professional",
+      "enterprise": "Enterprise",
+      "categories": {
+        "scheduling": {
+          "title": "Scheduling",
+          "features": {
+            "0": { "name": "Interactive Gantt Chart", "starter": true, "professional": true, "enterprise": true },
+            "1": { "name": "Drag-and-Drop Scheduling", "starter": true, "professional": true, "enterprise": true },
+            "2": { "name": "AI Optimization Engine", "starter": false, "professional": true, "enterprise": true },
+            "3": { "name": "What-If Scenarios", "starter": false, "professional": true, "enterprise": true },
+            "4": { "name": "Multi-Site Scheduling", "starter": false, "professional": false, "enterprise": true }
+          }
+        },
+        "resources": {
+          "title": "Resource Management",
+          "features": {
+            "0": { "name": "Machine & Equipment Tracking", "starter": true, "professional": true, "enterprise": true },
+            "1": { "name": "Worker Management", "starter": true, "professional": true, "enterprise": true },
+            "2": { "name": "Resource Groups", "starter": false, "professional": true, "enterprise": true },
+            "3": { "name": "Skill-Based Assignment", "starter": false, "professional": true, "enterprise": true },
+            "4": { "name": "Capacity Planning Dashboard", "starter": false, "professional": true, "enterprise": true }
+          }
+        },
+        "operations": {
+          "title": "Operations",
+          "features": {
+            "0": { "name": "Order Management", "starter": true, "professional": true, "enterprise": true },
+            "1": { "name": "Shift Management", "starter": "1 shift", "professional": "Unlimited", "enterprise": "Unlimited" },
+            "2": { "name": "Changeover Optimization", "starter": false, "professional": true, "enterprise": true },
+            "3": { "name": "BOM & Inventory", "starter": false, "professional": true, "enterprise": true },
+            "4": { "name": "Shop Floor Tracking", "starter": false, "professional": false, "enterprise": true }
+          }
+        },
+        "support": {
+          "title": "Support & Integration",
+          "features": {
+            "0": { "name": "Email Support", "starter": true, "professional": true, "enterprise": true },
+            "1": { "name": "Priority Support", "starter": false, "professional": true, "enterprise": true },
+            "2": { "name": "Dedicated Account Manager", "starter": false, "professional": false, "enterprise": true },
+            "3": { "name": "API Access", "starter": false, "professional": false, "enterprise": true },
+            "4": { "name": "Custom Onboarding", "starter": false, "professional": false, "enterprise": true }
+          }
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "0": {
+          "question": "Is there a free trial?",
+          "answer": "Yes. We offer a guided demo and trial period so you can see Planifactor with your own data before committing. Contact us to get started."
+        },
+        "1": {
+          "question": "Can I upgrade my plan later?",
+          "answer": "Absolutely. You can upgrade at any time as your needs grow. Your data and configuration carry over seamlessly."
+        },
+        "2": {
+          "question": "Do you offer discounts for annual billing?",
+          "answer": "Yes, we offer significant savings for annual commitments. Contact our sales team for detailed pricing."
+        },
+        "3": {
+          "question": "How long does implementation take?",
+          "answer": "Most teams are up and running within 1-2 weeks. Enterprise deployments with custom integrations may take 4-6 weeks. We support you through every step."
+        },
+        "4": {
+          "question": "Can Planifactor integrate with our ERP system?",
+          "answer": "The Enterprise plan includes API access for custom integrations with ERP systems, MES platforms, and other business software. Contact us for integration details."
+        },
+        "5": {
+          "question": "Is our data secure?",
+          "answer": "Yes. Planifactor uses industry-standard encryption, secure cloud infrastructure, and regular security audits. Your production data is private and protected."
+        }
+      }
+    }
+  },
+  "UseCases": {
+    "discrete-manufacturing": {
+      "metaTitle": "Discrete Manufacturing Scheduling",
+      "metaDescription": "See how Planifactor helps discrete manufacturers optimize production scheduling, reduce changeover time, and deliver on time.",
+      "hero": {
+        "title": "Scheduling for Discrete Manufacturing",
+        "subtitle": "Coordinate complex production sequences across multiple machines and shifts. Planifactor keeps your lines running efficiently and your deliveries on time."
+      },
+      "painPoints": {
+        "title": "Challenges You Face",
+        "items": {
+          "0": {
+            "title": "Complex Sequencing",
+            "description": "Hundreds of orders competing for shared resources. Manual scheduling means constant firefighting and missed deadlines."
+          },
+          "1": {
+            "title": "Changeover Waste",
+            "description": "Frequent product changes on the same machine. Without optimization, changeover time eats into productive hours."
+          },
+          "2": {
+            "title": "No Cross-Machine Visibility",
+            "description": "Each department schedules independently. Downstream delays are invisible until they cause a crisis."
+          },
+          "3": {
+            "title": "Excel Does Not Scale",
+            "description": "Spreadsheet-based scheduling breaks down as order volume grows. One change ripples through the entire plan."
+          }
+        }
+      },
+      "solutions": {
+        "title": "How Planifactor Solves It",
+        "items": {
+          "0": {
+            "title": "AI-Optimized Sequences",
+            "description": "The optimizer evaluates thousands of possible sequences to minimize late orders and maximize throughput across all resources."
+          },
+          "1": {
+            "title": "Changeover Minimization",
+            "description": "Define changeover matrices and let the AI group similar jobs together, reducing setup time by up to 40%."
+          },
+          "2": {
+            "title": "End-to-End Gantt View",
+            "description": "See every machine, every order, and every dependency on a single timeline. Spot bottlenecks before they cause delays."
+          },
+          "3": {
+            "title": "Instant Replanning",
+            "description": "When a machine breaks down or a rush order arrives, reschedule in minutes -- not hours. The optimizer handles the cascade automatically."
+          }
+        }
+      },
+      "benefits": {
+        "title": "Results You Can Expect",
+        "items": {
+          "0": { "metric": "35%", "label": "Reduction in changeover time" },
+          "1": { "metric": "96%", "label": "On-time delivery rate" },
+          "2": { "metric": "4x", "label": "Faster scheduling vs. manual" },
+          "3": { "metric": "15%", "label": "Increase in throughput" }
+        }
+      },
+      "testimonial": {
+        "quote": "We went from spending a full day on the weekly schedule to having an optimized plan in under an hour. The AI handles complexity we could never manage in Excel.",
+        "name": "Dimitar Ivanov",
+        "title": "Production Director",
+        "company": "TechMetal Industries"
+      }
+    },
+    "job-shops": {
+      "metaTitle": "Job Shop Scheduling",
+      "metaDescription": "See how Planifactor helps job shops manage high-mix, low-volume scheduling with AI optimization and real-time replanning.",
+      "hero": {
+        "title": "Scheduling for Job Shops",
+        "subtitle": "Every order is different. Every deadline matters. Planifactor gives job shops the agility to handle constant change without chaos."
+      },
+      "painPoints": {
+        "title": "Challenges You Face",
+        "items": {
+          "0": {
+            "title": "Every Order Is Unique",
+            "description": "No two jobs are the same. Routing, processing times, and resource requirements vary for every order."
+          },
+          "1": {
+            "title": "Constant Reprioritization",
+            "description": "Rush orders arrive daily. Each one reshuffles the entire schedule, and manual adjustments take hours."
+          },
+          "2": {
+            "title": "Resource Juggling",
+            "description": "Skilled workers, specialized machines, and limited tooling create complex constraints that spreadsheets cannot handle."
+          },
+          "3": {
+            "title": "Quoting Accuracy",
+            "description": "Without visibility into current load, delivery date promises are guesses. Over-promise and lose trust, under-promise and lose the job."
+          }
+        }
+      },
+      "solutions": {
+        "title": "How Planifactor Solves It",
+        "items": {
+          "0": {
+            "title": "Flexible Order Routing",
+            "description": "Define alternative routings and let the optimizer choose the best path based on current load and availability."
+          },
+          "1": {
+            "title": "One-Click Reschedule",
+            "description": "Insert a rush order and see the cascade instantly. The AI finds the least-disruptive insertion point automatically."
+          },
+          "2": {
+            "title": "Skill-Based Assignment",
+            "description": "Match workers to jobs based on skills, certifications, and current availability. The optimizer respects all constraints."
+          },
+          "3": {
+            "title": "Realistic Delivery Dates",
+            "description": "See actual available capacity before quoting. Give customers accurate lead times based on your real schedule, not guesses."
+          }
+        }
+      },
+      "benefits": {
+        "title": "Results You Can Expect",
+        "items": {
+          "0": { "metric": "60%", "label": "Faster response to rush orders" },
+          "1": { "metric": "25%", "label": "Improvement in delivery accuracy" },
+          "2": { "metric": "3h", "label": "Saved per day on scheduling" },
+          "3": { "metric": "90%", "label": "Resource utilization rate" }
+        }
+      },
+      "testimonial": {
+        "quote": "In a job shop, everything changes by the hour. Planifactor lets us react in minutes instead of spending all afternoon on the whiteboard.",
+        "name": "Nikolay Todorov",
+        "title": "Shop Floor Manager",
+        "company": "Balkan Precision"
+      }
+    },
+    "production-planning": {
+      "metaTitle": "Production Planning Software",
+      "metaDescription": "Replace spreadsheet scheduling with AI-powered production planning. Planifactor helps planners optimize across resources, shifts, and priorities.",
+      "hero": {
+        "title": "Smarter Production Planning",
+        "subtitle": "Stop spending hours building schedules manually. Planifactor gives production planners the tools to create optimized plans in minutes, not days."
+      },
+      "painPoints": {
+        "title": "Challenges You Face",
+        "items": {
+          "0": {
+            "title": "Time-Consuming Manual Planning",
+            "description": "Building a weekly schedule takes hours or days. By the time it is done, something has already changed."
+          },
+          "1": {
+            "title": "No What-If Analysis",
+            "description": "You cannot easily compare scenarios. What if we add a shift? What if we prioritize this customer? Each scenario means rebuilding the plan."
+          },
+          "2": {
+            "title": "Reactive, Not Proactive",
+            "description": "Without forecasting tools, planning is always catching up to reality rather than getting ahead of it."
+          },
+          "3": {
+            "title": "Scattered Information",
+            "description": "Order data in ERP, resource info in spreadsheets, shift plans on the wall. No single source of truth for the planner."
+          }
+        }
+      },
+      "solutions": {
+        "title": "How Planifactor Solves It",
+        "items": {
+          "0": {
+            "title": "AI-Generated Schedules",
+            "description": "Define your constraints and objectives. The optimizer generates a complete schedule in minutes, considering all resources and dependencies."
+          },
+          "1": {
+            "title": "Scenario Comparison",
+            "description": "Run multiple what-if scenarios side by side. Compare the impact of adding resources, changing priorities, or accepting new orders."
+          },
+          "2": {
+            "title": "Proactive Planning",
+            "description": "See capacity bottlenecks weeks ahead. Plan preventive maintenance, overtime, or outsourcing before problems materialize."
+          },
+          "3": {
+            "title": "Single Source of Truth",
+            "description": "All orders, resources, shifts, and constraints in one platform. Everyone works from the same up-to-date schedule."
+          }
+        }
+      },
+      "benefits": {
+        "title": "Results You Can Expect",
+        "items": {
+          "0": { "metric": "80%", "label": "Reduction in planning time" },
+          "1": { "metric": "20%", "label": "Improvement in resource utilization" },
+          "2": { "metric": "5x", "label": "More scenarios evaluated" },
+          "3": { "metric": "30%", "label": "Fewer late orders" }
+        }
+      },
+      "testimonial": {
+        "quote": "We used to spend two days building the weekly plan. Now I run the optimizer and have a better schedule in 30 minutes. I actually have time for proactive planning.",
+        "name": "Elena Marinova",
+        "title": "Senior Production Planner",
+        "company": "Alpine Manufacturing"
+      }
+    }
   }
 }
