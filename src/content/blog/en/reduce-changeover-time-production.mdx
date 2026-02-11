@@ -1,0 +1,137 @@
+---
+title: "How to Reduce Changeover Time in Production Scheduling"
+description: "Discover practical strategies to reduce changeover time in manufacturing through intelligent scheduling, sequencing, and AI optimization."
+date: "2026-02-09"
+author: "Planifactor Team"
+tags: ["optimization", "manufacturing", "scheduling"]
+published: true
+---
+
+# How to Reduce Changeover Time in Production Scheduling
+
+Changeover time is one of the biggest hidden costs in manufacturing. Every minute spent switching a machine from one product to another is a minute that machine is not producing anything. Yet in most factories, changeover time is accepted as an unavoidable fact of life rather than treated as a variable that scheduling can directly influence.
+
+The truth is that how you sequence your production orders has an enormous impact on total changeover time. Two schedules with the exact same orders and the same machines can differ by hours in total changeover, simply because of the order in which jobs are arranged. This article explains what changeover time really costs, why scheduling is the most powerful lever to reduce it, and how AI optimization takes changeover reduction further than manual planning ever could.
+
+## What Is Changeover Time?
+
+Changeover time -- also called setup time or transition time -- is the period required to switch a machine or workstation from producing one product to producing another. It includes everything that happens between the last good unit of the previous job and the first good unit of the next one.
+
+Depending on your operation, changeover activities may include:
+
+- **Tool changes** -- swapping dies, molds, fixtures, or cutting tools
+- **Material switches** -- loading new raw materials, purging old ones
+- **Calibration** -- adjusting machine settings, temperatures, speeds, or pressures
+- **Cleaning** -- removing residue, contamination, or leftover material
+- **Quality verification** -- running test pieces, checking first-article dimensions
+- **Documentation** -- closing out the previous job, opening the next one in the system
+
+It is important to distinguish changeover time from processing time. Processing time is value-adding -- it produces output. Changeover time is necessary but non-value-adding. The goal is not to eliminate changeovers entirely (that would mean running only one product forever) but to minimize both the frequency and the duration of changeovers.
+
+## Why Changeover Matters More Than You Think
+
+Most manufacturers underestimate the cumulative impact of changeover time because each individual changeover seems short. Fifteen minutes here, twenty minutes there. But the numbers add up fast.
+
+<Callout type="info">
+Consider a factory with 10 machines, each performing an average of 8 changeovers per shift. If each changeover takes 15 minutes, that is 8 x 15 = 120 minutes of changeover per machine per shift. Across 10 machines, that is 1,200 minutes -- or 20 hours -- of non-productive time every single shift. At a labor rate of EUR 35 per hour plus machine overhead, the daily cost of changeovers can easily exceed EUR 1,000.
+</Callout>
+
+Here is a simple way to quantify the impact for your operation:
+
+| Variable | Example Value |
+|----------|--------------|
+| Machines | 10 |
+| Changeovers per machine per shift | 8 |
+| Average changeover duration | 15 minutes |
+| Total changeover time per shift | 20 hours |
+| Shifts per day | 2 |
+| Total daily changeover time | 40 hours |
+| Annual working days | 250 |
+| **Annual changeover time** | **10,000 hours** |
+
+Ten thousand hours per year is roughly five full-time employees doing nothing but setup work. For many manufacturers, changeover time represents 15 to 30 percent of total available machine time. Reducing that by even a quarter frees up hundreds of hours of productive capacity without buying a single new machine.
+
+## SMED and the Scheduling Connection
+
+If you have studied lean manufacturing, you have likely encountered SMED -- Single-Minute Exchange of Dies. Developed by Shigeo Shingo at Toyota, SMED is a methodology for reducing the duration of each individual changeover. It works by separating internal setup activities (which require the machine to be stopped) from external ones (which can be done while the machine is still running), then converting as many internal activities as possible to external ones.
+
+SMED is valuable. It can cut individual changeover times by 50 percent or more. But SMED has a limitation: it reduces the duration of each changeover but does not address the number of changeovers. A factory that does SMED on every machine but sequences orders randomly will still accumulate a large total changeover burden.
+
+This is where scheduling enters the picture. Intelligent sequencing can reduce the total number of changeovers -- or at least group together changeovers that require the same setup, reducing the effective duration even when the count stays the same.
+
+The most effective approach combines both: use SMED to reduce individual changeover duration, and use intelligent scheduling to reduce the number and severity of changeovers. Together, the impact is multiplicative.
+
+## Scheduling Strategies to Minimize Changeovers
+
+There are three primary scheduling strategies that directly reduce changeover time. Each has trade-offs, and the best approach depends on your product mix, customer requirements, and production constraints.
+
+### Campaign Scheduling (Batching Similar Products)
+
+Campaign scheduling groups identical or similar products together into longer production runs. Instead of making 20 units of Product A, then 30 of Product B, then 15 more of Product A, you combine the two A runs into a single batch of 35 units. One changeover instead of two.
+
+The benefit is obvious: fewer transitions mean less setup time. The risk is equally obvious: combining batches increases the time before the second batch of Product A starts, which may push its delivery date later. Campaign scheduling works best when:
+
+- Customer deadlines are flexible enough to allow batching
+- Product families share the same tooling or material
+- Changeover time between products within a family is significantly shorter than between families
+
+### Attribute-Based Sequencing
+
+Not all changeovers are equal. Switching from a red product to a blue product might take 5 minutes (color change only), while switching from red to a completely different material type might take 45 minutes. Attribute-based sequencing arranges the production order to minimize the total transition cost by considering the attributes that drive changeover.
+
+Common sequencing attributes include:
+
+- **Material type** -- group all jobs using the same raw material together
+- **Color** -- sequence colors from light to dark to reduce cleaning time
+- **Size or thickness** -- arrange from smallest to largest to minimize calibration adjustments
+- **Tooling** -- group jobs that share the same die, mold, or fixture
+
+When the scheduler understands these attributes and their impact on changeover duration, it can arrange jobs in a sequence that minimizes total transition time even when full batching is not possible.
+
+### Due-Date Balancing
+
+The hardest part of changeover reduction is that it often conflicts with on-time delivery. The lowest-changeover sequence is rarely the sequence that delivers every order on time. Effective scheduling requires balancing these two objectives.
+
+Due-date balancing considers delivery deadlines as a constraint alongside changeover cost. The scheduler searches for sequences that minimize changeovers while keeping all orders within their delivery windows. When conflicts arise, the planner decides which objective takes priority -- and the best tools make this trade-off explicit and configurable.
+
+## How AI Optimization Reduces Changeovers
+
+A human planner can apply the strategies above, but they are limited by the sheer number of possibilities. With 50 orders across 10 machines, the number of possible sequences is larger than the number of atoms in the universe. A planner will try a handful of arrangements, pick the best one they find, and move on. There is no way to know whether a better sequence exists.
+
+An AI optimizer approaches the problem differently. Using algorithms like genetic algorithms, simulated annealing, or constraint programming, it evaluates thousands of possible sequences in seconds. It considers:
+
+- The changeover matrix between every pair of products on every machine
+- Due dates and customer priorities
+- Machine capabilities and shift patterns
+- Multiple objectives simultaneously (minimize changeovers AND minimize lateness AND balance load)
+
+The result is a schedule that a human planner could not have found manually, not because the planner lacks skill, but because the combinatorial space is simply too large for the human mind to explore.
+
+In practice, AI optimization typically reduces total changeover time by 20 to 40 percent compared to manually sequenced schedules. For a factory losing 10,000 hours per year to changeovers, a 30 percent reduction means recovering 3,000 hours of productive capacity.
+
+## Measuring Improvement
+
+You cannot improve what you do not measure. Before implementing any changeover reduction strategy, establish a baseline with these key metrics:
+
+- **Total changeover time per shift** -- the sum of all changeover durations across all machines during a shift. This is your primary metric.
+- **Changeover-to-processing ratio** -- total changeover time divided by total processing time. A ratio above 0.20 (changeovers consume more than 20 percent of available time) indicates significant optimization potential.
+- **Number of changeovers per resource** -- helps identify which machines are switching too frequently and which might benefit from campaign scheduling.
+- **Average changeover duration** -- distinguishes between a frequency problem (too many changeovers) and a duration problem (each changeover takes too long). The fix is different for each.
+
+<Callout type="tip">
+Before you invest in changeover optimization, spend one week measuring your current changeover time. Assign operators a simple task: log the start and end time of every changeover. The data will likely surprise you -- most manufacturers find that changeover time is 30 to 50 percent higher than their estimate.
+</Callout>
+
+Track these metrics weekly after implementing scheduling changes. Improvement is rarely instant -- it takes a few scheduling cycles for the team to adapt to new sequencing patterns. But the trend should be clearly downward within the first month.
+
+## Getting Started
+
+Changeover reduction through intelligent scheduling is one of the highest-return improvements a manufacturer can make. It requires no capital investment in new machines, no expensive lean consulting engagement, and no disruption to the shop floor. It simply requires arranging existing work in a smarter order.
+
+The first step is understanding your changeover matrix -- which product transitions cost the most time. The second step is applying that knowledge to your scheduling process, either manually or with the help of an optimization tool.
+
+For a deeper look at how AI transforms manufacturing scheduling beyond changeover reduction, see our article on [how AI is transforming manufacturing scheduling](/en/blog/ai-in-manufacturing).
+
+---
+
+Want to estimate how much changeover reduction could save your operation? Try the [Planifactor ROI calculator](/en/roi-calculator) to quantify the impact. Or [request a demo](/en/contact) and we will show you how AI-optimized sequencing works with your actual product mix.
