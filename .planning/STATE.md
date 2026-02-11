@@ -4,7 +4,7 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 9 IN PROGRESS. Plan 09-01 (ToFu Blog Batch 1) complete -- 3 EN + 3 BG educational posts created. Plans 09-02 through 09-04 remain.
+**Current Focus:** Phase 9 IN PROGRESS. Plans 09-01 (ToFu), 09-02 (MoFu), and 09-03 (BoFu comparison) complete. Plan 09-04 (launch checklist) remains.
 
 ---
 
@@ -12,9 +12,9 @@
 
 **Milestone:** v1 -- Marketing Site Launch
 **Current Phase:** Phase 9 -- Blog Content & Launch (IN PROGRESS)
-**Current Plan:** 1 of 4 complete
+**Current Plan:** 3 of 4 complete
 **Status:** In progress
-**Last activity:** 2026-02-11 -- Completed 09-01-PLAN.md (ToFu blog batch 1)
+**Last activity:** 2026-02-11 -- Completed 09-02-PLAN.md (MoFu blog content batch 2)
 
 **Progress:**
 ```
@@ -26,10 +26,10 @@ Phase 5: Content Pages              [==========] VERIFIED
 Phase 6: Blog Infrastructure        [==========] VERIFIED
 Phase 7: Interactive Features       [==========] VERIFIED
 Phase 8: SEO & Performance          [==========] VERIFIED
-Phase 9: Blog Content & Launch      [==        ] Plan 1/4
+Phase 9: Blog Content & Launch      [=======   ] Plan 3/4
 ```
 
-**Overall:** 8/9 phases complete | 26/~29 plans complete
+**Overall:** 8/9 phases complete | 28/~29 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [==        ] Plan 1/4
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 26 |
+| Plans completed | 28 |
 | Plans failed | 0 |
 | Requirements completed | 23/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-04, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-01, INTER-02, INTER-03, INTER-04, CONT-01, CONT-02, CONT-03, CONT-04, BLOG-01, OPS-01, OPS-02, OPS-03) |
 | Phases completed | 8/9 |
@@ -132,6 +132,8 @@ Phase 9: Blog Content & Launch      [==        ] Plan 1/4
 | 2 Callouts per post (not 3) | Keeps callouts impactful without overuse; each post has info/tip + warning/tip variety | 9 |
 | Honest self-qualification sections | "When Excel Is Still Fine" builds trust with B2B audience rather than overselling | 9 |
 | Cross-linking to future posts | Forward links to planifactor-vs-excel-scheduling will work once post exists | 9 |
+| Detailed calculation tables in MoFu posts | Manufacturing engineers appreciate concrete numbers; changeover cost and AI comparison tables make content actionable | 9 |
+| Balanced AI vs manual comparison | 9-dimension table includes dimensions where manual wins (setup effort, cost) -- builds credibility with skeptical B2B audience | 9 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -155,11 +157,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-11 -- Phase 9 Plan 01 execution (ToFu blog batch 1)
-**What happened:** Created 3 EN + 3 BG top-of-funnel educational blog posts (production scheduling for SMBs, finite capacity scheduling, outgrowing spreadsheets). All posts 1,200-1,800 words, Callout components, CTA links, internal cross-links. Build clean.
-**Stopped at:** Completed 09-01-PLAN.md
+**Last session:** 2026-02-11 -- Phase 9 Plan 02 execution (MoFu blog batch 2)
+**What happened:** Created 3 EN + 3 BG middle-of-funnel blog posts (Gantt chart essentials, changeover time reduction, AI vs manual scheduling). All posts 1,200-1,800 words, Callout components, comparison tables, CTA links, internal cross-links. Build clean.
+**Stopped at:** Completed 09-02-PLAN.md
 **Resume file:** None
-**Next action:** Phase 9 Plan 02 (MoFu blog content)
+**Next action:** Phase 9 Plan 04 (Launch checklist)
 
 ---
-*Last updated: 2026-02-11 after 09-01 execution*
+*Last updated: 2026-02-11 after 09-02 execution*
