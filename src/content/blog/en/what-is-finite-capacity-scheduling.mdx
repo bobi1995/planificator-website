@@ -1,0 +1,146 @@
+---
+title: "What Is Finite Capacity Scheduling? A Manufacturer's Guide"
+description: "Understand finite capacity scheduling, how it differs from infinite capacity planning, and why it matters for realistic production schedules."
+date: "2026-02-05"
+author: "Planifactor Team"
+tags: ["scheduling", "manufacturing", "capacity-planning"]
+published: true
+---
+
+# What Is Finite Capacity Scheduling? A Manufacturer's Guide
+
+Every manufacturer faces the same fundamental challenge: you have a fixed set of resources -- machines, workers, tooling -- and a variable set of orders that need to be completed by specific deadlines. The question is how you allocate those limited resources to meet demand without overcommitting.
+
+The answer depends on whether your planning approach respects the real limits of your capacity or pretends those limits do not exist. This is the core distinction between finite and infinite capacity scheduling, and understanding it can transform how you plan production.
+
+## Infinite vs Finite Capacity Scheduling
+
+### Infinite Capacity Scheduling
+
+Infinite capacity scheduling is the simpler approach. It assumes that resources have unlimited availability. When you place an order on a timeline, the system does not check whether the machine is already busy at that time. If two orders need the same machine on Tuesday morning, infinite capacity scheduling places them both there and leaves the conflict for the planner to resolve.
+
+This might sound unrealistic, and it is. But it has one advantage: speed. Because it ignores constraints, infinite capacity scheduling can generate a plan almost instantly. Material Requirements Planning (MRP) systems typically use infinite capacity logic. They calculate when materials are needed based on order due dates and work backward, without checking whether the shop floor can actually execute that plan.
+
+The result is a wishful-thinking schedule. It tells you what would need to happen if everything were available all the time. The gap between that schedule and reality is where firefighting lives.
+
+### Finite Capacity Scheduling
+
+Finite capacity scheduling takes the opposite approach. It treats resources as what they actually are: limited. A machine can only run one operation at a time. A worker can only be in one place. A shift has a fixed number of hours.
+
+When the scheduler places an operation on a resource, it checks whether that resource is available. If it is not, the operation is moved to the next available time slot. The result is a schedule that can actually be executed on the shop floor without overloading any single resource.
+
+<Callout type="info">
+**Finite capacity scheduling** is a planning method that accounts for the actual available capacity of each resource -- machines, workers, and workstations -- when generating a production schedule. Operations are only placed where real capacity exists, producing plans that are physically executable.
+</Callout>
+
+## Why Finite Capacity Matters
+
+The difference between infinite and finite capacity scheduling is not academic. It has direct, measurable consequences for your operation.
+
+### Prevents Overcommitting Resources
+
+The most common symptom of infinite capacity planning is chronic overload. Planners promise delivery dates based on a schedule that assumes unlimited resources. When the shop floor cannot keep up, the result is late orders, overtime, and frustrated workers.
+
+Finite capacity scheduling prevents this by making overload visible before it happens. If next Tuesday's schedule shows 14 hours of work on a machine that only runs 8 hours, you know immediately that something has to move.
+
+### Enables Accurate Delivery Promises
+
+When your schedule reflects reality, your delivery dates become trustworthy. Sales can tell a customer "we can deliver by March 15th" with confidence, because the schedule accounts for every other order already in the pipeline and the capacity available to execute them.
+
+### Reveals Bottlenecks Early
+
+A finite capacity schedule shows you where your constraints actually are. Maybe your CNC lathe is booked three weeks out while your milling station has gaps. That is actionable information. You can invest in additional lathe capacity, outsource some lathe work, or adjust your product mix to reduce lathe demand.
+
+### Supports Realistic What-If Analysis
+
+When you want to evaluate a new order -- "can we take this rush job?" -- a finite capacity scheduler gives you an honest answer. It shows you exactly what would need to move and what the ripple effects would be. An infinite capacity system would just say "yes" and leave the consequences for later.
+
+## Key Concepts in Finite Capacity Scheduling
+
+To use finite capacity scheduling effectively, you need to understand a few foundational concepts.
+
+### Resource Capacity
+
+Each resource has a defined capacity: the number of hours it can operate per day, based on shift patterns, breaks, and planned maintenance. A three-shift operation running a machine 24 hours minus breaks might have 21.5 available hours per day. A single-shift shop might have 7.5 hours. The scheduler uses these values to determine how much work can realistically be placed on each resource.
+
+### Shift Patterns
+
+Capacity is not uniform throughout the day or week. A machine might run two shifts on weekdays but only one on Saturdays and none on Sundays. Different workers might be available on different shifts. The scheduler needs to understand these patterns to generate accurate plans.
+
+### Constraint Types
+
+Production constraints come in two categories:
+
+- **Hard constraints** cannot be violated. A machine cannot run two operations simultaneously. An order cannot ship before it is completed. A worker cannot be in two places at once.
+- **Soft constraints** are preferences that should be respected but can be relaxed when necessary. You might prefer to group similar jobs together to minimize changeovers, but if a rush order arrives, you will break that sequence.
+
+A good finite capacity scheduler distinguishes between hard and soft constraints and handles both appropriately. Hard constraints are never violated. Soft constraints are optimized within the remaining flexibility.
+
+### Bottleneck Identification
+
+A bottleneck is any resource whose capacity limits the throughput of the entire system. In finite capacity scheduling, bottlenecks become immediately visible because they are the resources with the longest queues and the tightest schedules. Identifying bottlenecks is the first step toward improving overall capacity.
+
+<Callout type="warning">
+A common mistake is ignoring capacity limits during planning and then blaming the shop floor for not keeping up. If your schedule routinely requires 120 percent of available capacity, the problem is not execution -- it is the schedule itself. Finite capacity scheduling eliminates this disconnect.
+</Callout>
+
+## How Planifactor Handles Finite Capacity
+
+Planifactor is built from the ground up as a finite capacity scheduler. Every feature is designed around the principle that a schedule is only useful if it can actually be executed.
+
+### Resource Definitions
+
+In Planifactor, you define each resource with its actual capabilities: what operations it can perform, how fast it runs, and what its capacity limits are. When the optimizer generates a schedule, it never places work on a resource that cannot handle it.
+
+### Shift Management
+
+Planifactor's shift system lets you define complex patterns: rotating shifts, weekend schedules, holiday calendars, and per-resource overrides. The scheduler respects these patterns automatically. If a machine is down for maintenance on Thursday afternoon, no operations get placed there.
+
+### Automatic Conflict Detection
+
+When you make a manual adjustment -- moving an operation, adding a rush order, changing a deadline -- Planifactor immediately highlights any conflicts that result. Overlapping operations, capacity violations, and deadline breaches are flagged in real time so you can resolve them before they reach the shop floor.
+
+### Visual Capacity Utilization
+
+The Gantt chart in Planifactor shows capacity utilization at a glance. Overloaded time periods are highlighted, underutilized resources are visible as gaps, and bottlenecks stand out because their rows are packed while others have room. This visual approach makes capacity planning intuitive rather than abstract.
+
+### Optimizer with Capacity Awareness
+
+The Planifactor optimizer considers all capacity constraints simultaneously when generating a schedule. It does not just sequence operations -- it places them on specific resources at specific times, respecting every hard constraint and optimizing soft constraints like changeover minimization, on-time delivery, and workload balance.
+
+For more on how AI optimization complements finite capacity scheduling, see our article on [how AI is transforming manufacturing scheduling](/en/blog/ai-in-manufacturing).
+
+## Finite Capacity in Practice: A Simple Example
+
+Imagine you have two machines (Machine A and Machine B) and three orders, each requiring one operation:
+
+| Order | Machine Required | Duration | Deadline |
+|-------|-----------------|----------|----------|
+| Order 1 | Machine A | 4 hours | Tuesday EOD |
+| Order 2 | Machine A | 6 hours | Wednesday EOD |
+| Order 3 | Machine B | 3 hours | Tuesday EOD |
+
+With a single 8-hour shift per day:
+
+**Infinite capacity approach:** Place Order 1 and Order 2 both on Machine A starting Monday morning. The plan shows everything finishing by Monday afternoon. Looks great on paper -- but Machine A cannot run 10 hours of work in an 8-hour shift.
+
+**Finite capacity approach:** Order 1 starts Monday morning on Machine A (4 hours). Order 2 starts Monday afternoon on Machine A and continues into Tuesday morning (6 hours total). Order 3 runs Monday morning on Machine B (3 hours). All deadlines are met, and no resource is overloaded.
+
+The finite capacity schedule is less optimistic but entirely achievable. That is the point.
+
+## Making the Transition
+
+If you currently use an MRP system or spreadsheet-based planning (both of which tend toward infinite capacity assumptions), transitioning to finite capacity scheduling requires a few changes:
+
+1. **Audit your resource data.** You need accurate capacity numbers: shift patterns, maintenance schedules, and real throughput rates.
+2. **Define your constraints explicitly.** What are the hard limits? What are the preferences?
+3. **Start with your bottleneck.** Apply finite capacity scheduling to your most constrained resource first. This is where the biggest improvement will come from.
+4. **Train your team.** Planners accustomed to infinite capacity thinking will need to adjust their expectations. The schedule will look different -- more realistic, sometimes less optimistic -- but the execution will be dramatically smoother.
+
+## Next Steps
+
+Finite capacity scheduling is not a luxury reserved for large enterprises. Any manufacturer who deals with limited resources and competing deadlines -- which is every manufacturer -- benefits from planning that respects reality.
+
+Planifactor makes finite capacity scheduling accessible and practical. Define your resources, set your constraints, and let the optimizer build a schedule that your shop floor can actually execute.
+
+[Explore Planifactor's features](/en/features) to see how finite capacity scheduling works in practice, or [request a demo](/en/contact) to try it with your own production data.
