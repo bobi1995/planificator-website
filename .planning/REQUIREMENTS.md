@@ -7,7 +7,7 @@
 - [x] **FOUND-01**: Next.js App Router project initialized with Tailwind CSS and shadcn/ui component library
 - [x] **FOUND-02**: Full i18n setup with next-intl -- English and Bulgarian with URL-based switching (/en, /bg) and language switcher component
 - [x] **FOUND-03**: Brand identity created from scratch -- logo, color palette, typography (Latin + Cyrillic), design tokens integrated into Tailwind config
-- [ ] **FOUND-04**: SEO infrastructure -- dynamic sitemap generation, metadata cascading from layout to page, structured data (Organization, Product schemas), robots.txt
+- [x] **FOUND-04**: SEO infrastructure -- dynamic sitemap generation, metadata cascading from layout to page, structured data (Organization, Product schemas), robots.txt
 - [x] **FOUND-05**: Responsive design system -- mobile-first approach, all components work on mobile (375px), tablet, and desktop
 - [x] **FOUND-06**: Cyrillic font support -- preloaded Latin + Cyrillic subsets for Bulgarian content, no flash of unstyled text
 
@@ -41,9 +41,9 @@
 
 ### Operations & Analytics (OPS)
 
-- [ ] **OPS-01**: Plausible Analytics integration -- privacy-friendly, cookieless analytics tracking page views and conversions
-- [ ] **OPS-02**: Performance optimization -- Core Web Vitals passing (LCP < 2.5s, FID < 100ms, CLS < 0.1), image optimization, lazy-loaded animations
-- [ ] **OPS-03**: Open Graph images -- auto-generated or custom OG images for social sharing, per-page metadata with locale-aware images
+- [x] **OPS-01**: Plausible Analytics integration -- privacy-friendly, cookieless analytics tracking page views and conversions
+- [x] **OPS-02**: Performance optimization -- Core Web Vitals passing (LCP < 2.5s, FID < 100ms, CLS < 0.1), image optimization, lazy-loaded animations
+- [x] **OPS-03**: Open Graph images -- auto-generated or custom OG images for social sharing, per-page metadata with locale-aware images
 
 ---
 
@@ -80,7 +80,7 @@
 | FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 2 | Complete |
-| FOUND-04 | Phase 8 | Pending |
+| FOUND-04 | Phase 8 | Complete |
 | FOUND-05 | Phase 2 | Complete |
 | FOUND-06 | Phase 1 | Complete |
 | LAND-01 | Phase 3 | Complete |
@@ -99,9 +99,9 @@
 | BLOG-01 | Phase 6 | Complete |
 | BLOG-02 | Phase 9 | Pending |
 | BLOG-03 | Phase 9 | Pending |
-| OPS-01 | Phase 8 | Pending |
-| OPS-02 | Phase 8 | Pending |
-| OPS-03 | Phase 8 | Pending |
+| OPS-01 | Phase 8 | Complete |
+| OPS-02 | Phase 8 | Complete |
+| OPS-03 | Phase 8 | Complete |
 
 ---
-*Last updated: 2026-02-10 after phase 7 completion*
+*Last updated: 2026-02-11 after phase 8 completion*
