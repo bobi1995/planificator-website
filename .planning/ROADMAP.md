@@ -201,15 +201,23 @@ Plans:
 
 ## Phase 9: Blog Content & Launch Polish
 
-**Goal:** The site launches with substantive SEO content -- 5-10 blog posts and competitor comparison pages in both languages -- establishing Prefactor as a thought leader from day one.
+**Goal:** The site launches with substantive SEO content -- 8 new blog posts and competitor comparison pages in both languages -- establishing Planifactor as a thought leader from day one.
 
 **Dependencies:** Phase 6 (blog infrastructure), Phase 8 (SEO infrastructure)
 
 **Requirements:** BLOG-02, BLOG-03
 
+**Plans:** 4 plans
+
+Plans:
+- [ ] 09-01-PLAN.md -- Topical blog posts batch 1: 3 ToFu educational posts (small manufacturers, finite capacity, spreadsheet outgrowth) in EN + BG
+- [ ] 09-02-PLAN.md -- Topical blog posts batch 2: 3 MoFu + optimization posts (Gantt charts, changeover reduction, AI vs manual) in EN + BG
+- [ ] 09-03-PLAN.md -- Comparison blog posts: 2 BoFu competitor comparisons (vs Excel, vs Legacy APS) in EN + BG
+- [ ] 09-04-PLAN.md -- Build verification, content audit, cross-link check, and human quality review
+
 **Success Criteria:**
 1. Five to ten blog posts are published in both English and Bulgarian covering production scheduling, AI in manufacturing, and industry insights
-2. At least two competitor comparison pages exist ("Prefactor vs Excel scheduling", "Prefactor vs [competitor]") optimized for search capture
+2. At least two competitor comparison pages exist ("Planifactor vs Excel scheduling", "Planifactor vs Legacy APS") optimized for search capture
 3. All blog content has proper metadata, OG images, and appears in the sitemap
 4. Blog posts are discoverable via the blog index, tag filtering, and search engines (pages are indexable)
 
@@ -227,7 +235,7 @@ Plans:
 | 6 | Blog Infrastructure | BLOG-01 | Complete (2/2 plans) |
 | 7 | Interactive Features & Forms | INTER-01, INTER-02, INTER-03 | Complete (3/3 plans) |
 | 8 | SEO & Performance | FOUND-04, OPS-01, OPS-02, OPS-03 | Complete (4/4 plans) |
-| 9 | Blog Content & Launch Polish | BLOG-02, BLOG-03 | Not Started |
+| 9 | Blog Content & Launch Polish | BLOG-02, BLOG-03 | Planned (0/4 plans) |
 
 ---
 
@@ -294,4 +302,4 @@ Phase 3 (Layout Shell & Landing Page)
 **25/25 v1 requirements mapped. No orphans. No duplicates.**
 
 ---
-*Last updated: 2026-02-11 after phase 8 completion*
+*Last updated: 2026-02-11 after phase 9 planning*
