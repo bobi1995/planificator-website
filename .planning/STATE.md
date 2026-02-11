@@ -4,17 +4,17 @@
 
 **Core Value:** AI finds the optimal production schedule automatically -- the marketing site must communicate this clearly and compellingly to manufacturing decision-makers.
 
-**Current Focus:** Phase 8 COMPLETE. All 4 plans delivered (SEO foundation, metadata + Plausible, OG images, CLS prevention + performance audit). Phase 9 (Blog Content & Launch) next.
+**Current Focus:** Phase 9 IN PROGRESS. Plan 09-01 (ToFu Blog Batch 1) complete -- 3 EN + 3 BG educational posts created. Plans 09-02 through 09-04 remain.
 
 ---
 
 ## Current Position
 
 **Milestone:** v1 -- Marketing Site Launch
-**Current Phase:** Phase 8 -- SEO & Performance (COMPLETE)
-**Current Plan:** 4 of 4 complete
-**Status:** Phase complete -- ready for Phase 9
-**Last activity:** 2026-02-10 -- Completed 08-04-PLAN.md (CLS prevention + performance audit)
+**Current Phase:** Phase 9 -- Blog Content & Launch (IN PROGRESS)
+**Current Plan:** 1 of 4 complete
+**Status:** In progress
+**Last activity:** 2026-02-11 -- Completed 09-01-PLAN.md (ToFu blog batch 1)
 
 **Progress:**
 ```
@@ -26,10 +26,10 @@ Phase 5: Content Pages              [==========] VERIFIED
 Phase 6: Blog Infrastructure        [==========] VERIFIED
 Phase 7: Interactive Features       [==========] VERIFIED
 Phase 8: SEO & Performance          [==========] VERIFIED
-Phase 9: Blog Content & Launch      [          ] Not Started
+Phase 9: Blog Content & Launch      [==        ] Plan 1/4
 ```
 
-**Overall:** 8/9 phases complete | 25/~25 plans complete
+**Overall:** 8/9 phases complete | 26/~29 plans complete
 
 ---
 
@@ -37,7 +37,7 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 
 | Metric | Value |
 |--------|-------|
-| Plans completed | 25 |
+| Plans completed | 26 |
 | Plans failed | 0 |
 | Requirements completed | 23/25 (FOUND-01, FOUND-02, FOUND-03, FOUND-04, FOUND-05, FOUND-06, LAND-01, LAND-02, LAND-03, LAND-04, LAND-05, INTER-01, INTER-02, INTER-03, INTER-04, CONT-01, CONT-02, CONT-03, CONT-04, BLOG-01, OPS-01, OPS-02, OPS-03) |
 | Phases completed | 8/9 |
@@ -129,6 +129,9 @@ Phase 9: Blog Content & Launch      [          ] Not Started
 | title.template cascading for DRY page titles | Layout sets template '%s \| Planifactor'; child pages provide title string only | 8 |
 | Fallback min-h matches widget min-h (700px) | Prevents CLS when consent state toggles between declined/accepted on CalendlyInline | 8 |
 | CookieConsent min-h-[60px] for fixed banner | Consistent sizing prevents internal reflow during text rendering | 8 |
+| 2 Callouts per post (not 3) | Keeps callouts impactful without overuse; each post has info/tip + warning/tip variety | 9 |
+| Honest self-qualification sections | "When Excel Is Still Fine" builds trust with B2B audience rather than overselling | 9 |
+| Cross-linking to future posts | Forward links to planifactor-vs-excel-scheduling will work once post exists | 9 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -152,11 +155,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-10 -- Phase 8 Plan 04 execution (final plan in phase)
-**What happened:** Executed Plan 08-04 (CLS Prevention & Performance Audit). Fixed CalendlyInline fallback min-h mismatch (300px->700px), added min-h-[60px] to CookieConsent. Audited AnimatedGantt, ComparisonSlider, checked for raw img tags, verified LazyMotion usage. Build clean. User verified complete Phase 8 output (sitemap, robots, OG images, metadata, Plausible, JSON-LD, CLS prevention).
-**Stopped at:** Completed 08-04-PLAN.md -- Phase 8 COMPLETE
+**Last session:** 2026-02-11 -- Phase 9 Plan 01 execution (ToFu blog batch 1)
+**What happened:** Created 3 EN + 3 BG top-of-funnel educational blog posts (production scheduling for SMBs, finite capacity scheduling, outgrowing spreadsheets). All posts 1,200-1,800 words, Callout components, CTA links, internal cross-links. Build clean.
+**Stopped at:** Completed 09-01-PLAN.md
 **Resume file:** None
-**Next action:** Phase 9 (Blog Content & Launch)
+**Next action:** Phase 9 Plan 02 (MoFu blog content)
 
 ---
-*Last updated: 2026-02-11 after phase 8 verification*
+*Last updated: 2026-02-11 after 09-01 execution*
