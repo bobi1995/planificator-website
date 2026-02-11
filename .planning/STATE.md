@@ -134,6 +134,10 @@ Phase 9: Blog Content & Launch      [=======   ] Plan 3/4
 | Cross-linking to future posts | Forward links to planifactor-vs-excel-scheduling will work once post exists | 9 |
 | Detailed calculation tables in MoFu posts | Manufacturing engineers appreciate concrete numbers; changeover cost and AI comparison tables make content actionable | 9 |
 | Balanced AI vs manual comparison | 9-dimension table includes dimensions where manual wins (setup effort, cost) -- builds credibility with skeptical B2B audience | 9 |
+| 3 Callouts per comparison post | Comparison posts are longer (1,800-2,500 words) and warrant more callouts than topical posts | 9 |
+| 10-row comparison tables as visual centerpiece | Large scannable tables are the key differentiator of comparison posts; readers screenshot and share | 9 |
+| Category comparison for APS | "Legacy APS vs modern" framing rather than attacking specific vendors -- more professional | 9 |
+| Mandatory self-qualification sections | "When to Stay with Excel" and "When Legacy APS Makes Sense" build B2B trust | 9 |
 
 ### Research Flags
 - Phase 4 (Animated Gantt): Animation performance patterns, Gantt mockup implementation -- RESEARCHED
@@ -157,11 +161,11 @@ None currently.
 
 ## Session Continuity
 
-**Last session:** 2026-02-11 -- Phase 9 Plan 02 execution (MoFu blog batch 2)
-**What happened:** Created 3 EN + 3 BG middle-of-funnel blog posts (Gantt chart essentials, changeover time reduction, AI vs manual scheduling). All posts 1,200-1,800 words, Callout components, comparison tables, CTA links, internal cross-links. Build clean.
-**Stopped at:** Completed 09-02-PLAN.md
+**Last session:** 2026-02-11 -- Phase 9 Plan 03 execution (BoFu comparison posts)
+**What happened:** Created 2 EN + 2 BG bottom-of-funnel comparison blog posts (Planifactor vs Excel, Planifactor vs Legacy APS). All posts 1,800-2,300 words with 10-row comparison tables, self-qualification sections, 3 Callout components each. Build clean.
+**Stopped at:** Completed 09-03-PLAN.md
 **Resume file:** None
 **Next action:** Phase 9 Plan 04 (Launch checklist)
 
 ---
-*Last updated: 2026-02-11 after 09-02 execution*
+*Last updated: 2026-02-11 after 09-03 execution*
