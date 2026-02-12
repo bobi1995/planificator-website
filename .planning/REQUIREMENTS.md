@@ -36,8 +36,8 @@
 ### Blog & Content (BLOG)
 
 - [x] **BLOG-01**: MDX blog infrastructure -- content registry (getAllPosts, getPostsByTag), index page with pagination, individual post pages, categories/tags, RSS feed
-- [ ] **BLOG-02**: Initial blog posts (5-10) -- SEO content about production scheduling, AI in manufacturing, industry insights in both EN and BG
-- [ ] **BLOG-03**: Comparison pages -- "Prefactor vs Excel scheduling", "Prefactor vs PlanetTogether" style competitor comparison for SEO capture
+- [x] **BLOG-02**: Initial blog posts (5-10) -- SEO content about production scheduling, AI in manufacturing, industry insights in both EN and BG
+- [x] **BLOG-03**: Comparison pages -- "Prefactor vs Excel scheduling", "Prefactor vs PlanetTogether" style competitor comparison for SEO capture
 
 ### Operations & Analytics (OPS)
 
@@ -97,11 +97,11 @@
 | INTER-03 | Phase 7 | Complete |
 | INTER-04 | Phase 4 | Complete |
 | BLOG-01 | Phase 6 | Complete |
-| BLOG-02 | Phase 9 | Pending |
-| BLOG-03 | Phase 9 | Pending |
+| BLOG-02 | Phase 9 | Complete |
+| BLOG-03 | Phase 9 | Complete |
 | OPS-01 | Phase 8 | Complete |
 | OPS-02 | Phase 8 | Complete |
 | OPS-03 | Phase 8 | Complete |
 
 ---
-*Last updated: 2026-02-11 after phase 8 completion*
+*Last updated: 2026-02-12 after phase 9 completion*
