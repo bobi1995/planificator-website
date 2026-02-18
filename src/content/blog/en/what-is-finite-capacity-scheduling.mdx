@@ -2,7 +2,7 @@
 title: "What Is Finite Capacity Scheduling? A Manufacturer's Guide"
 description: "Understand finite capacity scheduling, how it differs from infinite capacity planning, and why it matters for realistic production schedules."
 date: "2026-02-05"
-author: "Planifactor Team"
+author: "Planificator Team"
 tags: ["scheduling", "manufacturing", "capacity-planning"]
 published: true
 ---
@@ -84,29 +84,29 @@ A bottleneck is any resource whose capacity limits the throughput of the entire 
 A common mistake is ignoring capacity limits during planning and then blaming the shop floor for not keeping up. If your schedule routinely requires 120 percent of available capacity, the problem is not execution -- it is the schedule itself. Finite capacity scheduling eliminates this disconnect.
 </Callout>
 
-## How Planifactor Handles Finite Capacity
+## How Planificator Handles Finite Capacity
 
-Planifactor is built from the ground up as a finite capacity scheduler. Every feature is designed around the principle that a schedule is only useful if it can actually be executed.
+Planificator is built from the ground up as a finite capacity scheduler. Every feature is designed around the principle that a schedule is only useful if it can actually be executed.
 
 ### Resource Definitions
 
-In Planifactor, you define each resource with its actual capabilities: what operations it can perform, how fast it runs, and what its capacity limits are. When the optimizer generates a schedule, it never places work on a resource that cannot handle it.
+In Planificator, you define each resource with its actual capabilities: what operations it can perform, how fast it runs, and what its capacity limits are. When the optimizer generates a schedule, it never places work on a resource that cannot handle it.
 
 ### Shift Management
 
-Planifactor's shift system lets you define complex patterns: rotating shifts, weekend schedules, holiday calendars, and per-resource overrides. The scheduler respects these patterns automatically. If a machine is down for maintenance on Thursday afternoon, no operations get placed there.
+Planificator's shift system lets you define complex patterns: rotating shifts, weekend schedules, holiday calendars, and per-resource overrides. The scheduler respects these patterns automatically. If a machine is down for maintenance on Thursday afternoon, no operations get placed there.
 
 ### Automatic Conflict Detection
 
-When you make a manual adjustment -- moving an operation, adding a rush order, changing a deadline -- Planifactor immediately highlights any conflicts that result. Overlapping operations, capacity violations, and deadline breaches are flagged in real time so you can resolve them before they reach the shop floor.
+When you make a manual adjustment -- moving an operation, adding a rush order, changing a deadline -- Planificator immediately highlights any conflicts that result. Overlapping operations, capacity violations, and deadline breaches are flagged in real time so you can resolve them before they reach the shop floor.
 
 ### Visual Capacity Utilization
 
-The Gantt chart in Planifactor shows capacity utilization at a glance. Overloaded time periods are highlighted, underutilized resources are visible as gaps, and bottlenecks stand out because their rows are packed while others have room. This visual approach makes capacity planning intuitive rather than abstract.
+The Gantt chart in Planificator shows capacity utilization at a glance. Overloaded time periods are highlighted, underutilized resources are visible as gaps, and bottlenecks stand out because their rows are packed while others have room. This visual approach makes capacity planning intuitive rather than abstract.
 
 ### Optimizer with Capacity Awareness
 
-The Planifactor optimizer considers all capacity constraints simultaneously when generating a schedule. It does not just sequence operations -- it places them on specific resources at specific times, respecting every hard constraint and optimizing soft constraints like changeover minimization, on-time delivery, and workload balance.
+The Planificator optimizer considers all capacity constraints simultaneously when generating a schedule. It does not just sequence operations -- it places them on specific resources at specific times, respecting every hard constraint and optimizing soft constraints like changeover minimization, on-time delivery, and workload balance.
 
 For more on how AI optimization complements finite capacity scheduling, see our article on [how AI is transforming manufacturing scheduling](/en/blog/ai-in-manufacturing).
 
@@ -141,6 +141,6 @@ If you currently use an MRP system or spreadsheet-based planning (both of which 
 
 Finite capacity scheduling is not a luxury reserved for large enterprises. Any manufacturer who deals with limited resources and competing deadlines -- which is every manufacturer -- benefits from planning that respects reality.
 
-Planifactor makes finite capacity scheduling accessible and practical. Define your resources, set your constraints, and let the optimizer build a schedule that your shop floor can actually execute.
+Planificator makes finite capacity scheduling accessible and practical. Define your resources, set your constraints, and let the optimizer build a schedule that your shop floor can actually execute.
 
-[Explore Planifactor's features](/en/features) to see how finite capacity scheduling works in practice, or [request a demo](/en/contact) to try it with your own production data.
+[Explore Planificator's features](/en/features) to see how finite capacity scheduling works in practice, or [request a demo](/en/contact) to try it with your own production data.

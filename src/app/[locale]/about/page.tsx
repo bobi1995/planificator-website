@@ -1,9 +1,9 @@
 import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {AboutHero} from '@/components/sections/about/AboutHero';
-import {CompanyStory} from '@/components/sections/about/CompanyStory';
-import {MissionValues} from '@/components/sections/about/MissionValues';
-import {TeamSection} from '@/components/sections/about/TeamSection';
+import {ExpertiseSection} from '@/components/sections/about/ExpertiseSection';
+import {TechnologySection} from '@/components/sections/about/TechnologySection';
+import {MissionStatement} from '@/components/sections/about/MissionStatement';
 import {CTABanner} from '@/components/sections/CTABanner';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
@@ -35,9 +35,9 @@ export default async function AboutPage({params}: Props) {
   return (
     <>
       <AboutHero />
-      <CompanyStory />
-      <MissionValues />
-      <TeamSection />
+      <ExpertiseSection />
+      <TechnologySection />
+      <MissionStatement />
       <CTABanner />
     </>
   );

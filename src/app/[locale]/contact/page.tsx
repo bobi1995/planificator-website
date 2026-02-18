@@ -27,7 +27,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 }
 
 // Placeholder URL -- replace with real Calendly URL when available
-const CALENDLY_URL = 'https://calendly.com/planifactor/demo';
+const CALENDLY_URL = 'https://calendly.com/planificator/demo';
 
 export default async function ContactPage({params}: Props) {
   const {locale} = await params;

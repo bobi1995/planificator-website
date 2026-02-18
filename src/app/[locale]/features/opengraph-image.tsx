@@ -2,7 +2,7 @@ import {ImageResponse} from 'next/og';
 import {getTranslations} from 'next-intl/server';
 import {createOgImageElement, OG_SIZE, OG_CONTENT_TYPE} from '@/lib/og-image';
 
-export const alt = 'Planifactor';
+export const alt = 'Planificator';
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 

@@ -65,7 +65,7 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html lang={locale} className={inter.variable}>
       <body className="font-sans antialiased">
-        <PlausibleProvider domain="planifactor.com">
+        <PlausibleProvider domain="planificator.com">
           <NextIntlClientProvider>
             <Header />
             <main>{children}</main>

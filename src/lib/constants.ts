@@ -3,6 +3,6 @@
  */
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://planifactor.com';
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://planificator.com';
 
-export const SITE_NAME = 'Planifactor';
+export const SITE_NAME = 'Planificator';

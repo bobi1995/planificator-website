@@ -2,6 +2,7 @@ import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {Button} from '@/components/ui/button';
 import {AnimatedGantt} from '@/components/sections/AnimatedGantt';
+import {ImagePlaceholder} from '@/components/ui/ImagePlaceholder';
 
 /**
  * Hero section — the first thing visitors see on the landing page.
@@ -36,11 +37,18 @@ export async function Hero() {
             </div>
           </div>
 
-          {/* Visual column — Gantt mockup */}
-          <div className="flex justify-center lg:justify-end">
+          {/* Visual column — Gantt mockup + product screenshot */}
+          <div className="flex flex-col gap-6 justify-center lg:justify-end">
             <div className="w-full max-w-lg lg:max-w-none rounded-xl border bg-card shadow-lg overflow-hidden">
               <AnimatedGantt />
             </div>
+            {/* Product dashboard screenshot — drop image at public/images/home/product-dashboard.png */}
+            <ImagePlaceholder
+              src="/images/home/product-dashboard.png"
+              alt={t('ganttAlt')}
+              width={1200}
+              height={800}
+            />
           </div>
         </div>
       </div>

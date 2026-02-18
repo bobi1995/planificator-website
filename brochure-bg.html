@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificator - AI Производствено Планиране</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --brand-50: #eff5ff;
+      --brand-100: #dbe8fe;
+      --brand-200: #bfd4fe;
+      --brand-400: #7ba4fb;
+      --brand-500: #4a7cf5;
+      --brand-600: #2563eb;
+      --brand-700: #1d4fd8;
+      --brand-800: #1e3faf;
+      --brand-900: #1e3a8a;
+      --brand-950: #0f1e4a;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --green-500: #22c55e;
+      --green-400: #34d399;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-800);
+      line-height: 1.5;
+      background: #fff;
+    }
+
+    /* ===== PAGE LAYOUT ===== */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+    }
+
+    /* ===== PAGE 1: COVER ===== */
+    .cover {
+      background: linear-gradient(135deg, var(--brand-950) 0%, var(--brand-800) 40%, var(--brand-600) 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 60px;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .cover::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: 100px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .cover-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .cover-logo svg { width: 44px; height: 44px; }
+
+    .cover-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .cover-headline {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      max-width: 580px;
+    }
+
+    .cover-subtext {
+      font-size: 19px;
+      line-height: 1.6;
+      opacity: 0.85;
+      max-width: 500px;
+    }
+
+    .cover-cta {
+      display: inline-block;
+      background: #fff;
+      color: var(--brand-700);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .cover-stats {
+      display: flex;
+      gap: 40px;
+      padding-top: 20px;
+    }
+
+    .cover-stat-value {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--brand-200);
+    }
+
+    .cover-stat-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    /* ===== CONTENT PAGES ===== */
+    .content-page {
+      padding: 50px 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--brand-100);
+      margin-bottom: 40px;
+    }
+
+    .page-header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--brand-700);
+    }
+
+    .page-header-logo svg { width: 28px; height: 28px; }
+
+    .page-number {
+      font-size: 13px;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--brand-600);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--gray-900);
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.6;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    /* ===== PROBLEM CARDS ===== */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .problem-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .problem-card .icon {
+      width: 38px;
+      height: 38px;
+      background: #fef2f2;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      color: #dc2626;
+      font-size: 18px;
+    }
+
+    .problem-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--gray-800);
+    }
+
+    .problem-card p {
+      font-size: 12.5px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* ===== COMPARISON BARS ===== */
+    .comparison-section {
+      background: var(--brand-950);
+      border-radius: 16px;
+      padding: 32px;
+      color: #fff;
+    }
+
+    .comparison-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .comparison-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .comparison-row:last-child { margin-bottom: 0; }
+
+    .comparison-label {
+      width: 160px;
+      font-size: 12.5px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .comparison-bars {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bar-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      width: 50px;
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 16px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .bar-fill-before {
+      height: 100%;
+      background: rgba(255,255,255,0.25);
+      border-radius: 8px;
+    }
+
+    .bar-fill-after {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand-400), var(--green-400));
+      border-radius: 8px;
+    }
+
+    .bar-value {
+      font-size: 12.5px;
+      font-weight: 700;
+      width: 60px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .bar-value.highlight { color: var(--green-400); }
+
+    /* ===== FEATURES GRID ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+
+    .feature-card {
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid var(--gray-200);
+      background: #fff;
+    }
+
+    .feature-card.highlight {
+      border-color: var(--brand-400);
+      background: var(--brand-50);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--brand-50);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      color: var(--brand-600);
+    }
+
+    .feature-card.highlight .feature-icon {
+      background: var(--brand-600);
+      color: #fff;
+    }
+
+    .feature-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 6px;
+    }
+
+    .feature-card p {
+      font-size: 12.5px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    .feature-card .badge {
+      display: inline-block;
+      background: var(--brand-600);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Screenshot placeholder */
+    .screenshot-placeholder {
+      background: linear-gradient(135deg, var(--brand-50) 0%, var(--gray-100) 100%);
+      border: 2px dashed var(--brand-200);
+      border-radius: 14px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--brand-500);
+      font-size: 14px;
+      font-weight: 600;
+      gap: 8px;
+    }
+
+    .screenshot-placeholder .hint {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-500);
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 44px;
+    }
+
+    .testimonial {
+      background: var(--gray-50);
+      border-radius: 14px;
+      padding: 24px;
+      border: 1px solid var(--gray-200);
+    }
+
+    .testimonial blockquote {
+      font-size: 14.5px;
+      font-style: italic;
+      color: var(--gray-700);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--brand-600);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .testimonial-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    /* ===== FINAL CTA ===== */
+    .final-cta {
+      background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-800) 100%);
+      border-radius: 20px;
+      padding: 44px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .final-cta h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .final-cta p {
+      font-size: 15px;
+      opacity: 0.85;
+      margin-bottom: 24px;
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--brand-700);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .final-cta-contact {
+      margin-top: 18px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    .final-cta-contact a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== СТРАНИЦА 1: КОРИЦА ==================== -->
+  <div class="page cover">
+    <div class="cover-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="rgba(255,255,255,0.15)"/>
+        <path d="M8 10h4v12H8V10z" fill="#93c5fd"/>
+        <path d="M14 14h4v8h-4v-8z" fill="#60a5fa"/>
+        <path d="M20 8h4v14h-4V8z" fill="#fff"/>
+      </svg>
+      Planificator
+    </div>
+
+    <div class="cover-main">
+      <div class="cover-headline">AI Намира Оптималния Ви Производствен График</div>
+      <div class="cover-subtext">
+        За производители, които трябва да доставят навреме, всеки път.
+        Planificator използва AI за автоматична оптимизация на последователността,
+        минимизиране на времето за настройка и максимална производителност.
+      </div>
+      <div class="cover-cta">Заявете Демо &rarr;</div>
+
+      <div class="cover-stats">
+        <div>
+          <div class="cover-stat-value">87%</div>
+          <div class="cover-stat-label">По-малко планиране</div>
+        </div>
+        <div>
+          <div class="cover-stat-value">-40%</div>
+          <div class="cover-stat-label">Време за настройка</div>
+        </div>
+        <div>
+          <div class="cover-stat-value">96%</div>
+          <div class="cover-stat-label">Навременна доставка</div>
+        </div>
+        <div>
+          <div class="cover-stat-value">+45%</div>
+          <div class="cover-stat-label">Използване на ресурси</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-footer">
+      <span>planificator.com</span>
+      <span>hello@planificator.com</span>
+    </div>
+  </div>
+
+  <!-- ==================== СТРАНИЦА 2: ПРОБЛЕМ + СРАВНЕНИЕ ==================== -->
+  <div class="page content-page">
+    <div class="page-header">
+      <div class="page-header-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="var(--brand-100)"/>
+          <path d="M8 10h4v12H8V10z" fill="#93c5fd"/>
+          <path d="M14 14h4v8h-4v-8z" fill="var(--brand-400)"/>
+          <path d="M20 8h4v14h-4V8z" fill="var(--brand-600)"/>
+        </svg>
+        Planificator
+      </div>
+      <div class="page-number">02</div>
+    </div>
+
+    <div class="section-label">Проблемът</div>
+    <div class="section-title">Ръчното планиране ви струва скъпо</div>
+    <div class="section-subtitle">
+      Таблиците и белите дъски не могат да се справят със сложността на съвременното производство.
+      Резултатът? Закъснели доставки, прекомерно време за настройка, неработещи машини и разочаровани екипи.
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">&#9202;</div>
+        <h3>Часове загубени в планиране</h3>
+        <p>Планистите прекарват 4+ часа дневно в ръчно съставяне на графици &mdash; време, което може да се използва за решаване на реални проблеми.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">&#128260;</div>
+        <h3>Прекомерни настройки и смени</h3>
+        <p>Без интелигентна последователност машините сменят инструменти твърде често. Всяка ненужна настройка е загубен производствен капацитет.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">&#9888;</div>
+        <h3>Закъснели доставки</h3>
+        <p>Без видимост в реално време за капацитет и конфликти, поръчките се изпускат и сроковете се пропускат.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">&#128065;</div>
+        <h3>Нулева видимост</h3>
+        <p>Когато плановете живеят в таблици, никой друг не може да ги види. Решенията се вземат на тъмно.</p>
+      </div>
+    </div>
+
+    <div class="comparison-section">
+      <div class="comparison-title">Преди и след Planificator</div>
+
+      <div class="comparison-row">
+        <div class="comparison-label">Време за настройка</div>
+        <div class="comparison-bars">
+          <div class="bar-row">
+            <span class="bar-tag">Преди</span>
+            <div class="bar-track"><div class="bar-fill-before" style="width:75%"></div></div>
+            <span class="bar-value">Често</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-tag">След</span>
+            <div class="bar-track"><div class="bar-fill-after" style="width:35%"></div></div>
+            <span class="bar-value highlight">-40%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <div class="comparison-label">Време за планиране</div>
+        <div class="comparison-bars">
+          <div class="bar-row">
+            <span class="bar-tag">Преди</span>
+            <div class="bar-track"><div class="bar-fill-before" style="width:80%"></div></div>
+            <span class="bar-value">4 часа</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-tag">След</span>
+            <div class="bar-track"><div class="bar-fill-after" style="width:12%"></div></div>
+            <span class="bar-value highlight">15 мин</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <div class="comparison-label">Навременна доставка</div>
+        <div class="comparison-bars">
+          <div class="bar-row">
+            <span class="bar-tag">Преди</span>
+            <div class="bar-track"><div class="bar-fill-before" style="width:74%"></div></div>
+            <span class="bar-value">74%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-tag">След</span>
+            <div class="bar-track"><div class="bar-fill-after" style="width:96%"></div></div>
+            <span class="bar-value highlight">96%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <div class="comparison-label">Използване на ресурси</div>
+        <div class="comparison-bars">
+          <div class="bar-row">
+            <span class="bar-tag">Преди</span>
+            <div class="bar-track"><div class="bar-fill-before" style="width:62%"></div></div>
+            <span class="bar-value">62%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-tag">След</span>
+            <div class="bar-track"><div class="bar-fill-after" style="width:90%"></div></div>
+            <span class="bar-value highlight">90%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-row">
+        <div class="comparison-label">Престой на машини</div>
+        <div class="comparison-bars">
+          <div class="bar-row">
+            <span class="bar-tag">Преди</span>
+            <div class="bar-track"><div class="bar-fill-before" style="width:28%"></div></div>
+            <span class="bar-value">28%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-tag">След</span>
+            <div class="bar-track"><div class="bar-fill-after" style="width:8%"></div></div>
+            <span class="bar-value highlight">8%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== СТРАНИЦА 3: ФУНКЦИИ ==================== -->
+  <div class="page content-page">
+    <div class="page-header">
+      <div class="page-header-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="var(--brand-100)"/>
+          <path d="M8 10h4v12H8V10z" fill="#93c5fd"/>
+          <path d="M14 14h4v8h-4v-8z" fill="var(--brand-400)"/>
+          <path d="M20 8h4v14h-4V8z" fill="var(--brand-600)"/>
+        </svg>
+        Planificator
+      </div>
+      <div class="page-number">03</div>
+    </div>
+
+    <div class="section-label">Функции</div>
+    <div class="section-title">Всичко необходимо за оптимизация на производството</div>
+    <div class="section-subtitle">
+      Мощни инструменти, създадени за производствени екипи &mdash; от цеха до управлението.
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card highlight">
+        <div class="badge">Ключово предимство</div>
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Намаляване на времето за настройка</h3>
+        <p>AI групира сходни задачи и оптимизира последователността за минимум смени на инструменти. Намалете времето за настройка с до 40%.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+        </div>
+        <h3>AI Планиране</h3>
+        <p>Оставете AI да намери оптималната производствена последователност. Елиминирайте тесните места и максимизирайте производителността автоматично.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>
+        </div>
+        <h3>Гант Диаграма</h3>
+        <p>Вижте цялата си производствена времева линия с един поглед. Планиране с влачене и пускане с откриване на конфликти в реално време.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Управление на ресурси</h3>
+        <p>Проследявайте машини, работници и работни станции на едно място. Управлявайте смени, почивки и смяна на инструменти.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h3>Интелигентна оптимизация</h3>
+        <p>Конфигурирайте цели &mdash; минимизирайте закъснелите поръчки, намалете времето за смяна или балансирайте натоварването.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Управление на смени</h3>
+        <p>Дефинирайте смени, почивки и прозорци за поддръжка. Планировчикът спазва всички ограничения автоматично.</p>
+      </div>
+    </div>
+
+    <div class="screenshot-placeholder">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>
+      </svg>
+      Тук идва екранна снимка на продукта
+      <span class="hint">Споделете снимка и ще я вградя</span>
+    </div>
+  </div>
+
+  <!-- ==================== СТРАНИЦА 4: ОТЗИВИ + CTA ==================== -->
+  <div class="page content-page">
+    <div class="page-header">
+      <div class="page-header-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="var(--brand-100)"/>
+          <path d="M8 10h4v12H8V10z" fill="#93c5fd"/>
+          <path d="M14 14h4v8h-4v-8z" fill="var(--brand-400)"/>
+          <path d="M20 8h4v14h-4V8z" fill="var(--brand-600)"/>
+        </svg>
+        Planificator
+      </div>
+      <div class="page-number">04</div>
+    </div>
+
+    <div class="section-label">Какво казват клиентите</div>
+    <div class="section-title">Доверен от водещи производители</div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <blockquote>&bdquo;Planificator намали времето ни за планиране от 4 часа на 30 минути. AI оптимизаторът намира решения, които нашите планисти никога не са обмисляли.&ldquo;</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">СП</div>
+          <div>
+            <div class="testimonial-name">Стефан Петров</div>
+            <div class="testimonial-role">Мениджър Производство, TechMetal Industries</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>&bdquo;Смените на инструменти намаляха с 35% през първия месец. AI подрежда задачите толкова интелигентно, че машините ни почти не спират.&ldquo;</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">МГ</div>
+          <div>
+            <div class="testimonial-name">Мария Георгиева</div>
+            <div class="testimonial-role">Директор Операции, Balkan Precision</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>&bdquo;Само Гант диаграмата си заслужаваше &mdash; но AI планирането е това, което наистина трансформира начина, по който планираме производството.&ldquo;</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">АМ</div>
+          <div>
+            <div class="testimonial-name">Андреас Мюлер</div>
+            <div class="testimonial-role">Мениджър на Завод, EuroMach Components</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-cta">
+      <h2>Готови ли сте да оптимизирате производството си?</h2>
+      <p>Вижте как Planificator може да намали времето за настройка, да елиминира тесните места и да ви помогне да доставяте навреме &mdash; всеки път.</p>
+      <div class="final-cta-btn">Заявете Демо &rarr;</div>
+      <div class="final-cta-contact">
+        Или ни пишете на <a href="mailto:hello@planificator.com">hello@planificator.com</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

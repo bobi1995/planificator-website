@@ -1,8 +1,8 @@
-# CLAUDE.md - Planifactor Marketing Site
+# CLAUDE.md - Planificator Marketing Site
 
 ## Project Overview
 
-Marketing website for **Planifactor** — Plan + Factory -- an AI-powered B2B production scheduling platform with Gantt chart visualization, resource/shift/order management, and optimization scenarios.
+Marketing website for **Planificator** — Plan + Factory -- an AI-powered B2B production scheduling platform with Gantt chart visualization, resource/shift/order management, and optimization scenarios.
 
 The actual product (app) lives separately at `C:\mypc\programming\Optiplan\dev\preactor-client`. This repo is the public-facing marketing site only.
 
@@ -32,7 +32,7 @@ The actual product (app) lives separately at `C:\mypc\programming\Optiplan\dev\p
 ## Key Marketing Elements
 
 - Interactive or animated Gantt demo on the landing page
-- Before/After comparisons (manual scheduling vs. Planifactor)
+- Before/After comparisons (manual scheduling vs. Planificator)
 - ROI calculator ("How much time could you save?")
 - Multi-language support (English + Bulgarian minimum)
 

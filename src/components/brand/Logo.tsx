@@ -53,7 +53,7 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
         width={dimensions.icon}
         height={dimensions.icon}
         role="img"
-        aria-label="Planifactor"
+        aria-label="Planificator"
         className={cn("shrink-0", className)}
       >
         <GanttBarsIcon fill="currentColor" />
@@ -61,7 +61,7 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
     );
   }
 
-  // Full logo: icon + "Planifactor" text in wider viewBox
+  // Full logo: icon + "Planificator" text in wider viewBox
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -69,23 +69,23 @@ export function Logo({ variant = "default", size = "md", className }: LogoProps)
       width={dimensions.width}
       height={dimensions.height}
       role="img"
-      aria-label="Planifactor"
+      aria-label="Planificator"
       className={cn("shrink-0", className)}
     >
       {/* Gantt bars icon */}
       <GanttBarsIcon fill={fill} />
 
-      {/* "Planifactor" text */}
+      {/* "Planificator" text */}
       <text
         x="56"
         y="32"
         fontFamily="var(--font-inter), Inter, sans-serif"
         fontWeight={600}
-        fontSize="22"
+        fontSize="20"
         fill={fill}
         letterSpacing="-0.01em"
       >
-        Planifactor
+        Planificator
       </text>
     </svg>
   );

@@ -17,7 +17,7 @@ export async function ContactInfo() {
             <Mail className="h-5 w-5 text-brand-600 shrink-0" />
             <div>
               <p className="text-sm text-muted-foreground">{t('info.emailLabel')}</p>
-              <a href="mailto:hello@planifactor.com" className="text-brand-600 hover:underline">
+              <a href="mailto:hello@planificator.com" className="text-brand-600 hover:underline">
                 {t('info.emailValue')}
               </a>
             </div>

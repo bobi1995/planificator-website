@@ -1,16 +1,16 @@
 import {Feed} from 'feed';
 import {getAllPosts} from '@/lib/blog';
 
-const SITE_URL = 'https://planifactor.com';
+const SITE_URL = 'https://planificator.com';
 
 export async function GET() {
   const feed = new Feed({
-    title: 'Planifactor Blog',
+    title: 'Planificator Blog',
     description: 'Production scheduling insights for manufacturers',
     id: SITE_URL,
     link: `${SITE_URL}/en/blog`,
     language: 'en',
-    copyright: `${new Date().getFullYear()} Planifactor`,
+    copyright: `${new Date().getFullYear()} Planificator`,
     feedLinks: {
       rss2: `${SITE_URL}/feed.xml`,
     },

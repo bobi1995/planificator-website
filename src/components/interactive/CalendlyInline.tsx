@@ -43,8 +43,8 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
         <p className="text-muted-foreground mb-2">{t('booking.consentRequired')}</p>
         <p className="text-sm text-muted-foreground">
           {t('booking.alternativeContact')}{' '}
-          <a href="mailto:hello@planifactor.com" className="text-brand-600 underline">
-            hello@planifactor.com
+          <a href="mailto:hello@planificator.com" className="text-brand-600 underline">
+            hello@planificator.com
           </a>
         </p>
       </div>

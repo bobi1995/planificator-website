@@ -87,7 +87,7 @@ export async function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:hello@planifactor.com"
+                  href="mailto:hello@planificator.com"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('email')}
@@ -103,7 +103,7 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/company/planifactor"
+                  href="https://linkedin.com/company/planificator"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"

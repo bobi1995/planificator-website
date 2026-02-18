@@ -7,6 +7,7 @@ import {
   FileStack, Package, ClipboardCheck,
   Radio, ListChecks, MessageSquare
 } from 'lucide-react';
+import {ImagePlaceholder} from '@/components/ui/ImagePlaceholder';
 
 // Map domain keys to their Lucide header icons
 const domainIcons: Record<string, React.ComponentType<{className?: string}>> = {
@@ -28,6 +29,16 @@ const featureIcons: Record<string, React.ComponentType<{className?: string}>[]> 
   shopFloor: [Radio, ListChecks, MessageSquare],
 };
 
+// Map domain keys to screenshot image paths
+const domainImages: Record<string, string> = {
+  scheduling: '/images/features/scheduling.png',
+  resources: '/images/features/resources.png',
+  optimization: '/images/features/optimization.png',
+  shifts: '/images/features/shifts.png',
+  bom: '/images/features/bom.png',
+  shopFloor: '/images/features/shop-floor.png',
+};
+
 interface Props {
   domain: string;
   index: number;
@@ -38,25 +49,38 @@ export async function FeatureDomainSection({domain, index}: Props) {
 
   const DomainIcon = domainIcons[domain] || GanttChart;
   const icons = featureIcons[domain] || [];
+  const imageSrc = domainImages[domain];
 
   // Count features (domains have 3 or 4 features)
   const featureCount = domain === 'bom' || domain === 'shopFloor' ? 3 : 4;
   const featureIndices = Array.from({length: featureCount}, (_, i) => i);
 
   const isAlternate = index % 2 === 1;
+  const imageOnRight = index % 2 === 0;
 
   return (
     <section className={isAlternate ? 'py-20 px-4 bg-muted/30' : 'py-20 px-4'}>
       <div className="max-w-7xl mx-auto">
-        {/* Domain header */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <DomainIcon className="h-10 w-10 text-brand-600" />
-            <h2 className="text-heading md:text-display">{t('title')}</h2>
+        {/* Domain header with image */}
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center ${imageOnRight ? '' : 'lg:direction-rtl'}`}>
+          <div className={imageOnRight ? '' : 'lg:order-2'}>
+            <div className="flex items-center gap-3 mb-4">
+              <DomainIcon className="h-10 w-10 text-brand-600" />
+              <h2 className="text-heading md:text-display">{t('title')}</h2>
+            </div>
+            <p className="text-body-lg text-muted-foreground max-w-3xl">
+              {t('description')}
+            </p>
           </div>
-          <p className="text-body-lg text-muted-foreground max-w-3xl">
-            {t('description')}
-          </p>
+          <div className={imageOnRight ? '' : 'lg:order-1'}>
+            {/* Feature screenshot — drop image at public{imageSrc} */}
+            <ImagePlaceholder
+              src={imageSrc}
+              alt={t('title')}
+              width={800}
+              height={500}
+            />
+          </div>
         </div>
 
         {/* Feature cards grid */}

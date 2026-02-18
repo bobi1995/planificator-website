@@ -5,7 +5,7 @@ import {ComparisonSlider} from './ComparisonSlider';
 /**
  * Before/After comparison section — draggable slider revealing KPI impact.
  *
- * Shows "Manual Scheduling" (red) vs "With Planifactor" (brand-blue) metrics
+ * Shows "Manual Scheduling" (red) vs "With Planificator" (brand-blue) metrics
  * in a 2x2 grid with a draggable divider. Desktop uses vertical (landscape)
  * divider, mobile uses horizontal (portrait) divider.
  *

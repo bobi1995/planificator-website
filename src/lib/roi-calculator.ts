@@ -45,7 +45,7 @@ const WORKING_WEEKS_PER_YEAR = 50;
 const DEFAULT_HOURLY_RATE_EUR = 35;
 
 /**
- * Calculate estimated ROI from switching to Planifactor.
+ * Calculate estimated ROI from switching to Planificator.
  *
  * Design principles:
  * - Returns RANGES, not single numbers

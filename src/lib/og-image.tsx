@@ -42,7 +42,7 @@ export function createOgImageElement({
           opacity: 0.8,
         }}
       >
-        Planifactor
+        Planificator
       </div>
 
       {/* Title */}
