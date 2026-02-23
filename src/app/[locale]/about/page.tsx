@@ -38,7 +38,7 @@ export default async function AboutPage({params}: Props) {
       <ExpertiseSection />
       <TechnologySection />
       <MissionStatement />
-      <CTABanner />
+      <CTABanner headingKey="aboutHeading" descriptionKey="aboutDescription" ctaKey="aboutCta" />
     </>
   );
 }

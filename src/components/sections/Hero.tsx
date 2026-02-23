@@ -2,13 +2,12 @@ import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {Button} from '@/components/ui/button';
 import {AnimatedGantt} from '@/components/sections/AnimatedGantt';
-import {ImagePlaceholder} from '@/components/ui/ImagePlaceholder';
 
 /**
  * Hero section — the first thing visitors see on the landing page.
  *
  * Full-viewport section with AI-focused headline, audience subtext,
- * two CTA buttons, and a static Gantt chart mockup.
+ * two CTA buttons, and an animated Gantt chart.
  *
  * Async server component using next-intl getTranslations.
  */
@@ -35,20 +34,19 @@ export async function Hero() {
                 <Link href="/features">{t('ctaSecondary')}</Link>
               </Button>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground">
+              {t('trustSignal')}
+            </p>
           </div>
 
-          {/* Visual column — Gantt mockup + product screenshot */}
+          {/* Visual column — animated Gantt chart */}
           <div className="flex flex-col gap-6 justify-center lg:justify-end">
             <div className="w-full max-w-lg lg:max-w-none rounded-xl border bg-card shadow-lg overflow-hidden">
-              <AnimatedGantt />
+              <AnimatedGantt
+                days={[t('gantt.mon'), t('gantt.tue'), t('gantt.wed'), t('gantt.thu'), t('gantt.fri')]}
+                resources={[t('gantt.machineA'), t('gantt.machineB'), t('gantt.machineC'), t('gantt.line1'), t('gantt.line2'), t('gantt.line3')]}
+              />
             </div>
-            {/* Product dashboard screenshot — drop image at public/images/home/product-dashboard.png */}
-            <ImagePlaceholder
-              src="/images/home/product-dashboard.png"
-              alt={t('ganttAlt')}
-              width={1200}
-              height={800}
-            />
           </div>
         </div>
       </div>

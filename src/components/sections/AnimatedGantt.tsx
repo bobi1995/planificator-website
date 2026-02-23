@@ -6,6 +6,8 @@ import {cn} from '@/lib/utils';
 
 interface AnimatedGanttProps {
   className?: string;
+  days?: string[];
+  resources?: string[];
 }
 
 // --- Layout constants (same as GanttMockup.tsx) ---
@@ -17,8 +19,8 @@ const HEADER_HEIGHT = 40;
 const ROW_HEIGHT = 60;
 const BAR_PADDING = 14;
 const BAR_HEIGHT = ROW_HEIGHT - 28; // 32
-const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
-const RESOURCES = [
+const DEFAULT_DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+const DEFAULT_RESOURCES = [
   'Machine A',
   'Machine B',
   'Machine C',
@@ -81,7 +83,9 @@ const OPTIMIZED_BARS: BarDef[] = [
  *
  * Respects prefers-reduced-motion by showing the optimized state directly.
  */
-export function AnimatedGantt({className}: AnimatedGanttProps) {
+export function AnimatedGantt({className, days: daysProp, resources: resourcesProp}: AnimatedGanttProps) {
+  const DAYS = daysProp ?? DEFAULT_DAYS;
+  const RESOURCES = resourcesProp ?? DEFAULT_RESOURCES;
   const shouldReduceMotion = useReducedMotion();
   const [hasAnimated, setHasAnimated] = useState(false);
 

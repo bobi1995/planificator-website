@@ -2,10 +2,12 @@ import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {getAllPosts, getAllTags, getPostsByTag} from '@/lib/blog';
 import {BlogHero} from '@/components/sections/blog/BlogHero';
+import {FeaturedPostCard} from '@/components/sections/blog/FeaturedPostCard';
 import {PostCard} from '@/components/sections/blog/PostCard';
 import {TagFilter} from '@/components/sections/blog/TagFilter';
 import {BlogPagination} from '@/components/sections/blog/BlogPagination';
 import {CTABanner} from '@/components/sections/CTABanner';
+import {NewsletterSignup} from '@/components/interactive/NewsletterSignup';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
 
@@ -37,6 +39,7 @@ export default async function BlogPage({params, searchParams}: Props) {
   const {tag, page} = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations({locale, namespace: 'BlogPage'});
+  const tNewsletter = await getTranslations({locale, namespace: 'Newsletter'});
 
   const allTags = await getAllTags(locale);
   const allFilteredPosts = tag
@@ -71,18 +74,34 @@ export default async function BlogPage({params, searchParams}: Props) {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {posts.map((post) => (
-                  <PostCard
-                    key={post.slug}
-                    slug={post.slug}
-                    meta={post.meta}
-                    content={post.content}
+              {/* Featured post */}
+              {posts.length > 0 && (
+                <div className="mb-12">
+                  <FeaturedPostCard
+                    slug={posts[0].slug}
+                    meta={posts[0].meta}
+                    content={posts[0].content}
                     readMoreLabel={t('readMore')}
                     minReadLabel={t('minRead')}
                   />
-                ))}
-              </div>
+                </div>
+              )}
+
+              {/* Remaining posts */}
+              {posts.length > 1 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {posts.slice(1).map((post) => (
+                    <PostCard
+                      key={post.slug}
+                      slug={post.slug}
+                      meta={post.meta}
+                      content={post.content}
+                      readMoreLabel={t('readMore')}
+                      minReadLabel={t('minRead')}
+                    />
+                  ))}
+                </div>
+              )}
 
               <BlogPagination
                 currentPage={safePage}
@@ -96,7 +115,15 @@ export default async function BlogPage({params, searchParams}: Props) {
         </div>
       </section>
 
-      <CTABanner />
+      <section className="py-16 px-4 bg-brand-50">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-subheading mb-2">{tNewsletter('title')}</h2>
+          <p className="text-muted-foreground mb-6">{tNewsletter('description')}</p>
+          <NewsletterSignup />
+        </div>
+      </section>
+
+      <CTABanner headingKey="blogHeading" descriptionKey="blogDescription" ctaKey="blogCta" />
     </>
   );
 }

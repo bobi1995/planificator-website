@@ -5,8 +5,10 @@ import {PricingTierCard} from '@/components/sections/pricing/PricingTierCard';
 import {PricingComparisonTable} from '@/components/sections/pricing/PricingComparisonTable';
 import {PricingFAQ} from '@/components/sections/pricing/PricingFAQ';
 import {CTABanner} from '@/components/sections/CTABanner';
+import {Link} from '@/i18n/navigation';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
+import {FAQPageJsonLd} from '@/lib/structured-data';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -81,7 +83,20 @@ export default async function PricingPage({params}: Props) {
 
       <PricingComparisonTable />
       <PricingFAQ title={t('faq.title')} items={faqItems} />
-      <CTABanner />
+
+      <section className="py-12 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-body-lg text-muted-foreground">
+            {t('roiLink.text')}{' '}
+            <Link href="/contact#roi" className="text-brand-600 font-medium hover:text-brand-700 underline">
+              {t('roiLink.cta')}
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <CTABanner headingKey="pricingHeading" descriptionKey="pricingDescription" ctaKey="pricingCta" />
+      <FAQPageJsonLd items={faqItems} />
     </>
   );
 }

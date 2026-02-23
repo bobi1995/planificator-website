@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {FeatureHero} from '@/components/sections/features/FeatureHero';
 import {FeatureDomainSection} from '@/components/sections/features/FeatureDomainSection';
+import {FeatureNav} from '@/components/sections/features/FeatureNav';
 import {CTABanner} from '@/components/sections/CTABanner';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
@@ -38,14 +39,20 @@ const domains = [
 export default async function FeaturesPage({params}: Props) {
   const {locale} = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({locale, namespace: 'FeaturesPage'});
+  const domainNav = domains.map((d) => ({
+    id: d,
+    title: t(`domains.${d}.title`),
+  }));
 
   return (
     <>
       <FeatureHero />
+      <FeatureNav domains={domainNav} />
       {domains.map((domain, index) => (
         <FeatureDomainSection key={domain} domain={domain} index={index} />
       ))}
-      <CTABanner />
+      <CTABanner headingKey="featuresHeading" descriptionKey="featuresDescription" ctaKey="featuresCta" />
     </>
   );
 }

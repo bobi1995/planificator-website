@@ -23,7 +23,21 @@
     "subtext": "For manufacturers who need to ship on time, every time. Planificator uses artificial intelligence to automatically optimize your production planning.",
     "cta": "Request a Demo",
     "ctaSecondary": "See Features",
-    "ganttAlt": "Gantt chart showing optimized production schedule"
+    "ganttAlt": "Gantt chart showing optimized production schedule",
+    "trustSignal": "Free 30-minute demo \u00b7 No credit card required \u00b7 See results in your first session",
+    "gantt": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "machineA": "Machine A",
+      "machineB": "Machine B",
+      "machineC": "Machine C",
+      "line1": "Line 1",
+      "line2": "Line 2",
+      "line3": "Line 3"
+    }
   },
   "Features": {
     "title": "Everything You Need to Optimize Production",
@@ -47,6 +61,10 @@
     "realTimePlanning": {
       "title": "Real-Time Planning",
       "description": "Respond to disruptions instantly. Reschedule orders, adjust priorities, and see the impact of changes before committing."
+    },
+    "shiftManagement": {
+      "title": "Shift & Calendar Management",
+      "description": "Define work patterns, manage breaks, and handle changeovers. Your schedule reflects how your factory actually operates."
     }
   },
   "SocialProof": {
@@ -83,7 +101,19 @@
   "CTABanner": {
     "heading": "Ready to Optimize Your Production?",
     "description": "See how Planificator can reduce scheduling time, eliminate bottlenecks, and help you deliver on time — every time.",
-    "cta": "Request a Demo"
+    "cta": "Request a Demo",
+    "pricingHeading": "Need Help Choosing a Plan?",
+    "pricingDescription": "Talk to our team about your production scheduling needs and we'll recommend the right plan for your factory.",
+    "pricingCta": "Talk to Sales",
+    "blogHeading": "Want to See This in Action?",
+    "blogDescription": "Book a free demo and see how AI-powered scheduling can transform your production planning.",
+    "blogCta": "Book a Demo",
+    "featuresHeading": "See These Features Live",
+    "featuresDescription": "Book a personalized demo and we'll show you exactly how Planificator works with your production setup.",
+    "featuresCta": "Request a Demo",
+    "aboutHeading": "Join the Scheduling Revolution",
+    "aboutDescription": "See how Planificator can optimize your production planning — book a free demo today.",
+    "aboutCta": "Get Started"
   },
   "Footer": {
     "tagline": "AI-powered production scheduling for manufacturers.",
@@ -127,7 +157,8 @@
   },
   "NotFound": {
     "title": "Page Not Found",
-    "description": "The page you are looking for does not exist."
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Back to Home"
   },
   "FeaturesPage": {
     "metaTitle": "Features",
@@ -418,6 +449,10 @@
           "answer": "Yes. Planificator uses industry-standard encryption, secure cloud infrastructure, and regular security audits. Your production data is private and protected."
         }
       }
+    },
+    "roiLink": {
+      "text": "Not sure how much you could save?",
+      "cta": "Try our ROI Calculator \u2192"
     }
   },
   "UseCases": {
@@ -671,7 +706,17 @@
     "writtenBy": "By",
     "previousPage": "Previous",
     "nextPage": "Next",
-    "pageOf": "Page {current} of {total}"
+    "pageOf": "Page {current} of {total}",
+    "relatedPosts": "Related Articles",
+    "share": "Share",
+    "copyLink": "Copy link"
+  },
+  "Newsletter": {
+    "title": "Stay Updated",
+    "description": "Get production scheduling insights delivered to your inbox.",
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "thankYou": "Thanks for subscribing! We'll be in touch."
   },
   "ContactPage": {
     "metaTitle": "Contact Us",
@@ -685,6 +730,15 @@
       "description": "Choose a time that works for you. Our team will walk you through the platform with your specific use case in mind.",
       "consentRequired": "Please accept cookies to use the booking widget.",
       "alternativeContact": "You can also reach us directly at"
+    },
+    "form": {
+      "nameLabel": "Your Name",
+      "emailLabel": "Email Address",
+      "companyLabel": "Company",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your scheduling challenges...",
+      "submitButton": "Send Message",
+      "formDescription": "Fill out the form below and we'll get back to you within 24 hours."
     },
     "info": {
       "title": "Other Ways to Reach Us",
@@ -750,7 +804,8 @@
     "cta": {
       "title": "Want to Validate These Numbers?",
       "description": "Book a free demo and we'll run the analysis with your real production data -- no commitment required.",
-      "button": "Book a Demo"
+      "button": "Book a Demo",
+      "seePricing": "View pricing plans \u2192"
     }
   },
   "CookieConsent": {

@@ -59,7 +59,7 @@ export async function FeatureDomainSection({domain, index}: Props) {
   const imageOnRight = index % 2 === 0;
 
   return (
-    <section className={isAlternate ? 'py-20 px-4 bg-muted/30' : 'py-20 px-4'}>
+    <section id={domain} className={isAlternate ? 'py-20 px-4 bg-muted/30' : 'py-20 px-4'}>
       <div className="max-w-7xl mx-auto">
         {/* Domain header with image */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 items-center ${imageOnRight ? '' : 'lg:direction-rtl'}`}>

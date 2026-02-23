@@ -65,10 +65,16 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html lang={locale} className={inter.variable}>
       <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-md focus:outline-none"
+        >
+          Skip to content
+        </a>
         <PlausibleProvider domain="planificator.com">
           <NextIntlClientProvider>
             <Header />
-            <main>{children}</main>
+            <main id="main-content">{children}</main>
             <Footer />
             <CookieConsent />
           </NextIntlClientProvider>

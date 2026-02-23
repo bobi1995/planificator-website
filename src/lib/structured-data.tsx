@@ -1,10 +1,10 @@
-import type {WithContext, Organization, SoftwareApplication, Article} from 'schema-dts';
+import type {WithContext, Organization, SoftwareApplication, Article, FAQPage} from 'schema-dts';
 import {SITE_URL, SITE_NAME} from '@/lib/constants';
 
 /**
  * Safely serializes JSON-LD, escaping `<` to prevent XSS in script tags.
  */
-function safeJsonLd(data: WithContext<Organization | SoftwareApplication | Article>): string {
+function safeJsonLd(data: WithContext<Organization | SoftwareApplication | Article | FAQPage>): string {
   return JSON.stringify(data).replace(/</g, '\\u003c');
 }
 
@@ -44,9 +44,9 @@ export function SoftwareApplicationJsonLd() {
     description: 'AI-powered production scheduling platform for manufacturers',
     offers: {
       '@type': 'Offer',
-      price: '0',
       priceCurrency: 'EUR',
-      description: 'Contact for pricing',
+      description: 'Contact for pricing. Free demo available.',
+      availability: 'https://schema.org/OnlineOnly',
     },
   };
 
@@ -65,12 +65,14 @@ export function ArticleJsonLd({
   title,
   description,
   datePublished,
+  dateModified,
   author,
   url,
 }: {
   title: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   author: string;
   url: string;
 }) {
@@ -80,6 +82,7 @@ export function ArticleJsonLd({
     headline: title,
     description,
     datePublished,
+    dateModified: dateModified || datePublished,
     url,
     author: {
       '@type': 'Person',
@@ -90,6 +93,31 @@ export function ArticleJsonLd({
       name: SITE_NAME,
       url: SITE_URL,
     },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{__html: safeJsonLd(jsonLd)}}
+    />
+  );
+}
+
+/**
+ * FAQPage structured data for pages with FAQ sections.
+ */
+export function FAQPageJsonLd({items}: {items: {question: string; answer: string}[]}) {
+  const jsonLd: WithContext<FAQPage> = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question' as const,
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer' as const,
+        text: item.answer,
+      },
+    })),
   };
 
   return (

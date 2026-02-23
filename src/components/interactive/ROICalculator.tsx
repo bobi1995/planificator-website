@@ -22,9 +22,11 @@ import {Card, CardContent} from '@/components/ui/card';
 import {Link} from '@/i18n/navigation';
 import {calculateROI, type SchedulingMethod, type ROIResults} from '@/lib/roi-calculator';
 import {Clock, TrendingUp, DollarSign, Zap} from 'lucide-react';
+import {useAnalytics} from '@/lib/use-analytics';
 
 export function ROICalculator() {
   const t = useTranslations('ROICalculator');
+  const plausible = useAnalytics();
 
   const [ordersPerWeek, setOrdersPerWeek] = useState<string>('');
   const [schedulingHours, setSchedulingHours] = useState<string>('');
@@ -51,6 +53,7 @@ export function ROICalculator() {
       currentMethod: method,
     });
     setResults(roi);
+    plausible('ROI Calculator Used', {props: {estimatedSavings: roi.costSavingsPerYearMax}});
   }
 
   function handleReset() {
@@ -231,6 +234,12 @@ export function ROICalculator() {
               </Button>
             </CardContent>
           </Card>
+
+          <p className="text-center text-sm text-muted-foreground">
+            <Link href="/pricing" className="text-brand-600 hover:text-brand-700 underline">
+              {t('cta.seePricing')}
+            </Link>
+          </p>
         </div>
       )}
     </div>

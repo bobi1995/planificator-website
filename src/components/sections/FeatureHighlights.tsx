@@ -1,6 +1,6 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
-import {Brain, GanttChart, Users, Zap, Clock} from 'lucide-react';
+import {Brain, GanttChart, Users, Zap, Clock, CalendarClock} from 'lucide-react';
 
 const features = [
   {key: 'aiScheduling', icon: Brain},
@@ -8,10 +8,11 @@ const features = [
   {key: 'resourceManagement', icon: Users},
   {key: 'optimization', icon: Zap},
   {key: 'realTimePlanning', icon: Clock},
+  {key: 'shiftManagement', icon: CalendarClock},
 ] as const;
 
 /**
- * Feature Highlights section — grid of 5 feature cards with icons.
+ * Feature Highlights section — grid of 6 feature cards with icons.
  *
  * Each card links to the /features page and displays a Lucide icon,
  * title, and description from the Features translation namespace.
