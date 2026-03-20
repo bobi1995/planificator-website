@@ -1,7 +1,8 @@
 'use client';
 
+import {useState} from 'react';
 import {useTranslations} from 'next-intl';
-import {Linkedin, LinkIcon} from 'lucide-react';
+import {Linkedin, LinkIcon, Check} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 
 interface ShareButtonsProps {
@@ -11,9 +12,26 @@ interface ShareButtonsProps {
 
 export function ShareButtons({url}: ShareButtonsProps) {
   const t = useTranslations('BlogPage');
+  const [copied, setCopied] = useState(false);
 
-  function copyLink() {
-    navigator.clipboard.writeText(url);
+  async function copyLink() {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for browsers without clipboard API
+      const textArea = document.createElement('textarea');
+      textArea.value = url;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   }
 
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
@@ -26,8 +44,18 @@ export function ShareButtons({url}: ShareButtonsProps) {
           <Linkedin className="h-4 w-4" />
         </a>
       </Button>
-      <Button variant="ghost" size="icon" className="h-8 w-8" onClick={copyLink} aria-label={t('copyLink')}>
-        <LinkIcon className="h-4 w-4" />
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8"
+        onClick={copyLink}
+        aria-label={t('copyLink')}
+      >
+        {copied ? (
+          <Check className="h-4 w-4 text-green-600" />
+        ) : (
+          <LinkIcon className="h-4 w-4" />
+        )}
       </Button>
     </div>
   );

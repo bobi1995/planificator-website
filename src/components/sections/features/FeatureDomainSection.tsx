@@ -30,13 +30,14 @@ const featureIcons: Record<string, React.ComponentType<{className?: string}>[]> 
 };
 
 // Map domain keys to screenshot image paths
+// TODO: add _en variants and use locale to pick the right one
 const domainImages: Record<string, string> = {
-  scheduling: '/images/features/scheduling.png',
-  resources: '/images/features/resources.png',
-  optimization: '/images/features/optimization.png',
-  shifts: '/images/features/shifts.png',
-  bom: '/images/features/bom.png',
-  shopFloor: '/images/features/shop-floor.png',
+  scheduling: '/images/features/playground_bg.png',
+  resources: '/images/features/resource_bg.png',
+  optimization: '/images/features/plan-compare_bg.png',
+  shifts: '/images/features/shift_bg.png',
+  bom: '/images/features/routes_bg.png',
+  shopFloor: '/images/features/schedule_bg.png',
 };
 
 interface Props {

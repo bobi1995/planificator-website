@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import {Suspense} from 'react';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {getAllPosts, getAllTags, getPostsByTag} from '@/lib/blog';
 import {BlogHero} from '@/components/sections/blog/BlogHero';
@@ -59,12 +60,14 @@ export default async function BlogPage({params, searchParams}: Props) {
 
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <TagFilter
-            tags={allTags}
-            activeTag={tag || null}
-            allLabel={t('allPosts')}
-            filterLabel={t('filterByTag')}
-          />
+          <Suspense fallback={<div className="flex gap-2 mb-8">{Array.from({length: 4}).map((_, i) => <div key={i} className="h-8 w-20 bg-muted animate-pulse rounded-full" />)}</div>}>
+            <TagFilter
+              tags={allTags}
+              activeTag={tag || null}
+              allLabel={t('allPosts')}
+              filterLabel={t('filterByTag')}
+            />
+          </Suspense>
 
           {posts.length === 0 ? (
             <div className="text-center py-20">
@@ -103,13 +106,15 @@ export default async function BlogPage({params, searchParams}: Props) {
                 </div>
               )}
 
-              <BlogPagination
-                currentPage={safePage}
-                totalPages={totalPages}
-                previousLabel={t('previousPage')}
-                nextLabel={t('nextPage')}
-                pageOfLabel={t('pageOf', {current: safePage, total: totalPages})}
-              />
+              <Suspense>
+                <BlogPagination
+                  currentPage={safePage}
+                  totalPages={totalPages}
+                  previousLabel={t('previousPage')}
+                  nextLabel={t('nextPage')}
+                  pageOfLabel={t('pageOf', {current: safePage, total: totalPages})}
+                />
+              </Suspense>
             </>
           )}
         </div>

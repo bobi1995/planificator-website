@@ -50,7 +50,7 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
     e.preventDefault();
     const subject = `Demo Request from ${formData.name}${formData.company ? ` (${formData.company})` : ''}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\n${formData.message}`;
-    window.location.href = `mailto:hello@planificator.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:hello@planificator.bg?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   if (consent !== 'accepted') {
@@ -119,8 +119,8 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
         <p className="mt-4 text-xs text-muted-foreground">
           {t('booking.consentRequired')}{' '}
           {t('booking.alternativeContact')}{' '}
-          <a href="mailto:hello@planificator.com" className="text-brand-600 underline">
-            hello@planificator.com
+          <a href="mailto:hello@planificator.bg" className="text-brand-600 underline">
+            hello@planificator.bg
           </a>
         </p>
       </div>

@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {ContactHero} from '@/components/sections/contact/ContactHero';
 import {ContactInfo} from '@/components/sections/contact/ContactInfo';
-import {CalendlyInline} from '@/components/interactive/CalendlyInline';
+import {CalendlyInlineLoader} from '@/components/interactive/CalendlyInlineLoader';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
 
@@ -45,7 +45,7 @@ export default async function ContactPage({params}: Props) {
             <div className="lg:col-span-2">
               <h2 className="text-heading mb-2">{t('booking.title')}</h2>
               <p className="text-muted-foreground mb-6">{t('booking.description')}</p>
-              <CalendlyInline url={CALENDLY_URL} locale={locale} />
+              <CalendlyInlineLoader url={CALENDLY_URL} locale={locale} />
             </div>
 
             {/* Contact info sidebar -- takes 1/3 width on desktop */}

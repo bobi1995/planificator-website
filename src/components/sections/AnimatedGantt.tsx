@@ -1,7 +1,7 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {motion, useReducedMotion} from 'motion/react';
+import {LazyMotion, domAnimation, m, useReducedMotion} from 'motion/react';
 import {cn} from '@/lib/utils';
 
 interface AnimatedGanttProps {
@@ -77,6 +77,7 @@ const OPTIMIZED_BARS: BarDef[] = [
 /**
  * Animated Gantt chart that plays a chaos-to-order transition.
  *
+ * Uses LazyMotion + domAnimation for a smaller bundle (~5KB vs ~20KB).
  * Renders 11 bars initially in chaotic red/amber positions (overlapping, gaps),
  * holds for 1 second, then smoothly transitions each bar to its optimized
  * brand-blue position over ~3 seconds total (staggered 80ms per bar).
@@ -99,195 +100,197 @@ export function AnimatedGantt({className, days: daysProp, resources: resourcesPr
   }, [shouldReduceMotion]);
 
   return (
-    <svg
-      viewBox="0 0 800 400"
-      className={cn('w-full h-auto', className)}
-      role="img"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Background */}
-      <rect
-        x="0"
-        y="0"
-        width="800"
-        height="400"
-        style={{fill: 'var(--color-brand-50)'}}
-      />
+    <LazyMotion features={domAnimation}>
+      <svg
+        viewBox="0 0 800 400"
+        className={cn('w-full h-auto', className)}
+        role="img"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Background */}
+        <rect
+          x="0"
+          y="0"
+          width="800"
+          height="400"
+          style={{fill: 'var(--color-brand-50)'}}
+        />
 
-      {/* Header background */}
-      <rect
-        x="0"
-        y="0"
-        width="800"
-        height={HEADER_HEIGHT}
-        style={{fill: 'var(--color-brand-100)'}}
-      />
+        {/* Header background */}
+        <rect
+          x="0"
+          y="0"
+          width="800"
+          height={HEADER_HEIGHT}
+          style={{fill: 'var(--color-brand-100)'}}
+        />
 
-      {/* Alternating row stripes */}
-      {RESOURCES.map((_, i) =>
-        i % 2 === 1 ? (
-          <rect
-            key={`stripe-${i}`}
-            x="0"
-            y={HEADER_HEIGHT + i * ROW_HEIGHT}
-            width="800"
-            height={ROW_HEIGHT}
-            style={{fill: 'var(--color-brand-100)'}}
-            opacity="0.4"
+        {/* Alternating row stripes */}
+        {RESOURCES.map((_, i) =>
+          i % 2 === 1 ? (
+            <rect
+              key={`stripe-${i}`}
+              x="0"
+              y={HEADER_HEIGHT + i * ROW_HEIGHT}
+              width="800"
+              height={ROW_HEIGHT}
+              style={{fill: 'var(--color-brand-100)'}}
+              opacity="0.4"
+            />
+          ) : null,
+        )}
+
+        {/* Vertical day divider lines */}
+        {DAYS.map((_, i) => (
+          <line
+            key={`vline-${i}`}
+            x1={CHART_LEFT + i * DAY_WIDTH}
+            y1="0"
+            x2={CHART_LEFT + i * DAY_WIDTH}
+            y2="400"
+            style={{stroke: 'var(--color-brand-100)'}}
+            strokeWidth="1"
           />
-        ) : null,
-      )}
-
-      {/* Vertical day divider lines */}
-      {DAYS.map((_, i) => (
+        ))}
+        {/* Right edge line */}
         <line
-          key={`vline-${i}`}
-          x1={CHART_LEFT + i * DAY_WIDTH}
+          x1="799"
           y1="0"
-          x2={CHART_LEFT + i * DAY_WIDTH}
+          x2="799"
           y2="400"
           style={{stroke: 'var(--color-brand-100)'}}
           strokeWidth="1"
         />
-      ))}
-      {/* Right edge line */}
-      <line
-        x1="799"
-        y1="0"
-        x2="799"
-        y2="400"
-        style={{stroke: 'var(--color-brand-100)'}}
-        strokeWidth="1"
-      />
 
-      {/* Horizontal row divider lines */}
-      {RESOURCES.map((_, i) => (
+        {/* Horizontal row divider lines */}
+        {RESOURCES.map((_, i) => (
+          <line
+            key={`hline-${i}`}
+            x1="0"
+            y1={HEADER_HEIGHT + i * ROW_HEIGHT}
+            x2="800"
+            y2={HEADER_HEIGHT + i * ROW_HEIGHT}
+            style={{stroke: 'var(--color-brand-100)'}}
+            strokeWidth="1"
+          />
+        ))}
+
+        {/* Label column separator */}
         <line
-          key={`hline-${i}`}
-          x1="0"
-          y1={HEADER_HEIGHT + i * ROW_HEIGHT}
-          x2="800"
-          y2={HEADER_HEIGHT + i * ROW_HEIGHT}
-          style={{stroke: 'var(--color-brand-100)'}}
+          x1={LABEL_WIDTH}
+          y1="0"
+          x2={LABEL_WIDTH}
+          y2="400"
+          style={{stroke: 'var(--color-brand-200)'}}
           strokeWidth="1"
         />
-      ))}
 
-      {/* Label column separator */}
-      <line
-        x1={LABEL_WIDTH}
-        y1="0"
-        x2={LABEL_WIDTH}
-        y2="400"
-        style={{stroke: 'var(--color-brand-200)'}}
-        strokeWidth="1"
-      />
+        {/* Header day labels */}
+        {DAYS.map((day, i) => (
+          <text
+            key={`day-${i}`}
+            x={CHART_LEFT + i * DAY_WIDTH + DAY_WIDTH / 2}
+            y="26"
+            textAnchor="middle"
+            style={{
+              fill: 'var(--color-foreground)',
+              fontSize: '13px',
+              fontWeight: 600,
+              fontFamily: 'var(--font-inter), Inter, sans-serif',
+            }}
+          >
+            {day}
+          </text>
+        ))}
 
-      {/* Header day labels */}
-      {DAYS.map((day, i) => (
-        <text
-          key={`day-${i}`}
-          x={CHART_LEFT + i * DAY_WIDTH + DAY_WIDTH / 2}
-          y="26"
-          textAnchor="middle"
-          style={{
-            fill: 'var(--color-foreground)',
-            fontSize: '13px',
-            fontWeight: 600,
-            fontFamily: 'var(--font-inter), Inter, sans-serif',
-          }}
-        >
-          {day}
-        </text>
-      ))}
+        {/* Resource row labels */}
+        {RESOURCES.map((name, i) => (
+          <text
+            key={`label-${i}`}
+            x="10"
+            y={HEADER_HEIGHT + i * ROW_HEIGHT + ROW_HEIGHT / 2 + 4}
+            style={{
+              fill: 'var(--color-muted-foreground)',
+              fontSize: '11px',
+              fontWeight: 500,
+              fontFamily: 'var(--font-inter), Inter, sans-serif',
+            }}
+          >
+            {name}
+          </text>
+        ))}
 
-      {/* Resource row labels */}
-      {RESOURCES.map((name, i) => (
-        <text
-          key={`label-${i}`}
-          x="10"
-          y={HEADER_HEIGHT + i * ROW_HEIGHT + ROW_HEIGHT / 2 + 4}
-          style={{
-            fill: 'var(--color-muted-foreground)',
-            fontSize: '11px',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter), Inter, sans-serif',
-          }}
-        >
-          {name}
-        </text>
-      ))}
-
-      {/* Animated task bars */}
-      {shouldReduceMotion
-        ? /* Reduced motion: render optimized bars as static rects */
-          OPTIMIZED_BARS.map(([row, startDay, endDay, color], i) => (
-            <rect
-              key={`bar-${i}`}
-              x={barX(startDay)}
-              y={barY(row)}
-              width={barW(startDay, endDay)}
-              height={BAR_HEIGHT}
-              rx="6"
-              ry="6"
-              fill={color}
-              opacity={0.9}
-            />
-          ))
-        : /* Normal: animate from chaos to optimized */
-          CHAOS_BARS.map((chaosBar, i) => {
-            const optBar = OPTIMIZED_BARS[i];
-            return (
-              <motion.rect
+        {/* Animated task bars */}
+        {shouldReduceMotion
+          ? /* Reduced motion: render optimized bars as static rects */
+            OPTIMIZED_BARS.map(([row, startDay, endDay, color], i) => (
+              <rect
                 key={`bar-${i}`}
+                x={barX(startDay)}
+                y={barY(row)}
+                width={barW(startDay, endDay)}
+                height={BAR_HEIGHT}
                 rx="6"
                 ry="6"
-                height={BAR_HEIGHT}
-                initial={{
-                  attrX: barX(chaosBar[1]),
-                  attrY: barY(chaosBar[0]),
-                  width: barW(chaosBar[1], chaosBar[2]),
-                  fill: chaosBar[3],
-                  opacity: 0.7,
-                }}
-                animate={
-                  hasAnimated
-                    ? {
-                        attrX: barX(optBar[1]),
-                        attrY: barY(optBar[0]),
-                        width: barW(optBar[1], optBar[2]),
-                        fill: optBar[3],
-                        opacity: 0.9,
-                      }
-                    : {
-                        attrX: barX(chaosBar[1]),
-                        attrY: barY(chaosBar[0]),
-                        width: barW(chaosBar[1], chaosBar[2]),
-                        fill: chaosBar[3],
-                        opacity: 0.7,
-                      }
-                }
-                transition={{
-                  duration: 0.8,
-                  ease: [0.25, 0.1, 0.25, 1],
-                  delay: hasAnimated ? i * 0.08 : 0,
-                }}
+                fill={color}
+                opacity={0.9}
               />
-            );
-          })}
+            ))
+          : /* Normal: animate from chaos to optimized */
+            CHAOS_BARS.map((chaosBar, i) => {
+              const optBar = OPTIMIZED_BARS[i];
+              return (
+                <m.rect
+                  key={`bar-${i}`}
+                  rx="6"
+                  ry="6"
+                  height={BAR_HEIGHT}
+                  initial={{
+                    attrX: barX(chaosBar[1]),
+                    attrY: barY(chaosBar[0]),
+                    width: barW(chaosBar[1], chaosBar[2]),
+                    fill: chaosBar[3],
+                    opacity: 0.7,
+                  }}
+                  animate={
+                    hasAnimated
+                      ? {
+                          attrX: barX(optBar[1]),
+                          attrY: barY(optBar[0]),
+                          width: barW(optBar[1], optBar[2]),
+                          fill: optBar[3],
+                          opacity: 0.9,
+                        }
+                      : {
+                          attrX: barX(chaosBar[1]),
+                          attrY: barY(chaosBar[0]),
+                          width: barW(chaosBar[1], chaosBar[2]),
+                          fill: chaosBar[3],
+                          opacity: 0.7,
+                        }
+                  }
+                  transition={{
+                    duration: 0.8,
+                    ease: [0.25, 0.1, 0.25, 1],
+                    delay: hasAnimated ? i * 0.08 : 0,
+                  }}
+                />
+              );
+            })}
 
-      {/* Subtle "now" indicator line (vertical dashed line at ~Wednesday noon) */}
-      <line
-        x1={CHART_LEFT + 2.5 * DAY_WIDTH}
-        y1={HEADER_HEIGHT}
-        x2={CHART_LEFT + 2.5 * DAY_WIDTH}
-        y2="400"
-        style={{stroke: 'var(--color-brand-600)'}}
-        strokeWidth="1.5"
-        strokeDasharray="6 4"
-        opacity="0.5"
-      />
-    </svg>
+        {/* Subtle "now" indicator line (vertical dashed line at ~Wednesday noon) */}
+        <line
+          x1={CHART_LEFT + 2.5 * DAY_WIDTH}
+          y1={HEADER_HEIGHT}
+          x2={CHART_LEFT + 2.5 * DAY_WIDTH}
+          y2="400"
+          style={{stroke: 'var(--color-brand-600)'}}
+          strokeWidth="1.5"
+          strokeDasharray="6 4"
+          opacity="0.5"
+        />
+      </svg>
+    </LazyMotion>
   );
 }

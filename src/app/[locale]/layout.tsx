@@ -10,6 +10,7 @@ import {Footer} from '@/components/layout/Footer';
 import {CookieConsent} from '@/components/interactive/CookieConsent';
 import {SITE_URL, SITE_NAME} from '@/lib/constants';
 import {OrganizationJsonLd} from '@/lib/structured-data';
+import {SkipToContent} from '@/components/layout/SkipToContent';
 import '../globals.css';
 
 const inter = Inter({
@@ -65,14 +66,9 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html lang={locale} className={inter.variable}>
       <body className="font-sans antialiased">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-600 focus:text-white focus:rounded-md focus:outline-none"
-        >
-          Skip to content
-        </a>
-        <PlausibleProvider domain="planificator.com">
+        <PlausibleProvider domain="planificator.bg">
           <NextIntlClientProvider>
+            <SkipToContent />
             <Header />
             <main id="main-content">{children}</main>
             <Footer />

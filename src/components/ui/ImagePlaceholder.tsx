@@ -40,7 +40,7 @@ export function ImagePlaceholder({
           alt={alt}
           width={width}
           height={height}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
           priority={priority}
           onError={() => setError(true)}
         />

@@ -17,7 +17,7 @@ export async function ContactInfo() {
             <Mail className="h-5 w-5 text-brand-600 shrink-0" />
             <div>
               <p className="text-sm text-muted-foreground">{t('info.emailLabel')}</p>
-              <a href="mailto:hello@planificator.com" className="text-brand-600 hover:underline">
+              <a href="mailto:hello@planificator.bg" className="text-brand-600 hover:underline">
                 {t('info.emailValue')}
               </a>
             </div>
@@ -27,7 +27,8 @@ export async function ContactInfo() {
             <Phone className="h-5 w-5 text-brand-600 shrink-0" />
             <div>
               <p className="text-sm text-muted-foreground">{t('info.phoneLabel')}</p>
-              <p>{t('info.phoneValue')}</p>
+              <a href="tel:+359878880564" className="block hover:underline">{t('info.phoneValue1')}</a>
+              <a href="tel:+359888433075" className="block hover:underline">{t('info.phoneValue2')}</a>
             </div>
           </div>
 

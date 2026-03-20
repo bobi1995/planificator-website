@@ -128,8 +128,9 @@
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "email": "hello@planificator.com",
-    "phone": "+359 2 123 4567",
+    "email": "hello@planificator.bg",
+    "phone1": "+359 878 880 564",
+    "phone2": "+359 888 433 075",
     "linkedin": "LinkedIn",
     "copyright": "© 2026 Planificator. All rights reserved."
   },
@@ -660,34 +661,34 @@
       "subtitle": "Where Experience Meets Artificial Intelligence -- in the dynamic world of Industry 4.0, production scheduling demands more than spreadsheets and intuition."
     },
     "expertise": {
-      "title": "Expertise Forged in Practice",
+      "title": "Built for the Real Problems of Production",
       "paragraphs": {
-        "0": "Planificator is the distillation of years of hands-on experience in production environments. We have walked the production halls, spoken with planners, operators, and managers, and we understand the real chaos that happens between a customer order and a finished product.",
-        "1": "We know what it means to reschedule an entire week because one machine broke down on Monday morning. We know the frustration of a planner staring at a spreadsheet, trying to fit 200 orders across 30 machines with shifting priorities.",
-        "2": "That experience is coded into every algorithm and every screen of Planificator. This is not software built in an ivory tower -- it is built by people who understand the shop floor."
+        "0": "Production schedulers spend 4+ hours daily building schedules manually in spreadsheets and whiteboards that can't keep up with modern production complexity. The result? Late deliveries, excessive setup times, idle machines, and frustrated teams.",
+        "1": "Without intelligent sequencing, machines change over far too often -- every unnecessary setup is lost production capacity. Without real-time visibility into capacity and conflicts, orders slip through the cracks and deadlines are missed. When plans live in spreadsheets, no one else can see them and decisions happen in the dark.",
+        "2": "Planificator was built to solve exactly these problems. AI automatically finds the optimal production sequence, groups similar jobs to minimize changeovers, and gives your entire team real-time visibility into the production schedule."
       },
-      "imageAlt": "Production hall walkthrough"
+      "imageAlt": "Planificator Gantt chart production schedule"
     },
     "technology": {
-      "title": "Technology That Makes the Difference",
-      "subtitle": "Modern AI and mathematical optimization, purpose-built for production scheduling.",
+      "title": "Everything You Need to Optimize Production",
+      "subtitle": "Powerful tools designed for manufacturing teams -- from the shop floor to the front office.",
       "pillars": {
         "0": {
-          "title": "APS and AI Optimization",
-          "description": "We combine advanced planning and scheduling with modern AI and mathematical optimization. The result: optimal resource utilization, minimized rework, and maximized on-time delivery."
+          "title": "Setup Time Reduction",
+          "description": "AI groups similar jobs and optimizes sequencing to minimize changeovers. Reduce setup time by up to 40% -- more time producing, less time switching."
         },
         "1": {
-          "title": "Next-Generation Intelligence",
-          "description": "Planificator is adaptive -- it learns from history, suggests alternatives when constraints tighten, and automates routine scheduling decisions so your planners can focus on exceptions."
+          "title": "AI-Powered Scheduling",
+          "description": "Let AI find the optimal production sequence. Eliminate bottlenecks and maximize throughput automatically. Run the optimizer without activating the plan -- explore possible solutions and compare them before committing."
         },
         "2": {
-          "title": "World-Class Technology",
-          "description": "Fast, scalable, and easy to integrate. Planificator is built to rival global leaders in production scheduling while remaining accessible to manufacturers of every size."
+          "title": "Gantt Visualization & Resource Management",
+          "description": "See your entire production timeline at a glance with drag-and-drop scheduling and real-time conflict detection. Track machines, workers, and workstations in one place. Manage shifts, breaks, and changeovers with full visibility."
         }
       },
-      "imageAlt": "Modern technology dashboard"
+      "imageAlt": "Planificator optimizer comparison dashboard"
     },
-    "missionStatement": "To turn complex planning into a competitive advantage for every manufacturer by bringing together human expertise and the power of algorithms."
+    "missionStatement": "For manufacturers who need to ship on time, every time. Planificator uses AI to automatically optimize production scheduling, minimize setup times, and maximize throughput."
   },
   "BlogPage": {
     "metaTitle": "Blog",
@@ -743,9 +744,10 @@
     "info": {
       "title": "Other Ways to Reach Us",
       "emailLabel": "Email",
-      "emailValue": "hello@planificator.com",
+      "emailValue": "hello@planificator.bg",
       "phoneLabel": "Phone",
-      "phoneValue": "+359 2 XXX XXXX",
+      "phoneValue1": "+359 878 880 564",
+      "phoneValue2": "+359 888 433 075",
       "linkedinLabel": "LinkedIn",
       "linkedinValue": "Planificator",
       "officeHours": "Office Hours",
@@ -807,6 +809,9 @@
       "button": "Book a Demo",
       "seePricing": "View pricing plans \u2192"
     }
+  },
+  "Accessibility": {
+    "skipToContent": "Skip to content"
   },
   "CookieConsent": {
     "message": "We use cookies for the demo booking widget on our contact page. Our analytics (Plausible) are completely cookieless.",

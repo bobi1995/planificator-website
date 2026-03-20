@@ -88,7 +88,7 @@ export default async function PricingPage({params}: Props) {
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-body-lg text-muted-foreground">
             {t('roiLink.text')}{' '}
-            <Link href="/contact#roi" className="text-brand-600 font-medium hover:text-brand-700 underline">
+            <Link href="/roi-calculator" className="text-brand-600 font-medium hover:text-brand-700 underline">
               {t('roiLink.cta')}
             </Link>
           </p>

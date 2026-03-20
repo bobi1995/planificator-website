@@ -87,7 +87,7 @@ export async function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:hello@planificator.com"
+                  href="mailto:hello@planificator.bg"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('email')}
@@ -95,10 +95,18 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+35921234567"
+                  href="tel:+359878880564"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t('phone')}
+                  {t('phone1')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+359888433075"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('phone2')}
                 </a>
               </li>
               <li>

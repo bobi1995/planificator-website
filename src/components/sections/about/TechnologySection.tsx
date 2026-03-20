@@ -38,11 +38,11 @@ export async function TechnologySection() {
 
         <div className="bg-muted rounded-lg overflow-hidden aspect-[2/1] max-w-4xl mx-auto">
           <Image
-            src="/images/about/technology.jpg"
+            src="/images/features/plan-compare_bg.png"
             alt={t('imageAlt')}
             width={1200}
             height={600}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>

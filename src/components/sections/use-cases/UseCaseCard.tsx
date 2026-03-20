@@ -8,10 +8,11 @@ const slugIcons: Record<string, React.ComponentType<{className?: string}>> = {
   'production-planning': CalendarRange,
 };
 
+// TODO: add unique images per use case
 const slugImages: Record<string, string> = {
-  'discrete-manufacturing': '/images/use-cases/discrete-manufacturing.jpg',
-  'job-shops': '/images/use-cases/job-shops.jpg',
-  'production-planning': '/images/use-cases/production-planning.jpg',
+  'discrete-manufacturing': '/images/use-cases/gantt-pic.png',
+  'job-shops': '/images/use-cases/gantt-pic.png',
+  'production-planning': '/images/use-cases/gantt-pic.png',
 };
 
 interface UseCaseCardProps {
