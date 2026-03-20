@@ -37,18 +37,23 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  /* Brand blue color scale */
-  --color-brand-50: oklch(0.97 0.014 254.604);
-  --color-brand-100: oklch(0.932 0.032 255.585);
-  --color-brand-200: oklch(0.882 0.059 254.128);
-  --color-brand-300: oklch(0.809 0.105 251.813);
-  --color-brand-400: oklch(0.707 0.165 254.624);
-  --color-brand-500: oklch(0.623 0.214 259.815);
-  --color-brand-600: oklch(0.546 0.245 262.881);
-  --color-brand-700: oklch(0.488 0.243 264.376);
-  --color-brand-800: oklch(0.424 0.199 265.638);
-  --color-brand-900: oklch(0.379 0.146 265.522);
-  --color-brand-950: oklch(0.282 0.091 267.935);
+  /* Brand indigo color scale (matching product UI) */
+  --color-brand-50: oklch(0.962 0.018 272.314);
+  --color-brand-100: oklch(0.930 0.034 272.788);
+  --color-brand-200: oklch(0.870 0.065 274.039);
+  --color-brand-300: oklch(0.785 0.115 274.713);
+  --color-brand-400: oklch(0.673 0.182 276.935);
+  --color-brand-500: oklch(0.585 0.233 277.117);
+  --color-brand-600: oklch(0.511 0.262 276.966);
+  --color-brand-700: oklch(0.457 0.240 277.023);
+  --color-brand-800: oklch(0.398 0.195 277.366);
+  --color-brand-900: oklch(0.359 0.144 278.697);
+  --color-brand-950: oklch(0.257 0.09 281.288);
+
+  /* Accent purple scale (for gradients) */
+  --color-accent-purple-400: oklch(0.714 0.203 305.504);
+  --color-accent-purple-500: oklch(0.627 0.265 303.9);
+  --color-accent-purple-600: oklch(0.558 0.288 302.321);
 
   /* Typography scale */
   --text-hero: 3.5rem;
@@ -88,23 +93,23 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.546 0.245 262.881);
+  --primary: oklch(0.511 0.262 276.966);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0.014 254.604);
-  --secondary-foreground: oklch(0.379 0.146 265.522);
-  --muted: oklch(0.97 0.014 254.604);
+  --secondary: oklch(0.962 0.018 272.314);
+  --secondary-foreground: oklch(0.359 0.144 278.697);
+  --muted: oklch(0.962 0.018 272.314);
   --muted-foreground: oklch(0.444 0 0);
-  --accent: oklch(0.932 0.032 255.585);
-  --accent-foreground: oklch(0.379 0.146 265.522);
+  --accent: oklch(0.930 0.034 272.788);
+  --accent-foreground: oklch(0.359 0.144 278.697);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.546 0.245 262.881);
-  --chart-1: oklch(0.546 0.245 262.881);
-  --chart-2: oklch(0.707 0.165 254.624);
-  --chart-3: oklch(0.809 0.105 251.813);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.623 0.214 259.815);
+  --ring: oklch(0.511 0.262 276.966);
+  --chart-1: oklch(0.511 0.262 276.966);
+  --chart-2: oklch(0.673 0.182 276.935);
+  --chart-3: oklch(0.785 0.115 274.713);
+  --chart-4: oklch(0.457 0.240 277.023);
+  --chart-5: oklch(0.585 0.233 277.117);
 }
 
 @layer base {
@@ -120,15 +125,15 @@
 .prose {
   --tw-prose-body: var(--foreground);
   --tw-prose-headings: var(--foreground);
-  --tw-prose-links: oklch(0.546 0.245 262.881);
+  --tw-prose-links: oklch(0.511 0.262 276.966);
   --tw-prose-bold: var(--foreground);
-  --tw-prose-code: oklch(0.424 0.199 265.638);
-  --tw-prose-pre-bg: oklch(0.282 0.091 267.935);
-  --tw-prose-pre-code: oklch(0.97 0.014 254.604);
+  --tw-prose-code: oklch(0.398 0.195 277.366);
+  --tw-prose-pre-bg: oklch(0.257 0.09 281.288);
+  --tw-prose-pre-code: oklch(0.962 0.018 272.314);
   --tw-prose-counters: oklch(0.556 0 0);
-  --tw-prose-bullets: oklch(0.546 0.245 262.881);
+  --tw-prose-bullets: oklch(0.511 0.262 276.966);
   --tw-prose-quotes: var(--foreground);
-  --tw-prose-quote-borders: oklch(0.546 0.245 262.881);
+  --tw-prose-quote-borders: oklch(0.511 0.262 276.966);
   --tw-prose-hr: var(--border);
   --tw-prose-th-borders: var(--border);
   --tw-prose-td-borders: var(--border);
@@ -141,7 +146,7 @@
 }
 
 .prose a:hover {
-  color: oklch(0.488 0.243 264.376);
+  color: oklch(0.457 0.240 277.023);
 }
 
 .prose pre {
@@ -150,7 +155,7 @@
 }
 
 .prose code:not(pre code) {
-  background: oklch(0.97 0.014 254.604);
+  background: oklch(0.962 0.018 272.314);
   padding: 0.15em 0.35em;
   border-radius: calc(var(--radius) - 4px);
   font-size: 0.875em;

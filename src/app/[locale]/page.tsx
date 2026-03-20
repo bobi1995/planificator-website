@@ -3,7 +3,8 @@ import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {Hero} from '@/components/sections/Hero';
 import {ComparisonSection} from '@/components/sections/ComparisonSection';
 import {FeatureHighlights} from '@/components/sections/FeatureHighlights';
-import {SocialProof} from '@/components/sections/SocialProof';
+// SocialProof temporarily removed — will be re-added when real testimonials are available
+// import {SocialProof} from '@/components/sections/SocialProof';
 import {CTABanner} from '@/components/sections/CTABanner';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
@@ -39,7 +40,7 @@ export default async function HomePage({params}: Props) {
       <Hero />
       <ComparisonSection />
       <FeatureHighlights />
-      <SocialProof />
+      {/* SocialProof temporarily removed — will be re-added when real testimonials are available */}
       <CTABanner />
       <SoftwareApplicationJsonLd />
     </>

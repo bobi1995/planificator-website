@@ -19,7 +19,7 @@ interface ComparisonSliderProps {
 
 const handleButtonStyle = {
   backdropFilter: undefined,
-  background: 'oklch(0.546 0.245 262.881)',
+  background: 'oklch(0.511 0.262 276.966)',
   border: 0,
   color: '#fff',
 };

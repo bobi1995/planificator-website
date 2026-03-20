@@ -26,7 +26,7 @@ export function createOgImageElement({
         width: '100%',
         height: '100%',
         padding: '60px 80px',
-        background: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%)',
+        background: 'linear-gradient(135deg, #3730a3 0%, #4f46e5 50%, #a855f7 100%)',
         color: '#ffffff',
       }}
     >

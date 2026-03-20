@@ -53,7 +53,9 @@ export async function ComparisonSection() {
           </p>
         </div>
 
-        <div className="min-h-[350px] md:min-h-[300px] rounded-xl border bg-card shadow-lg overflow-hidden">
+        <div className="min-h-[350px] md:min-h-[300px] rounded-xl overflow-hidden shadow-xl shadow-brand-600/10 border border-brand-100/50">
+          {/* Gradient top accent bar (matching product table headers) */}
+          <div className="h-1 bg-linear-to-r from-brand-600 to-accent-purple-600" />
           <ComparisonSlider
             beforeLabel={t('beforeLabel')}
             afterLabel={t('afterLabel')}

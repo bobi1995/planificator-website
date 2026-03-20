@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/Planificator/client/**)",
+      "Bash(xargs head:*)"
+    ]
+  }
+}

@@ -58,20 +58,20 @@ const CHAOS_BARS: BarDef[] = [
   [5, 2.2, 3.0, '#ef4444'], // small leftover
 ];
 
-// Optimized bars: matching the static GanttMockup layout with brand-blue colors.
+// Optimized bars: matching the product's indigo color palette.
 // Using hex colors because Motion cannot interpolate oklch/CSS variables.
 const OPTIMIZED_BARS: BarDef[] = [
-  [0, 0.0, 1.4, '#2563eb'], // brand-600
-  [0, 1.7, 3.0, '#60a5fa'], // brand-400
-  [1, 0.3, 3.3, '#3b82f6'], // brand-500
-  [2, 0.8, 2.2, '#1d4ed8'], // brand-700
-  [2, 2.6, 4.0, '#60a5fa'], // brand-400
-  [3, 0.0, 2.0, '#2563eb'], // brand-600
-  [3, 2.5, 4.5, '#3b82f6'], // brand-500
-  [4, 0.5, 1.5, '#3b82f6'], // brand-500
-  [4, 1.9, 4.5, '#1d4ed8'], // brand-700
-  [5, 1.2, 3.7, '#60a5fa'], // brand-400
-  [5, 3.9, 5.0, '#2563eb'], // brand-600
+  [0, 0.0, 1.4, '#4f46e5'], // indigo-600
+  [0, 1.7, 3.0, '#818cf8'], // indigo-400
+  [1, 0.3, 3.3, '#6366f1'], // indigo-500
+  [2, 0.8, 2.2, '#4338ca'], // indigo-700
+  [2, 2.6, 4.0, '#818cf8'], // indigo-400
+  [3, 0.0, 2.0, '#4f46e5'], // indigo-600
+  [3, 2.5, 4.5, '#a855f7'], // purple-500 (accent)
+  [4, 0.5, 1.5, '#6366f1'], // indigo-500
+  [4, 1.9, 4.5, '#4338ca'], // indigo-700
+  [5, 1.2, 3.7, '#818cf8'], // indigo-400
+  [5, 3.9, 5.0, '#7c3aed'], // violet-600 (accent)
 ];
 
 /**
