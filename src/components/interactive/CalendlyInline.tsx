@@ -17,7 +17,7 @@ interface CalendlyInlineProps {
 
 export function CalendlyInline({url, locale}: CalendlyInlineProps) {
   const t = useTranslations('ContactPage');
-  const [consent, setConsent] = useState<'accepted' | 'declined' | 'unknown'>('unknown');
+  const [consent, setConsent] = useState<'accepted' | 'declined' | 'unknown'>(() => getConsentStatus());
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,9 +26,6 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
   });
 
   useEffect(() => {
-    // Read initial consent status
-    setConsent(getConsentStatus());
-
     // Listen for consent changes (from CookieConsent banner)
     function handleConsentChange(e: Event) {
       const detail = (e as CustomEvent).detail as string;

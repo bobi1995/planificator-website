@@ -31,7 +31,8 @@
       "Bash(npx next lint)",
       "Bash(npx next lint:*)",
       "Bash(npx eslint:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(find C:/mypc/programming/Prefactor/marketing-site/public/images -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.webp -o -name *.avif \\\\\\))"
     ]
   }
 }

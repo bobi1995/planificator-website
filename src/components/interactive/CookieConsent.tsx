@@ -1,6 +1,6 @@
 'use client';
 
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/navigation';
 import {Button} from '@/components/ui/button';
@@ -8,15 +8,7 @@ import {getConsentStatus, setConsentStatus} from '@/lib/cookie-consent';
 
 export function CookieConsent() {
   const t = useTranslations('CookieConsent');
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    // Check consent status on mount (client-side only)
-    const status = getConsentStatus();
-    if (status === 'unknown') {
-      setVisible(true);
-    }
-  }, []);
+  const [visible, setVisible] = useState(() => getConsentStatus() === 'unknown');
 
   function handleAccept() {
     setConsentStatus('accepted');

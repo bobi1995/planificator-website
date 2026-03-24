@@ -22,7 +22,6 @@ export function GanttMockup({className}: GanttMockupProps) {
   // Row layout
   const headerHeight = 40;
   const rowHeight = 60;
-  const rowCount = 6;
 
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
   const resources = ['Machine A', 'Machine B', 'Machine C', 'Line 1', 'Line 2', 'Line 3'];
