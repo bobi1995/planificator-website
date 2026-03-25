@@ -32,7 +32,9 @@
       "Bash(npx next lint:*)",
       "Bash(npx eslint:*)",
       "Bash(git stash:*)",
-      "Bash(find C:/mypc/programming/Prefactor/marketing-site/public/images -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.webp -o -name *.avif \\\\\\))"
+      "Bash(find C:/mypc/programming/Prefactor/marketing-site/public/images -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.webp -o -name *.avif \\\\\\))",
+      "Bash(npx shadcn@latest add dialog -y)",
+      "Bash(git status:*)"
     ]
   }
 }

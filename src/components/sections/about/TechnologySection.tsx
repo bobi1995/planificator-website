@@ -1,4 +1,4 @@
-import {getTranslations} from 'next-intl/server';
+import {getTranslations, getLocale} from 'next-intl/server';
 import {Brain, Lightbulb, Zap} from 'lucide-react';
 import Image from 'next/image';
 
@@ -6,6 +6,10 @@ const pillarIcons = [Brain, Lightbulb, Zap];
 
 export async function TechnologySection() {
   const t = await getTranslations('AboutPage.technology');
+  const locale = await getLocale();
+  const techImage = locale === 'bg'
+    ? '/images/features/AI_optimization_bg.png'
+    : '/images/features/AI_optimization_en.png';
 
   return (
     <section className="py-20 px-4 bg-muted/30">
@@ -36,9 +40,9 @@ export async function TechnologySection() {
           })}
         </div>
 
-        <div className="bg-muted rounded-lg overflow-hidden aspect-[2/1] max-w-4xl mx-auto">
+        <div className="rounded-lg overflow-hidden aspect-[2/1] max-w-4xl mx-auto">
           <Image
-            src="/images/features/plan-compare_bg.png"
+            src={techImage}
             alt={t('imageAlt')}
             width={1200}
             height={600}

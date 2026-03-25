@@ -1,4 +1,4 @@
-import {getTranslations} from 'next-intl/server';
+import {getTranslations, getLocale} from 'next-intl/server';
 import {
   GanttChart, Users, Brain, Calendar, Layers, Activity,
   MousePointerClick, AlertTriangle, Monitor, Wrench, GraduationCap,
@@ -29,15 +29,32 @@ const featureIcons: Record<string, React.ComponentType<{className?: string}>[]> 
   shopFloor: [Radio, ListChecks, MessageSquare],
 };
 
-// Map domain keys to screenshot image paths
-// TODO: add _en variants and use locale to pick the right one
-const domainImages: Record<string, string> = {
-  scheduling: '/images/features/playground_bg.png',
-  resources: '/images/features/resource_bg.png',
-  optimization: '/images/features/plan-compare_bg.png',
-  shifts: '/images/features/shift_bg.png',
-  bom: '/images/features/routes_bg.png',
-  shopFloor: '/images/features/schedule_bg.png',
+// Map domain keys to screenshot image paths per locale
+const domainImages: Record<string, Record<string, string>> = {
+  scheduling: {
+    bg: '/images/features/production_schedule_bg.png',
+    en: '/images/features/production_schedule_en.png',
+  },
+  resources: {
+    bg: '/images/features/resource_management_bg.png',
+    en: '/images/features/resource_management_en.png',
+  },
+  optimization: {
+    bg: '/images/features/AI_optimization_bg.png',
+    en: '/images/features/AI_optimization_en.png',
+  },
+  shifts: {
+    bg: '/images/features/shifts_calendar_bg.png',
+    en: '/images/features/shifts_calendar_en.png',
+  },
+  bom: {
+    bg: '/images/features/bom_and_invetory_bg.png',
+    en: '/images/features/bom_and_invetory_en.png',
+  },
+  shopFloor: {
+    bg: '/images/features/shop_floor_tracking_bg.png',
+    en: '/images/features/shop_floor_tracking_en.png',
+  },
 };
 
 interface Props {
@@ -47,10 +64,11 @@ interface Props {
 
 export async function FeatureDomainSection({domain, index}: Props) {
   const t = await getTranslations(`FeaturesPage.domains.${domain}`);
+  const locale = await getLocale();
 
   const DomainIcon = domainIcons[domain] || GanttChart;
   const icons = featureIcons[domain] || [];
-  const imageSrc = domainImages[domain];
+  const imageSrc = domainImages[domain]?.[locale] || domainImages[domain]?.['en'];
 
   // Count features (domains have 3 or 4 features)
   const featureCount = domain === 'bom' || domain === 'shopFloor' ? 3 : 4;

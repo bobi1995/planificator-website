@@ -9,6 +9,7 @@ import {Link} from '@/i18n/navigation';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
 import {FAQPageJsonLd} from '@/lib/structured-data';
+import {PricingAddons} from '@/components/sections/pricing/PricingAddons';
 
 type Props = {
   params: Promise<{locale: string}>;
@@ -38,7 +39,7 @@ export default async function PricingPage({params}: Props) {
   const t = await getTranslations({locale, namespace: 'PricingPage'});
 
   const tiers = TIER_KEYS.map((key) => {
-    const featureCount = key === 'starter' ? 5 : 7;
+    const featureCount = key === 'starter' ? 6 : 7;
     const features = Array.from({length: featureCount}, (_, i) =>
       t(`tiers.${key}.features.${i}`)
     );
@@ -54,7 +55,7 @@ export default async function PricingPage({params}: Props) {
     };
   });
 
-  const faqItems = Array.from({length: 6}, (_, i) => ({
+  const faqItems = Array.from({length: 7}, (_, i) => ({
     question: t(`faq.items.${i}.question`),
     answer: t(`faq.items.${i}.answer`),
   }));
@@ -82,6 +83,7 @@ export default async function PricingPage({params}: Props) {
       </section>
 
       <PricingComparisonTable />
+      <PricingAddons />
       <PricingFAQ title={t('faq.title')} items={faqItems} />
 
       <section className="py-12 px-4">

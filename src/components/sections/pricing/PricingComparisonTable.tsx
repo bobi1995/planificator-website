@@ -9,8 +9,13 @@ import {
 } from '@/components/ui/table';
 import {Check, X} from 'lucide-react';
 
-const CATEGORIES = ['scheduling', 'resources', 'operations', 'support'] as const;
-const FEATURE_INDICES = [0, 1, 2, 3, 4] as const;
+const CATEGORIES = [
+  { key: 'scheduling', count: 9 },
+  { key: 'resources', count: 6 },
+  { key: 'operations', count: 4 },
+  { key: 'admin', count: 2 },
+  { key: 'support', count: 5 },
+] as const;
 
 export async function PricingComparisonTable() {
   const t = await getTranslations('PricingPage.comparison');
@@ -38,14 +43,14 @@ export async function PricingComparisonTable() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {CATEGORIES.map((category) => (
+              {CATEGORIES.map(({key: category, count}) => (
                 <>
                   <TableRow key={`${category}-header`} className="bg-muted/50">
                     <TableCell colSpan={4} className="font-semibold">
                       {t(`categories.${category}.title`)}
                     </TableCell>
                   </TableRow>
-                  {FEATURE_INDICES.map((i) => {
+                  {Array.from({length: count}, (_, i) => {
                     const key = `categories.${category}.features.${i}` as const;
                     return (
                       <TableRow key={`${category}-${i}`}>

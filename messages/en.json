@@ -334,14 +334,15 @@
     "tiers": {
       "starter": {
         "name": "Starter",
-        "description": "For small manufacturers getting started with intelligent scheduling.",
+        "description": "Perfect for testing the value on a single production sector. All Professional capabilities -- limited to 5 resources.",
         "cta": "Contact for Pricing",
         "features": {
           "0": "Up to 5 resources",
-          "1": "Interactive Gantt chart",
-          "2": "Basic order management",
-          "3": "Single shift support",
-          "4": "Email support"
+          "1": "All Professional features included",
+          "2": "AI Optimization Engine",
+          "3": "Interactive Gantt chart & What-If Scenarios",
+          "4": "Ideal for proving ROI before scaling",
+          "5": "Email & priority support"
         }
       },
       "professional": {
@@ -351,28 +352,36 @@
         "cta": "Contact for Pricing",
         "features": {
           "0": "Up to 50 resources",
-          "1": "AI optimization engine",
-          "2": "Multi-shift scheduling",
-          "3": "Changeover optimization",
-          "4": "Resource groups & skill matching",
-          "5": "BOM & inventory tracking",
+          "1": "AI Optimization Engine",
+          "2": "Full scheduling suite with KPIs & Playground",
+          "3": "BOM & Inventory, Shop Floor Tracking",
+          "4": "Changeover optimization",
+          "5": "Resource groups & skill matching",
           "6": "Priority support"
         }
       },
       "enterprise": {
         "name": "Enterprise",
-        "description": "For large operations with complex requirements and custom integration needs.",
+        "description": "For large operations with complex requirements, custom rules, and multi-site needs.",
         "cta": "Contact Sales",
         "features": {
           "0": "Unlimited resources",
           "1": "Everything in Professional",
-          "2": "Custom API integrations",
-          "3": "Shop floor tracking",
-          "4": "Multi-site support",
+          "2": "Custom Optimization Rules",
+          "3": "Multi-site scheduling",
+          "4": "API access & custom integrations",
           "5": "Dedicated account manager",
           "6": "Custom onboarding & training"
         }
       }
+    },
+    "addons": {
+      "title": "Available Add-ons",
+      "description": "MES (Manufacturing Execution System) and MRP (Material Requirements Planning) modules can be included in any package upon request. We also provide a full ERP solution if needed. The AI Optimizer is included in every plan -- it is the core of Planificator.",
+      "optimizer": "AI Optimizer included in every plan",
+      "mes": "MES module available on request",
+      "mrp": "MRP module available on request",
+      "erp": "Full ERP solution available"
     },
     "comparison": {
       "title": "Feature Comparison",
@@ -384,37 +393,48 @@
           "title": "Scheduling",
           "features": {
             "0": { "name": "Interactive Gantt Chart", "starter": true, "professional": true, "enterprise": true },
-            "1": { "name": "Drag-and-Drop Scheduling", "starter": true, "professional": true, "enterprise": true },
-            "2": { "name": "AI Optimization Engine", "starter": false, "professional": true, "enterprise": true },
-            "3": { "name": "What-If Scenarios", "starter": false, "professional": true, "enterprise": true },
-            "4": { "name": "Multi-Site Scheduling", "starter": false, "professional": false, "enterprise": true }
+            "1": { "name": "AI Optimization Engine", "starter": true, "professional": true, "enterprise": true },
+            "2": { "name": "What-If Scenarios", "starter": true, "professional": true, "enterprise": true },
+            "3": { "name": "KPIs Dashboard", "starter": true, "professional": true, "enterprise": true },
+            "4": { "name": "Schedules Comparison", "starter": true, "professional": true, "enterprise": true },
+            "5": { "name": "Scheduled Tasks", "starter": true, "professional": true, "enterprise": true },
+            "6": { "name": "Planning Playground", "starter": true, "professional": true, "enterprise": true },
+            "7": { "name": "Custom Optimization Rules", "starter": false, "professional": false, "enterprise": true },
+            "8": { "name": "Multi-Site Scheduling", "starter": false, "professional": false, "enterprise": true }
           }
         },
         "resources": {
           "title": "Resource Management",
           "features": {
-            "0": { "name": "Machine & Equipment Tracking", "starter": true, "professional": true, "enterprise": true },
-            "1": { "name": "Worker Management", "starter": true, "professional": true, "enterprise": true },
-            "2": { "name": "Resource Groups", "starter": false, "professional": true, "enterprise": true },
-            "3": { "name": "Skill-Based Assignment", "starter": false, "professional": true, "enterprise": true },
-            "4": { "name": "Capacity Planning Dashboard", "starter": false, "professional": true, "enterprise": true }
+            "0": { "name": "Number of Resources", "starter": "Up to 5", "professional": "Up to 50", "enterprise": "Unlimited" },
+            "1": { "name": "Machine & Equipment Tracking", "starter": true, "professional": true, "enterprise": true },
+            "2": { "name": "Worker Management", "starter": true, "professional": true, "enterprise": true },
+            "3": { "name": "Resource Groups", "starter": true, "professional": true, "enterprise": true },
+            "4": { "name": "Skill-Based Assignment", "starter": true, "professional": true, "enterprise": true },
+            "5": { "name": "Capacity Planning Dashboard", "starter": true, "professional": true, "enterprise": true }
           }
         },
         "operations": {
           "title": "Operations",
           "features": {
             "0": { "name": "Order Management", "starter": true, "professional": true, "enterprise": true },
-            "1": { "name": "Shift Management", "starter": "1 shift", "professional": "Unlimited", "enterprise": "Unlimited" },
-            "2": { "name": "Changeover Optimization", "starter": false, "professional": true, "enterprise": true },
-            "3": { "name": "BOM & Inventory", "starter": false, "professional": true, "enterprise": true },
-            "4": { "name": "Shop Floor Tracking", "starter": false, "professional": false, "enterprise": true }
+            "1": { "name": "Changeover Optimization", "starter": true, "professional": true, "enterprise": true },
+            "2": { "name": "BOM & Inventory", "starter": true, "professional": true, "enterprise": true },
+            "3": { "name": "Shop Floor Tracking", "starter": true, "professional": true, "enterprise": true }
+          }
+        },
+        "admin": {
+          "title": "System Administration",
+          "features": {
+            "0": { "name": "User Management", "starter": true, "professional": true, "enterprise": true },
+            "1": { "name": "Activity Log", "starter": true, "professional": true, "enterprise": true }
           }
         },
         "support": {
           "title": "Support & Integration",
           "features": {
             "0": { "name": "Email Support", "starter": true, "professional": true, "enterprise": true },
-            "1": { "name": "Priority Support", "starter": false, "professional": true, "enterprise": true },
+            "1": { "name": "Priority Support", "starter": true, "professional": true, "enterprise": true },
             "2": { "name": "Dedicated Account Manager", "starter": false, "professional": false, "enterprise": true },
             "3": { "name": "API Access", "starter": false, "professional": false, "enterprise": true },
             "4": { "name": "Custom Onboarding", "starter": false, "professional": false, "enterprise": true }
@@ -430,22 +450,26 @@
           "answer": "Yes. We offer a guided demo and trial period so you can see Planificator with your own data before committing. Contact us to get started."
         },
         "1": {
+          "question": "What is the Starter plan for?",
+          "answer": "The Starter plan lets you prove the value of AI-powered scheduling on a single production sector with up to 5 resources. It includes all Professional capabilities so you can see the full benefit before scaling. It is a win-win -- low commitment for you, real results from day one."
+        },
+        "2": {
           "question": "Can I upgrade my plan later?",
           "answer": "Absolutely. You can upgrade at any time as your needs grow. Your data and configuration carry over seamlessly."
         },
-        "2": {
-          "question": "Do you offer discounts for annual billing?",
-          "answer": "Yes, we offer significant savings for annual commitments. Contact our sales team for detailed pricing."
-        },
         "3": {
+          "question": "Do you offer MES, MRP, or ERP solutions?",
+          "answer": "Yes. MES and MRP modules can be added to any plan upon request. We also provide a full ERP solution if needed. The AI Optimizer is always included -- it is the core of every Planificator package."
+        },
+        "4": {
           "question": "How long does implementation take?",
           "answer": "Most teams are up and running within 1-2 weeks. Enterprise deployments with custom integrations may take 4-6 weeks. We support you through every step."
         },
-        "4": {
+        "5": {
           "question": "Can Planificator integrate with our ERP system?",
           "answer": "The Enterprise plan includes API access for custom integrations with ERP systems, MES platforms, and other business software. Contact us for integration details."
         },
-        "5": {
+        "6": {
           "question": "Is our data secure?",
           "answer": "Yes. Planificator uses industry-standard encryption, secure cloud infrastructure, and regular security audits. Your production data is private and protected."
         }
@@ -756,7 +780,7 @@
     },
     "expect": {
       "title": "What to Expect",
-      "step1": "30-minute personalized demo with your production data",
+      "step1": "30-minute demo with real production data",
       "step2": "See AI optimization in action on a real scheduling scenario",
       "step3": "Get answers to your specific questions -- no sales pressure"
     }
