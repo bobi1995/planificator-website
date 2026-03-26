@@ -1,7 +1,7 @@
 import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
-import {Avatar, AvatarFallback} from '@/components/ui/avatar';
+// import {Avatar, AvatarFallback} from '@/components/ui/avatar'; // uncomment when real testimonials are available
 import {UseCaseHero} from '@/components/sections/use-cases/UseCaseHero';
 import {UseCaseBenefits} from '@/components/sections/use-cases/UseCaseBenefits';
 import {CTABanner} from '@/components/sections/CTABanner';
@@ -103,7 +103,7 @@ export default async function UseCasePage({params}: Props) {
       {/* Benefits metrics */}
       <UseCaseBenefits slug={slug} />
 
-      {/* Testimonial */}
+      {/* Testimonial -- commented out until real testimonials are available
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <blockquote className="text-xl md:text-2xl text-foreground italic mb-8">
@@ -127,6 +127,7 @@ export default async function UseCasePage({params}: Props) {
           </div>
         </div>
       </section>
+      */}
 
       <CTABanner />
     </>

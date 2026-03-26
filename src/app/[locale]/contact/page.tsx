@@ -26,7 +26,6 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   };
 }
 
-// Placeholder URL -- replace with real Calendly URL when available
 const CALENDLY_URL = 'https://calendly.com/borislav-stefanov-1995/30min';
 
 export default async function ContactPage({params}: Props) {

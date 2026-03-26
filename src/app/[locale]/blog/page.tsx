@@ -8,7 +8,6 @@ import {PostCard} from '@/components/sections/blog/PostCard';
 import {TagFilter} from '@/components/sections/blog/TagFilter';
 import {BlogPagination} from '@/components/sections/blog/BlogPagination';
 import {CTABanner} from '@/components/sections/CTABanner';
-import {NewsletterSignup} from '@/components/interactive/NewsletterSignup';
 import {buildAlternates} from '@/lib/metadata';
 import {SITE_URL} from '@/lib/constants';
 
@@ -40,8 +39,6 @@ export default async function BlogPage({params, searchParams}: Props) {
   const {tag, page} = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations({locale, namespace: 'BlogPage'});
-  const tNewsletter = await getTranslations({locale, namespace: 'Newsletter'});
-
   const allTags = await getAllTags(locale);
   const allFilteredPosts = tag
     ? await getPostsByTag(locale, tag)
@@ -117,14 +114,6 @@ export default async function BlogPage({params, searchParams}: Props) {
               </Suspense>
             </>
           )}
-        </div>
-      </section>
-
-      <section className="py-16 px-4 bg-brand-50">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-subheading mb-2">{tNewsletter('title')}</h2>
-          <p className="text-muted-foreground mb-6">{tNewsletter('description')}</p>
-          <NewsletterSignup />
         </div>
       </section>
 

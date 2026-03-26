@@ -44,6 +44,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
       locale: locale === 'bg' ? 'bg_BG' : 'en_US',
       type: 'website',
       description: t('ogDescription'),
+      images: [{url: `${SITE_URL}/en/opengraph-image`, width: 1200, height: 630, alt: SITE_NAME}],
     },
     twitter: {
       card: 'summary_large_image',

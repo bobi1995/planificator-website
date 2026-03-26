@@ -47,6 +47,10 @@ The actual product (app) lives separately at `C:\mypc\programming\Optiplan\dev\p
 - Optimizer with configurable settings
 - Multi-language interface
 
+## Pre-Push Checklist
+
+Before every `git push`, remind the user about the status of items in `TODO_BEFORE_GOING_LIVE.md` — especially the Resend domain verification status and any other blockers for production deployment.
+
 ## Commands
 
 ```bash

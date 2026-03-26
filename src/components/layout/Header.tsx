@@ -16,6 +16,7 @@ const navLinks = [
   {href: '/features', key: 'features'},
   {href: '/use-cases', key: 'useCases'},
   {href: '/pricing', key: 'pricing'},
+  {href: '/roi-calculator', key: 'roiCalculator'},
   {href: '/about', key: 'about'},
   {href: '/blog', key: 'blog'},
   {href: '/contact', key: 'contact'},

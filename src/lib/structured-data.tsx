@@ -20,6 +20,14 @@ export function OrganizationJsonLd() {
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
     description: 'AI-powered production scheduling platform for manufacturers',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'hello@planificator.bg',
+      telephone: '+359-878-880-564',
+      contactType: 'sales',
+      availableLanguage: ['English', 'Bulgarian'],
+    },
+    sameAs: ['https://linkedin.com/company/planificator'],
   };
 
   return (

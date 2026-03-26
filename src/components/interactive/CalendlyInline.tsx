@@ -3,12 +3,13 @@
 import {useState, useEffect, type FormEvent} from 'react';
 import {useTranslations} from 'next-intl';
 import {InlineWidget} from 'react-calendly';
-import {Mail, Send} from 'lucide-react';
+import {Mail, Send, CheckCircle, AlertCircle, Loader2} from 'lucide-react';
 import {getConsentStatus} from '@/lib/cookie-consent';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Label} from '@/components/ui/label';
 import {Textarea} from '@/components/ui/textarea';
+import {sendContactEmail} from '@/app/actions/contact';
 
 interface CalendlyInlineProps {
   url: string;
@@ -24,9 +25,9 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
     company: '',
     message: '',
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   useEffect(() => {
-    // Listen for consent changes (from CookieConsent banner)
     function handleConsentChange(e: Event) {
       const detail = (e as CustomEvent).detail as string;
       if (detail === 'accepted' || detail === 'declined') {
@@ -38,19 +39,35 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
     return () => window.removeEventListener('consent-changed', handleConsentChange);
   }, []);
 
-  // Append locale to Calendly URL if provided
   const calendlyUrl = locale && locale !== 'en'
     ? `${url}?locale=${locale}`
     : url;
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const subject = `Demo Request from ${formData.name}${formData.company ? ` (${formData.company})` : ''}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\n${formData.message}`;
-    window.location.href = `mailto:hello@planificator.bg?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus('sending');
+
+    const result = await sendContactEmail(formData);
+
+    if (result.success) {
+      setStatus('success');
+      setFormData({name: '', email: '', company: '', message: ''});
+    } else {
+      setStatus('error');
+    }
   }
 
   if (consent !== 'accepted') {
+    if (status === 'success') {
+      return (
+        <div className="rounded-lg border bg-card p-6 md:p-8 shadow-sm text-center">
+          <CheckCircle className="h-12 w-12 text-brand-600 mx-auto mb-4" />
+          <h3 className="text-lg font-semibold mb-2">{t('form.successTitle')}</h3>
+          <p className="text-sm text-muted-foreground">{t('form.successMessage')}</p>
+        </div>
+      );
+    }
+
     return (
       <div className="rounded-lg border bg-card p-6 md:p-8 shadow-sm">
         <div className="flex items-center gap-3 mb-2">
@@ -107,9 +124,20 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
             />
           </div>
 
-          <Button type="submit" size="lg" className="w-full sm:w-auto">
-            <Send className="h-4 w-4" />
-            {t('form.submitButton')}
+          {status === 'error' && (
+            <div className="flex items-center gap-2 text-sm text-destructive">
+              <AlertCircle className="h-4 w-4 shrink-0" />
+              {t('form.errorMessage')}
+            </div>
+          )}
+
+          <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === 'sending'}>
+            {status === 'sending' ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="h-4 w-4" />
+            )}
+            {status === 'sending' ? t('form.sendingButton') : t('form.submitButton')}
           </Button>
         </form>
 

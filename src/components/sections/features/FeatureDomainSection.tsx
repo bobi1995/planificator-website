@@ -48,8 +48,8 @@ const domainImages: Record<string, Record<string, string>> = {
     en: '/images/features/shifts_calendar_en.png',
   },
   bom: {
-    bg: '/images/features/bom_and_invetory_bg.png',
-    en: '/images/features/bom_and_invetory_en.png',
+    bg: '/images/features/bom_and_inventory_bg.png',
+    en: '/images/features/bom_and_inventory_en.png',
   },
   shopFloor: {
     bg: '/images/features/shop_floor_tracking_bg.png',
