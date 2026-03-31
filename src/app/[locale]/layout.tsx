@@ -11,6 +11,7 @@ import {CookieConsent} from '@/components/interactive/CookieConsent';
 import {SITE_URL, SITE_NAME} from '@/lib/constants';
 import {OrganizationJsonLd} from '@/lib/structured-data';
 import {SkipToContent} from '@/components/layout/SkipToContent';
+import {Analytics} from '@vercel/analytics/next';
 import '../globals.css';
 
 const inter = Inter({
@@ -77,6 +78,7 @@ export default async function LocaleLayout({children, params}: Props) {
           </NextIntlClientProvider>
         </PlausibleProvider>
         <OrganizationJsonLd />
+        <Analytics />
       </body>
     </html>
   );
