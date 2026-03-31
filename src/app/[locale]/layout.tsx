@@ -5,6 +5,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {Inter} from 'next/font/google';
 import PlausibleProvider from 'next-plausible';
+import {Analytics} from '@vercel/analytics/next';
 import {Header} from '@/components/layout/Header';
 import {Footer} from '@/components/layout/Footer';
 import {CookieConsent} from '@/components/interactive/CookieConsent';
@@ -77,6 +78,7 @@ export default async function LocaleLayout({children, params}: Props) {
           </NextIntlClientProvider>
         </PlausibleProvider>
         <OrganizationJsonLd />
+        <Analytics />
       </body>
     </html>
   );
