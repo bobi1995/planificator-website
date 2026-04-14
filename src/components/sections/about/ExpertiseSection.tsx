@@ -20,7 +20,7 @@ export async function ExpertiseSection() {
           </div>
           <div className="bg-muted rounded-lg overflow-hidden aspect-[4/3]">
             <Image
-              src="/images/use-cases/gantt-pic.png"
+              src="/images/use-cases/changeovers.png"
               alt={t('imageAlt')}
               width={800}
               height={600}
