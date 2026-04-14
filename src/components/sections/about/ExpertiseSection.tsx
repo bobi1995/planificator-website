@@ -1,5 +1,5 @@
 import {getTranslations} from 'next-intl/server';
-import Image from 'next/image';
+import {ImagePlaceholder} from '@/components/ui/ImagePlaceholder';
 
 export async function ExpertiseSection() {
   const t = await getTranslations('AboutPage.expertise');
@@ -18,15 +18,12 @@ export async function ExpertiseSection() {
               ))}
             </div>
           </div>
-          <div className="bg-muted rounded-lg overflow-hidden aspect-[4/3]">
-            <Image
-              src="/images/use-cases/changeovers.png"
-              alt={t('imageAlt')}
-              width={800}
-              height={600}
-              className="w-full h-full object-contain"
-            />
-          </div>
+          <ImagePlaceholder
+            src="/images/use-cases/changeovers.png"
+            alt={t('imageAlt')}
+            width={800}
+            height={500}
+          />
         </div>
       </div>
     </section>
