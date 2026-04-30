@@ -928,7 +928,7 @@
       },
       "internationalTransfers": {
         "title": "10. International Data Transfers",
-        "content": "Your data may be processed by third-party services located outside the European Economic Area (EEA). In such cases, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses (SCCs) approved by the European Commission."
+        "content": "Some of our service providers are located outside the European Economic Area (EEA). In particular, our website is hosted on Vercel Inc. (United States), which also provides our analytics service (Vercel Analytics). When your data is transferred to the United States, the transfer is protected by Standard Contractual Clauses (SCCs) approved by the European Commission and, where applicable, the EU-U.S. Data Privacy Framework. Vercel Analytics is cookieless and does not collect personally identifiable information; only anonymized, aggregated usage data is processed."
       },
       "children": {
         "title": "11. Children's Privacy",
