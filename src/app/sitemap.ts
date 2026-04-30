@@ -26,28 +26,29 @@ const STATIC_PAGES = [
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  // Static pages with alternates for all locales
-  const staticEntries: MetadataRoute.Sitemap = STATIC_PAGES.map((path) => ({
-    url: `${SITE_URL}/en${path}`,
-    lastModified: now,
-    alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${SITE_URL}/${l}${path}`])
-      ),
-    },
-  }));
+  const languages = (path: string) =>
+    Object.fromEntries(routing.locales.map((l) => [l, `${SITE_URL}/${l}${path}`]));
 
-  // Blog post entries (EN canonical, with locale alternates)
-  const posts = await getAllPosts('en');
-  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${SITE_URL}/en/blog/${post.slug}`,
-    lastModified: new Date(post.meta.date),
-    alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${SITE_URL}/${l}/blog/${post.slug}`])
-      ),
-    },
-  }));
+  const staticEntries: MetadataRoute.Sitemap = routing.locales.flatMap((locale) =>
+    STATIC_PAGES.map((path) => ({
+      url: `${SITE_URL}/${locale}${path}`,
+      lastModified: now,
+      alternates: {languages: languages(path)},
+    }))
+  );
+
+  const blogEntries: MetadataRoute.Sitemap = (
+    await Promise.all(
+      routing.locales.map(async (locale) => {
+        const posts = await getAllPosts(locale);
+        return posts.map((post) => ({
+          url: `${SITE_URL}/${locale}/blog/${post.slug}`,
+          lastModified: new Date(post.meta.date),
+          alternates: {languages: languages(`/blog/${post.slug}`)},
+        }));
+      })
+    )
+  ).flat();
 
   return [...staticEntries, ...blogEntries];
 }

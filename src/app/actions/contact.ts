@@ -37,8 +37,13 @@ export async function sendContactEmail(data: ContactFormData) {
 
   const textBody = `New Demo Request\n\nName: ${name}\nEmail: ${email}\nCompany: ${company || 'Not provided'}\n\nMessage:\n${message}`;
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error('[contact] RESEND_API_KEY is not set in this environment');
+    return {success: false, error: 'send_failed'};
+  }
+
   try {
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: 'Planificator <noreply@planificator.bg>',
       to: RECIPIENTS,
       replyTo: email,
@@ -47,8 +52,14 @@ export async function sendContactEmail(data: ContactFormData) {
       text: textBody,
     });
 
+    if (result.error) {
+      console.error('[contact] Resend returned error:', result.error);
+      return {success: false, error: 'send_failed'};
+    }
+
     return {success: true};
-  } catch {
+  } catch (err) {
+    console.error('[contact] Resend threw exception:', err);
     return {success: false, error: 'send_failed'};
   }
 }
