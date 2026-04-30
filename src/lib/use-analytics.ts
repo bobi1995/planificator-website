@@ -1,8 +1,13 @@
 'use client';
 
-import {usePlausible} from 'next-plausible';
-import type {PlausibleEvents} from '@/lib/analytics';
+import {track} from '@vercel/analytics';
+import type {AnalyticsEvents} from '@/lib/analytics';
 
 export function useAnalytics() {
-  return usePlausible<PlausibleEvents>();
+  return <K extends keyof AnalyticsEvents>(
+    event: K,
+    options?: {props?: AnalyticsEvents[K]}
+  ) => {
+    track(event as string, options?.props as Record<string, string | number | boolean | null>);
+  };
 }

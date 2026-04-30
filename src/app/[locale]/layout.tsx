@@ -4,7 +4,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {Inter} from 'next/font/google';
-import PlausibleProvider from 'next-plausible';
+import {Analytics} from '@vercel/analytics/next';
 import {Header} from '@/components/layout/Header';
 import {Footer} from '@/components/layout/Footer';
 import {CookieConsent} from '@/components/interactive/CookieConsent';
@@ -67,16 +67,15 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html lang={locale} className={inter.variable}>
       <body className="font-sans antialiased">
-        <PlausibleProvider domain="planificator.bg">
-          <NextIntlClientProvider>
-            <SkipToContent />
-            <Header />
-            <main id="main-content">{children}</main>
-            <Footer />
-            <CookieConsent />
-          </NextIntlClientProvider>
-        </PlausibleProvider>
+        <NextIntlClientProvider>
+          <SkipToContent />
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <CookieConsent />
+        </NextIntlClientProvider>
         <OrganizationJsonLd />
+        <Analytics />
       </body>
     </html>
   );

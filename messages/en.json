@@ -843,7 +843,7 @@
     "skipToContent": "Skip to content"
   },
   "CookieConsent": {
-    "message": "We use cookies for the demo booking widget on our contact page. Our analytics (Plausible) are completely cookieless.",
+    "message": "We use cookies for the demo booking widget on our contact page. Our analytics (Vercel Analytics) are completely cookieless.",
     "learnMore": "Learn more",
     "accept": "Accept",
     "decline": "Decline"
@@ -868,7 +868,7 @@
         "intro": "We may collect the following categories of personal data:",
         "items": {
           "0": "Contact information: name, email address, phone number, company name -- when you fill out a contact form, request a demo, or subscribe to our newsletter.",
-          "1": "Usage data: pages visited, time spent on pages, referral source -- collected through Plausible Analytics, which is cookieless and does not track personal data.",
+          "1": "Usage data: pages visited, time spent on pages, referral source -- collected through Vercel Analytics, which is cookieless and does not track personal data.",
           "2": "Booking data: when you schedule a demo through Calendly, your name, email, and chosen time slot are processed by Calendly in accordance with their privacy policy.",
           "3": "Communication data: any information you voluntarily provide in emails or messages to us."
         }
@@ -896,14 +896,14 @@
       },
       "cookies": {
         "title": "5. Cookies and Tracking",
-        "content": "Our website uses minimal cookies. Our analytics solution (Plausible Analytics) is fully cookieless and does not collect any personal data. The only cookies used are by the Calendly booking widget on our contact page, which requires your consent before loading. You can accept or decline cookies via our consent banner."
+        "content": "Our website uses minimal cookies. Our analytics solution (Vercel Analytics) is fully cookieless and does not collect any personal data. The only cookies used are by the Calendly booking widget on our contact page, which requires your consent before loading. You can accept or decline cookies via our consent banner."
       },
       "dataSharing": {
         "title": "6. Data Sharing",
         "intro": "We do not sell your personal data. We may share your data with:",
         "items": {
           "0": "Calendly -- for demo booking functionality (subject to Calendly's privacy policy).",
-          "1": "Plausible Analytics -- anonymized, aggregated website usage data only.",
+          "1": "Vercel Analytics -- anonymized, aggregated website usage data only.",
           "2": "Email service providers -- to send transactional and marketing communications you have opted into.",
           "3": "Legal authorities -- when required by law."
         }

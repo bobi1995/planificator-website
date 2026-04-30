@@ -43,7 +43,7 @@ A marketing website for **Planifactor** — an AI-powered production scheduling 
 | UI Components | shadcn/ui (new-york) | 3.8.4 |
 | Animations | motion | ^12 |
 | Blog | next-mdx-remote-client/rsc | - |
-| Analytics | Plausible (next-plausible) | - |
+| Analytics | Vercel Analytics (@vercel/analytics) | - |
 | Demo booking | react-calendly | 4.4.0 |
 
 ## The Product (Context)
@@ -69,7 +69,7 @@ The website presents Planifactor as a complete AI-driven scheduling and producti
 | Contact for pricing (no public tiers) | Enterprise/consultative sales approach | Shipped |
 | Full i18n from day one | Bulgaria + EU requires both languages | Shipped |
 | MDX blog from launch | SEO content is acquisition strategy | Shipped |
-| Plausible over PostHog | Lightweight, cookieless, GDPR-compliant | Shipped |
+| Vercel Analytics over Plausible/PostHog | Free tier on Vercel, zero-config, cookieless by default | Shipped |
 | ROI calculator in v1 | Key conversion tool, competitor differentiation | Shipped |
 
 ## v2 Candidates (not yet scoped)

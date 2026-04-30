@@ -18,7 +18,7 @@ interface CalendlyInlineProps {
 
 export function CalendlyInline({url, locale}: CalendlyInlineProps) {
   const t = useTranslations('ContactPage');
-  const [consent, setConsent] = useState<'accepted' | 'declined' | 'unknown'>(() => getConsentStatus());
+  const [consent, setConsent] = useState<'accepted' | 'declined' | 'unknown'>('unknown');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,6 +28,8 @@ export function CalendlyInline({url, locale}: CalendlyInlineProps) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   useEffect(() => {
+    setConsent(getConsentStatus());
+
     function handleConsentChange(e: Event) {
       const detail = (e as CustomEvent).detail as string;
       if (detail === 'accepted' || detail === 'declined') {

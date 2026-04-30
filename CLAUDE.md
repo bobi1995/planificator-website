@@ -16,7 +16,7 @@ The actual product (app) lives separately at `C:\mypc\programming\Optiplan\dev\p
 | CMS / Blog | **MDX** or **Contentlayer** | Blog content without a backend |
 | Hosting | **Vercel** or **Cloudflare Pages** | Zero-config, global CDN |
 | Forms | **Resend + React Email** | Contact/demo request emails |
-| Analytics | **Plausible** or **PostHog** | Privacy-friendly |
+| Analytics | **Vercel Analytics** | Free tier on Vercel, zero-config, cookieless by default |
 | Animations | **Framer Motion** | Smooth scroll animations, Gantt demo previews |
 
 ## Site Structure (Planned Pages)
