@@ -33,9 +33,11 @@ The Calendly booking path is unaffected — most users will book demos through C
 
 ## 🟢 Nice-to-have
 
-- [ ] **GDPR transparency** — optional note in privacy policy that Vercel Analytics processes data in the US under SCCs (Vercel Analytics is cookieless and collects no PII, so this is transparency, not a compliance gap)
-- [ ] **npm audit fix** — 17 transitive vulnerabilities, all with patches available; run `npm audit fix` for non-breaking updates
-- [ ] **Domain canonicalization** — confirm `www.planificator.bg` ↔ `planificator.bg` redirect is set in Vercel → Settings → Domains so SEO signals don't split
+- [ ] _(no remaining nice-to-have items)_
+
+## ⏸ Deliberately deferred
+
+- **Domain canonicalization mismatch** — Vercel currently 308-redirects apex (`planificator.bg`) → `www.planificator.bg`, but the codebase (`SITE_URL`, sitemap, OG tags, JSON-LD canonicals) all use the apex. Google will eventually reconcile via the redirect chain, but it's a slow signal. Skipped on purpose; revisit if Search Console flags duplicate-content or canonical issues. Fix path: in Vercel → Settings → Domains, edit the apex row to "Connect to environment: Production", then edit www to "308 Redirect to planificator.bg".
 
 ---
 
@@ -47,8 +49,10 @@ The Calendly booking path is unaffected — most users will book demos through C
 - Internal docs (CLAUDE.md, PROJECT.md) updated to reflect analytics decision — committed `b15efdd`
 - Sitemap now emits explicit entries for both `/en` and `/bg` URLs — committed `20cf224`
 - Contact action surfaces Resend errors in Vercel function logs — committed `20cf224`
-- Use case "Results You Can Expect" softened to "Industry Benchmarks" with research disclaimer subtitle (both locales)
-- Newsletter signup component and `Newsletter` translations removed (was a no-op dead form, never rendered)
+- Use case "Results You Can Expect" softened to "Industry Benchmarks" with research disclaimer subtitle (both locales) — committed `1c1b6d5`
+- Newsletter signup component and `Newsletter` translations removed (was a no-op dead form, never rendered) — committed `1c1b6d5`
+- `npm audit fix` patched 11 of 17 transitive vulns; remaining 6 are inside Resend's svix/uuid chain and require a breaking upgrade — accepted as residual risk — committed `b4cd06c`
+- Privacy policy section 10 expanded to explicitly name Vercel Inc. (US) as hosting/analytics processor under SCCs and EU-U.S. Data Privacy Framework — committed `b4cd06c`
 - Stale TODO claims cleaned up:
   - `bom_and_invetory` typo file → does not exist in repo
   - Orphan `public/images/features/schedule_bg.png` → does not exist in repo
