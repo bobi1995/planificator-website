@@ -532,7 +532,8 @@
         }
       },
       "benefits": {
-        "title": "Results You Can Expect",
+        "title": "Industry Benchmarks",
+        "subtitle": "Based on published research on AI-optimized production scheduling. Actual results depend on your operation, data quality, and implementation.",
         "items": {
           "0": { "metric": "Up to 35%", "label": "Reduction in changeover time" },
           "1": { "metric": "Up to 96%", "label": "On-time delivery rate" },
@@ -597,7 +598,8 @@
         }
       },
       "benefits": {
-        "title": "Results You Can Expect",
+        "title": "Industry Benchmarks",
+        "subtitle": "Based on published research on AI-optimized production scheduling. Actual results depend on your operation, data quality, and implementation.",
         "items": {
           "0": { "metric": "Up to 60%", "label": "Faster response to rush orders" },
           "1": { "metric": "Up to 25%", "label": "Improvement in delivery accuracy" },
@@ -662,7 +664,8 @@
         }
       },
       "benefits": {
-        "title": "Results You Can Expect",
+        "title": "Industry Benchmarks",
+        "subtitle": "Based on published research on AI-optimized production scheduling. Actual results depend on your operation, data quality, and implementation.",
         "items": {
           "0": { "metric": "Up to 80%", "label": "Reduction in planning time" },
           "1": { "metric": "Up to 20%", "label": "Improvement in resource utilization" },
@@ -736,13 +739,6 @@
     "relatedPosts": "Related Articles",
     "share": "Share",
     "copyLink": "Copy link"
-  },
-  "Newsletter": {
-    "title": "Stay Updated",
-    "description": "Get production scheduling insights delivered to your inbox.",
-    "placeholder": "Your email address",
-    "subscribe": "Subscribe",
-    "thankYou": "Thanks for subscribing! We'll be in touch."
   },
   "ContactPage": {
     "metaTitle": "Contact Us",
